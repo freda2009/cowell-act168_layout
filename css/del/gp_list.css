@@ -1,0 +1,265 @@
+@charset "utf-8";
+/* CSS Document */
+/***start datepick*******************/
+/*btn_search */
+	div.search_mid {	
+		margin: 0;
+		padding: 0;
+		width: 71px;
+		height: 27px;
+	}
+	.search_mid ul.btn {
+		margin: 0;
+		padding: 0;
+		}
+	.search_mid ul.btn li.search {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		}
+	.search_mid ul.btn li.search a{
+		display:block;width:71px;height:27px;background-image: url(../images/G_btn_search.png);
+		background-repeat: no-repeat;background-position: 0 -27px;}
+	.search_mid ul.btn li.search a:hover{
+	display:block;width:71px;height:27px;background-image: url(../images/G_btn_search.png);
+	background-repeat: no-repeat;background-position: 0 0px;
+/***end datepick*******************/
+/***start searchResult*******************/
+.searchResult {
+display: block;
+width: 850px;
+height: 25px;
+background-color: #E6E6E6;
+border-left: 5px #990000 solid;
+line-height: 25px;
+letter-spacing: 1px;
+margin-bottom: 40px;
+}
+.RR {
+color: #C1272D;
+font-size: 13px;
+padding-left: 5px;
+padding-right: 5px;
+}
+.SQ {
+width: 200px;
+height: 22px;
+line-height: 30px;
+float: right;
+margin: -35px 30px 10px 0;
+}
+/***頁碼****************/
+.pageList {
+width: 850px;
+}
+
+.pageList {
+width: 715px;
+margin-top: 7px;
+height: 25px;
+text-align: center;
+}
+.pageList>div {
+margin-right: 150px;
+}
+.pageList .dis {
+color: #E7DED3;
+border: 1px #E7DED3 solid;
+}
+.pageList a {
+float: left;
+font-size: 12px;
+display: block;
+line-height: 16px;
+margin-right: 4px;
+color: #8C6239;
+border: 1px #E7DED3 solid;
+padding: 0 2px;
+}
+.pageList .pActive {
+background-color: #8C6239;
+color: #E7DED3;
+}
+.pageList .p {
+margin-top: 1px;
+padding: 0 4px;
+color: #8C6239;
+border: none;
+}
+.pageList span {
+line-height: 18px;
+color: #5D4840;
+}
+.listSelect{
+	border:1px #C0C0C0 solid;
+	width:60px;
+	color:#5D4840;
+	margin-right:10px;
+}
+
+/**end searchResult************/
+.table_title {
+	background-image:url(../images/ListTitle_bg.jpg);
+	background-repeat:repeat-x;
+	color:#e4e4e4;
+	font-size:13px;
+ 	width: 1025px;
+        line-height:24px;
+	font-family: "新細明體";
+
+}
+.table_title_GpList {
+	margin-left:50px;
+	margin-right:50px;
+	border: 0px;
+        width: 1025px;  float: left;
+        font-size:13px;
+        line-height:26px;
+        color:#2b2b2b;
+        letter-spacing: 1px;
+        font-family: "新細明體";
+
+}
+.table_title_GpList a{
+	text-decoration: none;
+        color:#2b2b2b;
+}
+.table_title_GpList th, .table_title_GpList td {
+	border: 0px;line-height:24px;padding-bottom:10px;padding-top:5px;
+        
+}
+.table_list_white {
+	font-size:13px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-family: "新細明體";
+	width: 1025px;
+	color: #2b2b2b;
+	line-height: 18px;
+}
+.table_list_gray {
+	float:left;
+	margin-left:50px;
+	margin-right:50px;
+	font-size:13px;
+	line-height: 18px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-family: "新細明體";
+	background-color: #e3e3e3;
+	width: 1025px;
+	color: #2b2b2b;
+}
+#AllProductPage_tool {
+	width: 1035px;
+	float: left;
+	margin-right: 50px;
+	margin-left: 50px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #7d7d7d;
+}
+#travel_name_flash_tool {
+	background-image: url(../images/travel_name.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	float: left;
+	width: 1126px;
+	margin-bottom: 45px;
+}
+.travel_name_tool {
+	float: left;
+	width: 510px;
+}
+.travel_name_title {
+	color: #FFFFFF;
+	font-family: "微軟正黑體";
+	font-size: 32px;
+	margin-left: 30px;
+        margin-right: 30px;
+
+	margin-top: 20px;
+	clear: both;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+.travel_descriptor {
+	color: #FFFFFF;
+	clear: both;
+	margin-left: 55px;
+	font-family: "微軟正黑體";
+	font-size: 15px;
+	letter-spacing: 2px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #474747;
+	padding-bottom: 0px;
+	padding-top: 5px;
+	margin-bottom: 20px;
+}
+#travel_link_tool {
+	margin-right: 30px;
+	margin-left: 55px;
+	float: left;
+	width: 250px;
+}
+.travel_link_list {
+	color: #bba574;
+	letter-spacing: 1px;
+	text-decoration: none;
+	float: left;
+	padding-left: 15px;
+	width: 220px;
+	line-height: 26px;
+}
+
+.travel_link_list a{
+	text-decoration: none;
+}
+
+
+.travel_link_list:hover {
+	color: #FFFFFF;
+	letter-spacing: 1px;
+	text-decoration: none;
+	background-image: url(../images/icon01.jpg);
+	background-repeat: no-repeat;
+	background-position: 1px center;
+}
+/**start *MAP HOVER*********/
+#content .gpmap .area-hover{
+	position:absolute;
+	width:220px;
+	height:auto;
+	max-height:156px;
+	overflow:hidden;
+	border:1px solid #e9e691;
+	background-color:#fffee8;
+	padding:10px;
+	border-radius:5px;
+	visibility: hidden;
+}
+#content .gpmap .area-hover .fleft{ width:61px;float:left;}
+#content .gpmap .area-hover .fleft img{ width:61px; height:61px;}
+#content .gpmap .area-hover .fright{ width:153px;float:right;}
+#content .gpmap .area-hover_title{
+	display:inline-block;
+	font-size:16px;
+	text-decoration:underline;
+	clear:right;
+	}
+#content .gpmap .area-hover .fright a:link,
+#content .gpmap .area-hover .fright a:visited{
+	font-size:14px;
+	font-family:"微軟正黑體", "Arial Unicode MS", sans-serif,"新細明體";
+	color:#3a3592;
+	padding-right:8px; 
+	white-space:nowrap;
+	margin-right:10px;
+	text-decoration:none;
+	}
+#content .gpmap .area-hover .fright a:hover{text-decoration:underline;color:#4497E3;}
+#content .gpmap .area-hover .fright strong{ font-size:20px; display:block; margin-bottom:5px;}
+/**END *MAP HOVER*********/

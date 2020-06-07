@@ -1,0 +1,168 @@
+/*****強檔促銷區塊********/
+
+.index_mid_title_bg span.title {
+	float:left;
+}
+
+.highlight_tip {
+	display: inline;
+	float: left;
+	margin: 8px 0 0 12px;
+}
+
+.highlight_tip .current {
+	background-position: 0 -220px;
+}
+
+.highlight_tip span {
+	display: inline;
+	float: left;
+	width: 7px;
+	height: 7px;
+	overflow: hidden;
+	margin: 0 2px;
+	background: url(../images/icon_index_promotions.gif) no-repeat 0 -320px;
+	text-indent: -9999px;
+}
+
+.change_btn {
+	float: left;
+	margin: 0 0 0 10px;
+}
+
+.change_btn span {
+	display: block;
+	float: left;
+	width: 30px;
+	height: 23px;
+	line-height: 23px;
+	overflow: hidden;
+	background: url(../images/icon_index_promotions.gif) no-repeat;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+
+.change_btn .previous {
+	background-position: 0 -400px;
+}
+
+.change_btn .next {
+	width: 31px;
+	background-position: -30px -400px;
+}
+
+.change_btn .first_btn {
+background-position: 0 -500px;
+cursor: default;
+}
+
+
+.change_btn .last_btn {
+background-position: -30px -500px;
+cursor: default;
+}
+
+
+
+.v_content {
+	position: relative;
+	width: 495px;
+	min-height: 246px;
+	overflow: hidden;
+	top: -15px;
+}
+
+.v_content_list {
+	position: absolute;
+	width: 1210px;
+}
+
+.v_content ul {
+	position: relative;
+}
+ul, li {
+	list-style: none;
+}
+
+.v_content ul li {
+	/*display: inline;*/
+	display: inline-block;
+
+	float: left;
+	margin: 8px 4px 0px;
+	padding: 0px;
+	background-color: #FFF;
+	border: 1px #CCC solid;
+}
+
+.v_content ul li em {
+color: #DF2020 !important;
+font-family: Verdana;
+font-size: 0.9em;
+}
+
+
+.v_content ul li img {
+	width: 155px;
+	height: 123px;
+	margin: 0px;
+padding: 0px;
+}
+
+.v_content ul li>h4 {
+	width: 145px;
+	overflow: hidden;
+	margin: 5px 0px 5px 0px;
+	font-weight: normal;
+	font-size: 12px;
+	padding: 0px 5px;
+}
+
+.v_content ul li>h4 a {
+	display: inline !important;
+	height: auto !important;
+}
+.v_content a {
+	color: #2B93D2;
+	text-decoration: none;
+}
+
+.v_content ul li .index_promotion_content {
+	line-height: 15px;
+	padding-bottom: 10px;
+}
+
+.v_content ul li span {
+	color: #666;
+	padding: 0px 5px;
+	font-size: 12px;
+}
+
+.v_content ul li em {
+	color: #888;
+	font-family: Verdana;
+	font-size: 15px;
+}
+
+.v_content ul li span {
+	color: #666;
+	padding: 0px 5px;
+	font-size: 12px;
+}
+.btn_go {
+	postion: relative;
+	top: -10px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.btn_go a {
+	font-size: 12px;
+	text-decoration: none;
+	color:#fff;
+padding: 0px 2px;	margin: 0px;
+}
+.btn_go a:hover {
+	text-decoration:  none;
+	color:#666;
+}

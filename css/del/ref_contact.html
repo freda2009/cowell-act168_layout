@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+<style>
+
+.fform-head-container {
+background: #f6f6f6;
+padding: 9px 0 0 20px;
+height: 50px;
+cursor: pointer;
+}
+.fform-head-container {
+cursor: pointer;
+}
+
+.fform-head-main-pencil {
+width: 23px;
+height: 23px;
+margin-top: 12px;
+background: url(images/pen-icon.png) no-repeat;
+float: left;
+}
+
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+<div class="fform-container fform-container-expanded">
+		<div class="fform-head-container">
+			<div class="fform-head-main">
+				<div class="fform-head-main-pencil">&nbsp;</div>
+				<div class="fform-head-main-title">Contact us</div>
+				<div class="fform-head-main-ico">&nbsp;</div>
+			</div>
+		</div>
+		<div class="fform-body-container" id="fform-body-container" style="display: block;">
+			<div class="fform-body-main">
+				<table class="fform-body-main-table ">
+					<tbody><tr>
+						<td class="tdfirst">
+							<label for="fform-sendername">Your&nbsp;Name<span class="required">*</span></label>
+						</td>
+						<td class="tdsecond" width="315" colspan="2">
+							<input tabindex="50" class="input-name" type="text" name="sendername" id="fform-sendername" size="25" maxlength="50" value="">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="fform-sendermail">Your&nbsp;e-mail<span class="required">*</span></label>
+						</td>
+						<td colspan="2">
+							<input tabindex="52" class="input-email" type="text" name="sendermail" id="fform-sendermail" size="25" maxlength="50" value="">
+						</td>
+					</tr>
+																	<input type="hidden" name="fform-question-types" value="Other Questions">
+											<tr>
+						<td>
+							<label for="fform-subject">Subject<span class="required">*</span></label>
+						</td>
+						<td colspan="2">
+							<input tabindex="53" class="input-subject" type="text" name="subject" id="fform-subject" size="50" maxlength="200" value="">
+						</td>
+					</tr>
+					<tr><td class="fform-body-main-label"><label for="fform-msgbody">Message<span class="required">*</span></label></td><td colspan="2"><textarea tabindex="54" name="msgbody" id="fform-msgbody" cols="50" rows="20" maxlength="10000"></textarea></td></tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td class="ext-form-td"><span><input type="hidden" id="extForm" name="extForm" value="publishMyMessage"><label class="for-ext-form checked" for="extForm"></label>Publish this message on the forum</span></td>
+						<td style="text-align:right;"><input class="input-sendqst" id="b-sendqst" type="submit" title="Send question" value="Send"></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td><p class="fform-body-main-timenote">Please remember that we work from 8am to 4pm GMT,<br>this is 4:00am to 12:00pm EST, 1:00am to 9:00am PST, and our public holidays may differ from yours.</p></td>						
+					</tr>
+				</tbody></table>
+			</div>
+		</div><!--/fform-body-container-->
+	</div>
+</body>
+</html>

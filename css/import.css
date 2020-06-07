@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+body { 
+	font-size: 12px; 
+	color: #222;
+font-family:font-family: "微軟正黑體","Microsoft JhengHei","新細明體","PMingLiU","細明體","MingLiU","標楷體","DFKai-sb",Helvetica,Arial,FreeSans,sans-serif;
+ }
+
+body ,.color_whithe,.color_whithe_sitemap{
+/*background: #d2eaff url(../images/noise2.png);*/
+/*background-color:aliceblue;*/
+background: aliceblue url(../images/noise2.png);
+}
+ul, li, form, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
+img { vertical-align: middle; border: 0; }
+.dn{ display:none;}
+.fl { float: left; }
+.fr { float: right; }
+
+.fb { font-weight: bold; }
+.fn { font-weight: normal; }
+.fi { font-style: italic; }
+.fu { text-decoration: underline; }
+
+.f12 { font-size: 12px; }
+.f14 { font-size: 14px; }
+.f16 { font-size: 16px; }
+.f18 { font-size: 18px; }
+.f20 { font-size: 20px; }
+.f22 { font-size: 22px; }
+.f24 { font-size: 24px; }
+.f26 { font-size: 26px; }
+.f28 { font-size: 28px; }
+
+/*.color_green{color: #093; }*/
+.fc00 { color: #FFF; }
+.fc01 { color: #999; }
+.fc02 { color: #280; }
+.fc03 { color: #F00; }
+.fc04 { color: #0873b9; }
+.fc05 { color: #F60; }
+.fc06 { color: #0066cb; }/*blue*/
+.fc07 { color: #111; }
+.fc11 { color: #C00; }
+.fc12 { color: #888; }
+.fc13 { color: #CCC; }
+.yellow{
+	color: #fc9604 !important;
+}
+.pink{
+color: #f45288 !important;
+}
+.purple {
+color: #5D12CE !important;
+}
+.bgcolor_blue{background-color: #d1f4ff;}
+.u_bg1{ background-color:#000;}
+.u_bg2{ background-color:#f4f4f4;}
+.u_fc1{ color:#ccc;}
+.u_fc2{ color:#7c7c7c;}
+.u_fs1{ font-style:italic;}
+.em01 em { color: #F00; font-style: normal; }
+
+.fs1 { font-family: "微軟正黑體", "Arial Unicode MS",'MS Yahei','微软雅黑'; }
+
+.lh01 { line-height: 18px; }
+.lh02 { line-height: 22px; }
+.lh015 { line-height: 1.5em; }
+.lh018 { line-height: 1.8em; }
+ .center{
+ margin: 0 auto;
+ text-align:center;
+}
+.m0 { margin: 0; }
+.ma { margin: auto; }
+.m0a {
+margin: 0 auto;
+}
+.m5 { margin: 5px; }
+.mt5 { margin: 5px 0 0 0; }
+.mb5 { margin: 0px 0 5px 0; }
+.mtb5 { margin: 5px 0; }
+.ml5 { margin: 0 0 0 5px; }
+.mr5 { margin: 0 5px 0 0; }
+.mtr5 { margin: 5px 5px 0 0; }
+.m10 { margin: 10px; }
+.mt10 { margin: 10px 0 0 0; }
+.mt10r1{margin: 10px 1px 0 0;}
+
+.mtb10 { margin: 10px 0; }
+.mb10 { margin: 0 0 10px 0; }
+.mb5 { margin: 0 0 5px 0; }
+.ml10 { margin: 0 0 0 10px; }
+.ml15 { margin: 0 0 0 15px; }
+.mr10 { margin: 0 10px 0 0; }
+.m20 { margin: 20px; }
+.ml20 { margin: 0 0 0 20px; }
+.mt20 { margin: 20px 0 0 0; }
+.mlr20{margin:0 20px;}
+.mr100{ margin-right:100px;}
+.mr50{ margin-right:50px;}
+.mt70{ margin-top:70px;}
+.mt60{ margin-top:60px;}
+
+.p0 { padding: 0; }
+.p5 { padding: 5px; }
+.p10 { padding: 10px; }
+.pl10{padding-left:10px;}
+.pl58{padding-left:58px;}
+
+.al { text-align: left; }
+.ac { text-align: center; }
+.ar { text-align: right; }
+.aj { text-align: justify; }
+
+.db { display: block; }
+.oh { overflow: hidden; }
+.ba { word-break: break-all; }
+
+.b0 { border: none; }
+.b1 { border: 1px solid #DDD; }
+.bb1 { border-bottom: 1px dashed #D7D7D7; padding-bottom: 5px; }
+.bb2 { border-bottom: 1px solid #DDD; height: 0; overflow: hidden; margin-bottom: 5px; }
+.bb3 { border-bottom: 1px dashed #DDD; height: 0; overflow: hidden; }
+.bn { border: none; }
+
+.bg1 { background: #FFF; }
+.bg2 { background: #f2f2f2; }
+.bg3 { background: #FAFAFA; }
+.bg4 { background: #f4ffdc; }
+.bg5 { background: #EEE; }
+.bg6 { background: #FEFEFE; }
+.bg7 { background: #0066cb; }
+
+.ctn { width: 985px; margin: 10px auto; }
+.ctn-nm { margin: 0 auto; }
+.ld0 { width: 985px; }
+.ld1l { width: 680px; }
+.ld1r { width: 300px; }
+.ld2l { width: 760px; }
+.ld2r { width: 215px; }
+.ld2  { width: 985px; }
+.ld3l { width: 720px; }
+.ld3r { width: 255px; }
+.ld4 { width: 900px; margin: 0 auto; }
+
+.ld0_21 { width: 470px; float: left; margin: 10px !important; margin: 8px; }
+.ld0_41 { width: 230px; float: left; margin: 8px !important; margin: 6px; }
+
+.ld5l{
+width: 220px;/*190px;*/
+height:auto; 
+float: left; 
+}
+
+.ld5r{
+width:740px;/* 650px; */
+height:auto;
+float: left; 
+}
+
+.a1 a { color: #36C; text-decoration: none; }
+.a1 a:hover { color: #F66; text-decoration: underline; }
+.a2 a { color:  #222;
+ text-decoration: none; }
+.a2 a:hover { color: #F66; text-decoration: underline; }
+.a2 a:visited {
+ color: #333;
+ text-decoration: underline; }
+.a3 a { color: #333;
+	text-decoration: none; }
+.a3 a:hover { color: #0873b9; text-decoration: underline; }
+.a3 a:visited {
+/*color: #555; */
+color:#081E44;
+text-decoration: underline; 
+}
+.a4 a { color: #005eca; text-decoration: none; }
+.a4 a:hover { color: #0873b9; text-decoration: underline; }
+.a5 a { color: #999; text-decoration: none; }
+.a5 a:hover { color: #0873b9; text-decoration: underline; }
+.a6 a { color:#222 ; text-decoration: none; }
+.a6 a:hover { color: #F90; text-decoration: underline; }
+
+.ul_1 li { list-style: disc; margin: 0 0 0 18px; }
+.ul_2 li { list-style: disc; margin: 5px 0 5px 18px; }
+
+.w100 { width: 100%; }
+
+.d25 { width: 25px; }
+.d50 { width: 50px; }
+.d75 { width: 75px; }
+.d100 { width: 100px; }
+.d110 { width: 110px; }
+.d120 { width: 120px; }
+.d125 { width: 125px; }
+.d150 { width: 150px; }
+.d175 { width: 175px; }
+.d200 { width: 200px; }
+.d225 { width: 225px; }
+.d250 { width: 250px; }
+.d300 { width: 300px; }
+.d350 { width: 350px; }
+.d400 { width: 400px; }
+.d425 { width: 425px; }
+.d450 { width: 450px; }
+.d500 { width: 500px; }
+.d525 { width: 525px; }
+.d550 { width: 550px; }
+.d600 { width: 600px; }
+.d625 { width: 625px; }
+.d650 { width: 650px; }
+.d700 { width: 700px; }
+.d715 { width: 715px; }
+.d750 { width: 750px; }
+.d800 { width: 800px; }
+.d840 { width: 840px; }
+.d850 { width: 850px; }
+.d900 { width: 900px; }
+.d985 { width: 985px; }
+.d1000 {width: 1000px;}
+
+.h0 { height: 0px; }
+.h20 { height: 20px; }
+.h40 { height: 40px; }
+.h50 { height: 50px; }
+.h60 { height: 60px; }
+.h80 { height: 80px; }
+.h100 { height: 100px; }
+
+.mh40 { max-height: 40px; }
+
+.clear { height: 0; clear: both; overflow: hidden; }
+.blind{display: none;}
+.text_to_center{text-align: center !important;}

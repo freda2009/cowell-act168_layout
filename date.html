@@ -1,0 +1,109 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+	 - 團體旅遊搜尋- 
+</title>
+
+  <style type="text/css" title="currentStyle">
+/*btn_search */
+	div.search_mid {	
+		margin: 0;
+		padding: 0;
+		width: 71px;
+		height: 27px;
+	}
+	.search_mid ul.btn {
+		margin: 0;
+		padding: 0;
+		}
+	.search_mid ul.btn li.search {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		}
+	.search_mid ul.btn li.search a{
+		display:block;width:71px;height:27px;background-image: url(images/G_btn_search.png);
+		background-repeat: no-repeat;background-position: 0 -27px;}
+	.search_mid ul.btn li.search a:hover{
+	display:block;width:71px;height:27px;background-image: url(images/G_btn_search.png);
+	background-repeat: no-repeat;background-position: 0 0px;
+    }
+    </style>
+
+<!--end index頁:WdatePicker-->
+<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+<link href="js/My97DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+<!--end index頁WdatePicker:-->
+
+</head>
+
+<body style="">
+    <form name="FORM1" method="post" action="" id="FORM1">
+        <div>
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTAzOTA4OTgwNmRkK9fjkp0aGPPItkUd27VtBVnZ6Nw=">
+        </div>
+
+        <div>
+
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBgKi64mtAgLH6pqzBQLhlKLQDALelKbKAwLmoNvoDgLpoNvoDjU9W/IDUDyGHi1c7u1VNr/h0AWS">
+        </div>
+        <div id="divTicketBox1" style="float: left;">
+            <table border="0" cellpadding="0" cellspacing="0" width="390" style="line-height: 30px;">
+                <tbody>
+                    <tr>
+                        <td class="title" valign="top">
+                            <nobr>目的地</nobr>
+                        </td>
+                        <td colspan="3">
+                            <select name="ITN_AREA" id="ITN_AREA">
+                                <option value="0010">其他</option>
+                                <option value="0001">北美洲</option>
+                                <option value="0002">中南美</option>
+                                <option value="0003">歐洲</option>
+                                <option selected="selected" value="0004">中國大陸</option>
+                                <option value="0005">中東或非洲</option>
+                                <option  value="0006">東北亞</option>
+                                <option value="0007">大洋洲</option>
+                                <option value="0008">南亞</option>
+                                <option value="0009">東南亞</option>
+                                <option value="0013">西亞</option>
+                            </select>
+                            <select name="ITN_NATN" id="ITN_NATN">
+
+                                <option value="">請選擇</option><option value="JP">日本</option><option value="KR">韓國</option></select>
+                                <select name="ITN_CITY" id="ITN_CITY">
+
+                                    <option value="">請選擇</option></select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    <nobr>出團日期</nobr>
+                                </td>
+                                <td>
+                                    <nobr>
+                                        <input name="USE_BDT" type="text" id="USE_BDT" class="Wdate" onFocus="WdatePicker({isShowClear:false,readOnly:true})" size="10" value="2013/11/20" readonly="">
+                                        ～
+                                        <input name="USE_EDT" type="text" id="USE_EDT" class="Wdate" onFocus="WdatePicker({isShowClear:false,readOnly:true,minDate:'#F{$dp.$D(\'USE_BDT\')}'})" size="10" value="2014/11/20">
+                                    </nobr>
+                                </td>
+                                <td colspan="2">
+
+                                    <div class="search_mid">
+                                        <ul class="btn">
+                                            <li class="search">
+                                                <a href="#" onClick="return btnSearch_onclick()"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+
+
+</body>
+</html>

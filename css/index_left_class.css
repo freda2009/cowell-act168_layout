@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, ul, li, h1, h2, h3, h4, h5, h6, p, ol {
+margin: 0;
+padding: 0;
+}
+
+.u-i-sharelist {
+height: auto;
+width:
+overflow: hidden;
+margin-bottom: 25px;
+padding: 5px;
+}
+.u-i-sharelist li {
+padding-bottom: 15px;
+height: 100px;
+margin-bottom: 15px;
+border-bottom: 1px dotted #ddd;
+position: relative;
+}
+.u-i-sharelist li h4 {
+display: block;
+position: absolute;
+left: 3px;
+top: -3px;
+top: -4px\8;
+width: 23px;
+font-size: 12px;
+padding: 5px 4px 0 0;
+text-align: center;
+color: #fff;
+height: 49px;
+background: url(../images/sprite_ydd_dot_ico_ex.v001.png) no-repeat;
+}
+.u-i-sharelist li img {
+width:100px;
+height: 100px;
+}
+
+
+.u-i-sharelist li div,.u-i-sharelist li strong{color:#999; margin-bottom:5px}
+.u-i-sharelist li strong{ display:block; font-size:14px;font-weight:normal}
+.u-i-sharelist li a,.u-i-sharelist li a:visited{color:#0066CB}
+
+.u-i-sharelist li div, .u-i-sharelist li strong {
+color: #999;
+margin-bottom: 5px;
+}
+.u-i-sharelist li a, .u-i-sharelist li a:visited {
+color: #0066CB;
+}
+.u-i-sharelist span.classtitle{
+	display:inline-block;
+	float:left;
+	}
+.fright{float:right;}
+.u-i-sharelist li div, .u-i-sharelist li strong {
+color: #999;
+margin-bottom: 5px;
+}
+.u-i-sharelist li .common-bgc1 {
+margin-left: 15px;
+height: 65px;
+padding: 10px;
+position: relative;
+width: 215px;
+}
+.common-bgc1 {
+background-color: #EEF9FF;
+}
+.u-i-sharelist li .common-bgc1 span {
+display: block;
+position: absolute;
+left: -8px;
+top: 35px;
+border-top: 8px dashed transparent;
+border-right: 8px solid #EDF8FE;
+border-bottom: 8px dashed transparent;
+height: 0;
+line-height: 0;
+width: 0;
+overflow: hidden;
+}
+.u-i-sharelist li .common-bgc1 div {
+height: 18px;
+margin-bottom: 3px;
+width: 215px;
+overflow: hidden;
+}
+.u-i-sharelist .fleft img, .u-i-sharelist li .common-bgc1 img {
+width: 16px;
+height: 16px;
+margin-right: 5px;
+float: left;
+}

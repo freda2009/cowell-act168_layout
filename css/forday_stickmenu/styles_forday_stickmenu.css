@@ -1,0 +1,318 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0b1 | 201101
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+   
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+   // font-size: 100%;
+   // font: inherit;
+    vertical-align: baseline;
+}
+
+/* Trannsitions */
+div.subnav-container>nav.dayplan li a, .links li a, .image, #gallery ul.gallery a img, .social img, a.-button, input[type="text"], textarea {
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+/* HTML5 display-role reset for older browsers */
+
+.subnav-container > nav.dayplan{
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+
+.subnav-container > nav.dayplan, section {
+    display: block;
+}
+
+a {
+	color:388ee5;// #40bfe8;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	margin-bottom: 1em;
+}
+
+
+.wrapper { 
+	position: relative; 
+	width: auto;//900px; 
+	margin: 0 auto; 
+	padding: 0;
+	
+	background: #ffffff;
+	
+	-webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1); /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+	-moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1); /* FF3.5 - 3.6 */
+	box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1); /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+	
+	-webkit-border-radius: 0 0 1px 1px;
+	-moz-border-radius: 0 0 1px 1px;
+	border-radius: 0 0 1px 1px;
+	
+}
+
+
+
+hr {
+	width: 100%;
+	display: block;
+	height: 1px;
+	border: none;
+	outline: none;
+	clear: both;
+	background: #ccc;
+	margin: 1em 0;
+	
+}
+
+.wrapper .column { 
+	float: left; 
+	display: inline; 
+	width: 50%;
+	padding: 0;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;	
+}
+
+.column.left { padding-right: 1em }
+.column.right { padding-left: 1em }
+
+div.subnav-container { 
+//margin-top:-10px;
+margin-bottom:0px;
+width:100%;
+margin-right:-2em }
+
+div.subnav-container  >nav.dayplan {
+	z-index:98; //1000;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width:1013px;//101.5%;//928px;
+	//padding: 1em 3em;
+	padding:0.6em 3em;
+	margin-left: -14px;
+
+	background:#bce5ed; //rgba(162,220,231,0.7);
+	filter: alpha(opacity=80); /* IE6-IE8 */
+	position: relative;
+	border-top-left-radius: 1em 0.5em;
+	border-top-right-radius: 1em 0.5em;
+	font-family: "微軟正黑體", "Arial Unicode MS", sans-serif;
+
+}
+
+div.subnav-container .nav-left {
+	position: absolute;
+	left:0;
+	bottom:-12px;//-14px;
+	width:14px;
+	height:12px;//14px;
+	//background: #88d8e8;
+
+	background: #bce5ed;//rgba(162,216,227,0.7);
+	border-bottom-left-radius: 100% 50%;
+}
+
+div.subnav-container .nav-left:after {
+	content: '';
+	position: absolute;
+	right:0;
+	width:66%;
+	height:66%;
+	background: #000;
+	border-top-left-radius:100% 50%;
+	border-bottom-left-radius:100% 50%;
+}
+
+div.subnav-container .nav-right {
+	position: absolute;
+	right:0;
+	bottom:-12px;//-14px;
+	width:14px;
+	height:12px;//14px;
+	background:#bce5ed;// rgba(162,216,227,0.7);
+	border-bottom-right-radius:100% 50%;
+}
+
+div.subnav-container .nav-right:after {
+	content: '';
+	position: absolute;
+	left:0;
+	width:66%;
+	height:66%;
+
+	background: #000;
+	border-top-right-radius:100% 50%;
+	border-bottom-right-radius:100% 50%;
+}
+ 
+div.subnav-container > nav.dayplan li {
+	display: inline;
+	list-style: none;
+}
+
+div.subnav-container > nav.dayplan li a {
+	text-decoration: none;
+	font-size:15px;//1.2em;
+	color:#2db3be;//#36A021;
+	font-weight: bold;
+	display: inline-block;
+	width: 6em;//5em; 
+	text-align: center;
+	padding:2px 10px; //.5em 1em;
+	
+	-webkit-border-radius:5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.subnav-container > nav.dayplan li a:hover{
+	color: #fff;
+	background: #40bfe8;
+	-webkit-border-radius:5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.subnav-container > nav.dayplan li a.selected {
+	color:#fff;
+	background: #40bfe8;
+	-webkit-border-radius:5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+ 
+/*clearfix*/    
+.wrapper:before,
+.wrapper:after {
+	content: '';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	clear: both;
+	zoom: 1 
+}
+
+.sticky {
+	position: fixed;
+	top:15px;
+	animation:thedrop 1s 1;
+	-moz-animation:thedrop 1s 1;
+	-webkit-animation:thedrop 1s 1;
+}
+
+.sticky  .subnav-container .subnav-above {
+	position: absolute;
+	top:-15px;
+	left:1em;
+	right:1em;
+	height:15px;
+	background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 80%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+    
+/*media queries*/  
+
+	/* #Tablet (Portrait) width of 768px */  
+	/*@media only screen and (min-width: 768px) and (max-width: 959px) {
+   		.wrapper { 
+   			width: 700px;
+   		}
+		
+		.subnav-container nav {
+			width: 728px;
+		}
+
+	}
+	
+	/* #Mobile (Portrait) width of 320px */
+/*
+    @media only screen and (max-width: 767px) {
+        .wrapper { 
+        	width: 300px;
+        }
+        
+        .wrapper .column {
+        	float: none;
+        	width: 100%;
+        }
+		
+		.subnav-container nav {
+			width: 328px;
+		}
+        
+        h1 {
+			font-size: 2.5em;
+			text-align: center;
+        }
+        
+        h3 {
+			font-size: 1.3em;
+			text-align: center;
+		}
+		
+ 	}
+ 	
+ 	/* Mobile (Landscape) width of 480px */
+/*
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .wrapper {
+        	width: 400px;
+        }
+		
+		.subnav-container nav {
+			width: 428px;
+		}
+        
+        h1 {
+			font-size: 3.5em;
+        }
+        
+        h3 {
+			font-size: 1.7em;
+		}
+
+  	}     
+ */

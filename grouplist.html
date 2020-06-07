@@ -1,0 +1,1299 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<title>團體總表</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<style type="text/css" media="all">
+		@import url("the_third_party/ivaynberg_select2/select2.css");
+		@import url("css/base.css");
+		@import url("css/index.css");
+		@import url("css/index_midslide.css");
+		@import url("css/index_movie_block.css");	/*首頁的影音區CSS*/
+		@import url("css/index_bloglead.css");	/*首頁的領隊旅遊經驗分享區CSS*/
+		@import url("css/index_photoAlbums.css");	/*首頁的旅遊相簿CSS*/
+		@import url("css/style_for_list.css");/*分類頁用*/
+		@import url("css/style_for_dayplan.css");/*行程頁的CSS*/
+		@import url("css/table_airplane_info.css");/*行程頁的航班表格CSS*/
+		@import url("css/forday_stickmenu/styles_forday_stickmenu.css");/*行程頁的submenu*/
+		@import url("css/font-awesome/css/font-awesome.min.css");	/*行程頁的submenu*/
+		@import url("css/owl.carousel.css");/*分類頁的國旗選單*/
+		@import url("css/style_for_news_grouplist_sitemap.css");	/*FOR 最新消息|團體總表|網站地圖 頁*/
+	</style>
+
+
+	<link rel="icon" type="image/icon" href="ico/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|LilyScriptOne-Regular|Ubuntu:400,500,700">
+
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome-ie7.min.css">
+	<![endif]-->
+
+	<!--[if gte IE 9]>
+		<style type="text/css">
+			.gradient {
+				filter: none;
+			}
+		</style>
+	<![endif]-->
+
+	<!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+	<script language="javascript" type="text/ecmascript" src="scripts/jquery.min.js"></script>
+	<script language="javascript" type="text/ecmascript" src="scripts/jquery.form.js"></script>
+
+	<script language="javascript" type="text/ecmascript" src="scripts/scroll.js"></script>
+	<script language="javascript" type="text/ecmascript" src="scripts/index.js"></script>
+
+	<!--start index頁:WdatePicker-->
+	<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+	<link href="js/My97DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	<!--end index頁WdatePicker:-->
+
+	<!--登入的下拉選單用bootstrap.min.js-->
+	<script language="javascript" type="text/ecmascript" src="scripts/bootstrap.min.js"></script>
+
+	<!--index頁:中間強檔促銷行程-->
+	<link rel="stylesheet" type="text/css" href="css/index_promotions.css">
+	<script type="text/javascript" src="scripts/index_promotions.js"></script>
+
+	<!--index頁:標籤雲tagscloud.js-->
+		<script type="text/javascript" src='scripts/tagscloud.js'></script>
+
+	<!--index首頁影音區塊jquery-latest.min.js & index_movieblock.js-->
+	<script type="text/javascript" src="scripts/index_movieblock.js"  ></script>
+
+	<!--分類頁 : START 瀏覽方式切換-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("a.switch_thumb").toggle(function(){
+				$(this).addClass("swap");
+					$("ul.display").fadeOut("fast", function() {
+						$(this).fadeIn("fast").addClass("thumb_view");
+						});
+					}, function () {
+				$(this).removeClass("swap");
+				$("ul.display").fadeOut("fast", function() {
+					$(this).fadeIn("fast").removeClass("thumb_view");
+					});
+				});
+		});
+	</script>
+	<!--END 分類頁: 瀏覽方式切換-->
+
+	<!--START 首頁中間精選攝影行程用-->
+	<script type="text/javascript">
+			$(document).ready(function() {
+				//Show Banner
+				$(".examples_image .desc").show(); //Show Banner
+				$(".examples_image .block").animate({ opacity: 0.7 }, 1 ); //Set Opacity
+
+				//Click and Hover events for thumbnail list
+				$(".mune_thumb ul li:first").addClass('active');
+				$(".mune_thumb ul li").click(function(){
+					//Set Variables
+					var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+					var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+					var imgDesc = $(this).find('.block').html(); 	//Get HTML of block
+					var imgDescHeight = $(".examples_image").find('.block').height();	//Calculate height of block
+
+					if ($(this).is(".active")) {  //If it's already active, then...
+						return false; // Don't click through
+					} else {
+						//Animate
+						$(".examples_image .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250 , function() {
+						$(".examples_image .block").html(imgDesc).animate({ opacity: 0.85,	marginBottom: "0" }, 250 );
+						$(".examples_image img").attr({ src: imgTitle , alt: imgAlt});
+						});
+					}
+
+					$(".mune_thumb ul li").removeClass('active'); //Remove class of 'active' on all lists
+					$(this).addClass('active');  //add class of 'active' on this list only
+					return false;
+
+				}) .hover(function(){
+					$(this).addClass('hover');
+					}, function() {
+					$(this).removeClass('hover');
+				});
+
+				//Toggle
+				$("a.collapse").click(function(){
+				$(".examples_image .block").slideToggle();
+				$("a.collapse").toggleClass("show");
+				});
+
+			});//Close Function
+		</script>
+		<!--END 首頁中間精選攝影行程用-->
+
+		<!--START 上方選單 mouseOVER 出現SUBMENU-->
+		<script type="text/javascript">
+			function MM_over(mmObj) {
+					var mSubObj = mmObj.getElementsByTagName("div")[0];
+					mSubObj.style.display = "block";
+					mSubObj.style.backgroundColor = "";
+				}
+				function MM_out(mmObj) {
+					var mSubObj = mmObj.getElementsByTagName("div")[0];
+					mSubObj.style.display = "none";
+				}
+		</script>
+		<!--END 上方選單 mouseOVER 出現SUBMENU-->
+
+
+    <script type="text/javascript" src="scripts/fancybox/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script type="text/javascript" src="scripts/fancybox/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="scripts/fancybox/jquery.fancybox.css" media="screen" />
+     
+    <script type="text/javascript">
+			  $(document).ready(function() {
+						$("a.fancybox_photo").fancybox({
+						    'opacity'			  : true,
+						    'overlayShow'    : false,
+						    'transitionIn'    : 'elastic',
+						    'transitionOut'    : 'none'
+						});
+						$(".various").fancybox({
+								'maxWidth'	: 800,
+								'maxHeight'	: 600,
+								'fitToView'	: false,
+								'width'		: '70%',
+								'height'		: '70%',
+								'autoSize'	: false,
+								'closeClick'	: false,
+								'openEffect'	: 'none',
+								'closeEffect'	: 'none'
+							});
+			  });
+    </script>
+<!--start 分類頁的國旗選單用-->
+	<script src="scripts/owl.carousel.js"></script>
+	<script>
+    $(document).ready(function() {
+
+			var owl = $("#owl-demo");
+
+			owl.owlCarousel({
+
+			items : 10, //10 items above 1000px browser width
+			itemsDesktop : [1000,5], //5 items between 1000px and 901px
+			itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
+			itemsTablet: [600,2], //2 items between 600 and 0;
+			itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+
+			});
+
+			// Custom Navigation Events
+			$(".owl_next").click(function(){
+			  owl.trigger('owl.next');
+			})
+			$(".owl_prev").click(function(){
+			  owl.trigger('owl.prev');
+			})
+			$(".owl_play").click(function(){
+			  owl.trigger('owl.play',1000);
+			})
+			$(".owl_stop").click(function(){
+			  owl.trigger('owl.stop');
+			})
+    });
+    </script>
+<!--END 分類頁的國旗選單用-->
+
+<!--MAP HOVER BOX-->
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+
+</head>
+
+<body >
+		<!--START FACEBOOK 按讚用-->
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=153150358224827";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+		<!--END FACEBOOK 按讚用-->
+
+	<div id="main">
+
+		<div id="navigation">
+			<div class="logo">
+				<div class="d250 fl">
+					<a href="index.html"><img src="images/logo.png" alt="大地假期旅遊網" class="mt10"></a>
+				</div>
+				<div class="d700 fr">
+					<div class="topbar a3">
+						<div class="frml"></div>
+						<div class="frmc">
+							<div class="d450 ml10 fl f12">
+								<div id="user_info_default">
+									<div class="login">
+										<div class="dropdown">
+											<a class="dropdown-toggle toggle" data-toggle="dropdown" data-target="#" href="#">登入</a>
+											<ul class="dropdown-menu" role="menu">
+												<div class="forms m10">
+													<form name="loginkform" method="post" action="membercenter.html#login">
+														<div class="close">
+															會員登入
+															<a href="" onClick="show_submenu_list(null);" data-toggle="close"><!-- X -->
+																<img src="images/close.gif" />
+															</a>
+														</div>
+														<div class="control-group">
+															<label for="email" class="">
+																<span class="fc03">*</span> E-mail
+															</label>
+															<div class="field" style="margin-left:0;">
+																<input type="text" id="login_email" name="email" class="input-large" placeholder="Email" value="">
+															</div>
+														</div>
+														<div class="control-group">
+															<label for="password" class="">
+																<span class="fc03">*</span> 密碼
+															</label>
+															<div class="field" style="margin-left:0;">
+																<input type="password" id="login_password" name="password" class="input-large" placeholder="密碼">
+															</div>
+														</div>
+														<div class="control-group">
+															<div class="field" style="margin-left:0;">
+																<span class="a2 fi ml10">
+																	<a href="forgot_password.html" class="various fancybox.iframe">忘記密碼</a>
+																</span>
+																<span class="a2 fi ml10">
+																	<a href="membercenter.html" >會員註冊</a>
+																</span>
+																<!--
+																<input type="submit" name="button" id="submit_button" value="登入" class="btn fr" style="width:115px; height:30px;">
+																-->
+																<a class="oval-bluebutton" href="" title="" target="_blank">
+																	<span>登入</span>
+																</a>
+															</div>
+														</div>
+													</form>
+												</div>
+											</ul>
+										</div>
+									</div>
+									<div class="fl d350">
+										<span class="divider">|</span>
+										<a href="aboutme.html">關於大地假期</a>
+										<span class="divider">|</span>
+										<span id="top_message">
+											<a href="grouplist.html"> 最新出團總表 </a>
+											<span class="divider">|</span>
+											<a href="sitemap.html">網站地圖</a>
+										</span>
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="frmr"></div>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+					<div class="sns_icons fc04">
+						<a href="https://www.facebook.com/ACTWG" target="_blank"><img src="images/facebook_02.gif" alt="Facebook"></a>
+						<a href="mailto:dianya168@yahoo.com.tw" target="_blank"><img src="images/mail_02.gif" alt="Email"></a>
+						<span class="sns_icons_txt">02-2508-2105 (代表號) | 傳真：02-25084915 </span>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="navi">
+				<div class="navibar">
+					<div class="frml"></div>
+					<div class="frmc">
+						<div class="navi">
+							<ul class="links inline clearfix btns" id="main-menu" style="display: inline-table; float: left;">
+								<li class="first leaf" style="padding-right: 0px; padding-left: 0px;" mlid="237">
+									<!--
+									<a href="#" class="submenu_item" id="switch_submenu_237_list" onclick="return show_submenu_list(237);">首頁
+									-->
+									<a href="index.html" class="submenu_item" id="switch_submenu_237_list" >首頁
+									</a>
+									<div class="blocker">
+									</div>
+								</li>
+								<li class="leaf" style="padding-right: 0px; padding-left: 0px;" mlid="340" onMouseOver="MM_over(this)" onMouseOut="MM_out(this)">
+
+									<a href="/taxonomy/term/8" title="攝影旅遊" id="switch_submenu_340_list" class="submenu_item" >攝影旅遊
+									</a>
+
+									<!--start submenu-list-->
+									<div id="submenu_340_list" class="hide topl_list submenu_list" style="display: none;">
+										<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+										<div class="frm2 bg6 a2">
+											<div class="topl_frms_frm">
+												<div class="topl">
+													<div class="topl_tt"><a href="list_photograph.html">國外攝影行程</a></div>
+													<div class="topl_cc">
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_photograph.html">台灣攝影行程</a></div>
+													<div class="topl_cc">
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_photograph.html">模特兒攝影行程</a></div>
+													<div class="topl_cc">
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--end submenu-list-->
+									<div class="blocker"></div>
+								</li>
+								<li class="leaf" style="padding-right: 0px; padding-left: 0px;" mlid="334" onMouseOver="MM_over(this)" onMouseOut="MM_out(this)">
+									<a href="/taxonomy/term/2" title="俄羅斯旅遊" id="switch_submenu_334_list" class="submenu_item" >俄羅斯旅遊
+									</a>
+									<!--start submenu-list-->
+									<div id="submenu_334_list" class="hide topl_list submenu_list" style="display: none;">
+										<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+										<div class="frm2 bg6 a2">
+											<div class="topl_frms_frm">
+												<div class="topl">
+													<div class="topl_tt">俄羅斯全系列</div>
+													<div class="topl_cc">
+														<a href="list_russia.html">西伯利亞大鐵路系列</a>
+														<a href="list_russia.html">堪察加半島系列</a>
+														<a href="list_russia.html">貝加爾湖系列</a>
+														<a href="list_russia.html">金環城市系列</a>
+														<a href="list_russia.html">伏爾加河 郵輪渡假</a>
+														<div class="topl_tt"><a href="list_russia.html#">俄羅斯+跨國行程</a></div>
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!--end submenu-list-->
+									<div class="blocker">
+									</div>
+								</li>
+								<li class="expanded" style="padding-right: 0px; padding-left: 0px;" mlid="335" onMouseOver="MM_over(this)" onMouseOut="MM_out(this)">
+									<a href="/taxonomy/term/3" title="亞洲旅遊" id="switch_submenu_335_list" class="submenu_item" >
+										亞洲旅遊
+									</a>
+									<!--start submenu-list-->
+									<div id="submenu_335_list" class="hide topl_list submenu_list" style="display: none;">
+										<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+										<div class="frm2 bg6 a2">
+											<div class="topl_frms_frm">
+												<div class="topl">
+													<div class="topl_tt">中國大陸旅遊</div>
+													<div class="topl_cc">
+														<a href="list_asia.html">西藏尼泊爾</a>
+														<a href="list_asia.html">新疆絲路</a>
+														<a href="list_asia.html">香格里拉</a>
+														<a href="list_asia.html">華北</a>
+														<a href="list_asia.html">華南</a>
+														<a href="list_asia.html">大江南北</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_asia.html">台灣</a></div>
+													<div class="topl_cc">
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt">東亞</div>
+													<div class="topl_cc">
+														<a href="list_asia.html">北韓</a>
+														<a href="list_asia.html">蒙古國</a>
+														<a href="list_asia.html">日本</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt">東南亞</div>
+													<div class="topl_cc">
+														<a href="list_asia.html">印尼</a>
+														<a href="list_asia.html">東/西帝汶</a>
+														<a href="list_asia.html">緬甸</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt">南亞</div>
+													<div class="topl_cc">
+														<a href="list_asia.html">印度</a>
+														<a href="list_asia.html">不丹</a>
+														<a href="list_asia.html">尼泊爾</a>
+														<a href="list_asia.html">巴基斯坦</a>
+														<a href="list_asia.html">斯里蘭卡</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--end submenu-list-->
+									<div class="blocker"></div>
+								</li>
+								<li class="leaf" style="padding-right: 0px; padding-left: 0px;" mlid="336" onMouseOver="MM_over(this)" onMouseOut="MM_out(this)">
+									<a href="/taxonomy/term/4" title="歐洲旅遊" id="switch_submenu_336_list" class="submenu_item" >歐洲旅遊
+									</a>
+									<!--start submenu-list-->
+									<div id="submenu_336_list" class="hide topl_list submenu_list" style="display: none;">
+										<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+										<div class="frm2 bg6 a2">
+											<div class="topl_frms_frm">
+												<div class="topl">
+													<div class="topl_tt"><a href="list_europe.html">北歐</a></div>
+													<div class="topl_cc">
+														<a href="list_europe.html">丹麥</a>
+														<a href="list_europe.html">挪威</a>
+														<a href="list_europe.html">冰島</a>
+														<a href="list_europe.html">芬蘭</a>
+														<a href="list_europe.html">瑞典</a>
+														<a href="list_europe.html">立陶宛|拉脫維亞|愛沙尼亞</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_europe.html">南歐</a></div>
+													<div class="topl_cc">
+														<a href="list_europe.html">葡萄牙</a>
+														<a href="list_europe.html">西班牙</a>
+														<a href="list_europe.html">希臘</a>
+														<a href="list_europe.html">義大利|梵蒂岡|直布羅陀|馬其頓</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_europe.html">東歐</a></div>
+													<div class="topl_cc">
+														<a href="list_europe.html">烏克蘭</a>
+														<a href="list_europe.html">白俄羅斯</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_europ.html">西歐</a></div>
+													<div class="topl_cc">
+														<a href="list_europe.html">英國</a>
+														<a href="list_europe.html">波蘭</a>
+														<a href="list_europe.html">匈牙利</a>
+														<a href="list_europe.html">斯洛伐克</a>
+														<a href="list_europe.html">捷克</a>
+														<a href="list_europe.html">保加利亞</a>
+														<a href="list_europe.html">羅馬尼亞</a>
+														<a href="list_europe.html">烏克蘭</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_europe.html">西歐</a></div>
+													<div class="topl_cc">
+														<a href="list_europe.html">法國</a>
+														<a href="list_europe.html">荷蘭</a>
+														<a href="list_europe.html">比利時</a>
+														<a href="list_europe.html">盧森堡|瑞士</a>
+														<a href="list_europe.html">奧地利</a>
+														<a href="list_europe.html">摩納哥</a>
+														<a href="list_europe.html">德國</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--end submenu-list-->
+									<div class="blocker"></div>
+								</li>
+								<li class="leaf" style="padding-right: 0px; padding-left: 0px;" mlid="339" onMouseOver="MM_over(this)" onMouseOut="MM_out(this)">
+									<a href="/taxonomy/term/5" title="非洲旅遊" id="switch_submenu_339_list" class="submenu_item" >非洲旅遊
+									</a>
+									<!--start submenu-list-->
+									<div id="submenu_339_list" class="hide topl_list submenu_list" style="display: none;">
+										<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+										<div class="frm2 bg6 a2">
+											<div class="topl_frms_frm">
+												<div class="topl">
+													<div class="topl_tt"><a href="list_africa.html">東非肯亞-動物天堂</a></div>
+													<div class="topl_cc">
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_africa.html">東非跨國之旅</a></div>
+													<div class="topl_cc">
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--end submenu-list-->
+									<div class="blocker"></div>
+								</li>
+									<li class="leaf" style="padding-right: 0px; padding-left: 0px;" mlid="338" onMouseOver="MM_over(this)" onMouseOut="MM_out(this)">
+										<a href="/taxonomy/term/6" title="美洲旅遊" id="switch_submenu_338_list" class="submenu_item">美洲旅遊
+										</a>
+									<!--start submenu-list-->
+									<div id="submenu_338_list" class="hide topl_list submenu_list" style="display: none;">
+										<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+										<div class="frm2 bg6 a2">
+											<div class="topl_frms_frm">
+												<div class="topl">
+													<div class="topl_tt">北美洲</div>
+													<div class="topl_cc">
+														<a href="list_america.html">美國 阿拉斯加</a>
+														<a href="list_america.html">美國 夏威夷</a>
+														<a href="list_america.html">加拿大</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_america.html">拉丁美洲</a></div>
+													<div class="topl_cc">
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--end submenu-list-->
+										<div class="blocker"></div>
+									</li>
+									<li class="leaf" style="padding-right: 0px; padding-left: 0px;" mlid="337" onMouseOver="MM_over(this)" onMouseOut="MM_out(this)">
+										<a href="/taxonomy/term/7" title="紐澳旅遊" id="switch_submenu_337_list" class="submenu_item">紐澳旅遊
+										</a>
+										<!--start submenu-list-->
+										<div id="submenu_337_list" class="hide topl_list submenu_list" style="display: none;">
+											<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+											<div class="frm2 bg6 a2">
+												<div class="topl_frms_frm">
+													<div class="topl">
+														<div class="topl_tt"><a href="list_australia.html">澳洲</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+													<div class="topl">
+														<div class="topl_tt"><a href="list_australia.html">紐西蘭</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!--end submenu-list-->
+										<div class="blocker"></div>
+									</li>
+									<li class="last leaf" style="padding-right: 0px; padding-left: 0px;" mlid="341" onMouseOver="MM_over(this)" onMouseOut="MM_out(this)">
+										<a href="/taxonomy/term/9" title="主題旅遊" id="switch_submenu_341_list" class="submenu_item" >主題旅遊
+										</a>
+										<!--start submenu-list-->
+										<div id="submenu_341_list" class="hide topl_list submenu_list" style="display: none;">
+											<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+											<div class="frm2 bg6 a2">
+												<div class="topl_frms_frm">
+													<div class="topl">
+														<div class="topl_tt"><a href="list_themetravel.html">節慶旅遊</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+													<div class="topl">
+														<div class="topl_tt"><a href="list_themetravel.html">郵輪渡假</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+													<div class="topl">
+														<div class="topl_tt"><a href="list_themetravel.html">海外婚禮|蜜月旅遊</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+													<div class="topl">
+														<div class="topl_tt"><a href="list_themetravel.html">主題樂園</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+													<div class="topl">
+														<div class="topl_tt"><a href="list_themetravel.html">SPA休閒&購物</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+													<div class="topl">
+														<div class="topl_tt"><a href="list_themetravel.html">挑戰極限旅遊</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!--end submenu-list-->
+										<div class="blocker"></div>
+									</li>
+								</ul>
+								<!-- /#main_menu -->
+							<div class="nsfrm">
+								<form name="ksearch" method="get" action="#">
+									<input name="keyword" class="nsipt" value="關鍵字/團號搜尋" onClick="if(this.value=='關鍵字/團號搜尋')this.value='';" onBlur="if(this.value=='')this.value='關鍵字/團號搜尋';" type="text"> <input value="" class="nsbtn" type="submit">
+								</form>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="frmr"></div>
+					<div class="clear"></div>
+
+				</div>
+			</div>
+
+			<div id="nav_message" class="navisub" data-sec="7">
+				<div class="frml"></div>
+				<div class="frmc">
+					<div class="ml10 a2 hide slideUpDown current" style="display: block;"><span class="fc05">最新消息: </span><a href="http://www.act168.com.tw/newscont.asp?id=369&amp;sub_kind=&amp;kind_id=&amp;subject1=%A4%A4%AC%EE%B8%60%B4%E7%B0%B2%A6%E6%B5%7B&amp;curName=&amp;topName=" class="ml5">中秋節渡假行程</a></div>
+					<div class="ml10 a2 hide slideUpDown" style="display: none;"><span class="fc05">最新消息: </span><a href="http://www.act168.com.tw/newscont.asp?id=368&amp;sub_kind=&amp;kind_id=&amp;subject1=%A5%EC%AE%D4+%A5j%AAi%B4%B5%AB%D2%B0%EA+%A4%A7%AE%C8+9%A4%E9%2F+14%A4%E9%7E%AC%DD%BA%C9%AAi%B4%B5%AB%D2%B0%EA%AA%BA%BAa%C4%A3%A5%FA%BD%F7%A1I&amp;curName=&amp;topName=" class="ml5">伊朗 古波斯帝國 之旅 9日/ 14日~看盡波斯帝國的榮耀光輝！</a></div>
+					<div class="ml10 a2 hide slideUpDown" style="display: none;"><span class="fc05">最新消息: </span><a href="http://www.act168.com.tw/newscont.asp?id=367&amp;sub_kind=&amp;kind_id=&amp;subject1=%B0l%B3v%A5%5F%B7%A5%A5%FA%AA%BA%A9u%B8%60%A1A%A7Y%B1N%B6%7D%C6r%A1C&amp;curName=&amp;topName=" class="ml5">追逐北極光的季節，即將開鑼。</a></div>
+				</div>
+				<div class="frmr"></div>
+				<div class="clear"></div>
+			</div>
+			<!-- /#nav_message -->
+		</div>
+		<!--END #navigation-->
+
+		<div id="body" class="ctn">
+
+				<div id="header" class="ld0">
+					<div id="position_now" class="ld0">
+						<!-- START 當前位置 -->
+						<div class="d250 fr">
+							<div class="bc_ln a3">當前位置:
+								<a href="index.html">首頁</a>
+								<span class="nowpostion divider"></span>
+								<a href="news.html">新聞專區</a>
+								<span class="nowpostion divider"></span>
+								團體總表
+							</div>
+						</div>
+						<!-- END 當前位置 -->
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			<!-- END #header -->
+
+			<div id="sidebar_first" class="blind">
+				<!--左欄#sidebar_first 於行程頁不顯示-->
+			</div>
+			<!-- END 左欄內容#sidebar_first -->
+
+			<div id="content_outside" class="ctn">
+				<div id="content" class="ld0 ctn-nm">
+
+					<div class="hd">
+						<h1 class="title_grouplist">
+							團體總表
+						</h1>
+					</div>
+
+					<!--START map-->
+					<div class="gpmap">
+						<img src="images/earthmap-01.png" name="Earth_map" width="900px" height="364px" usemap="#Earth_map" id="Earth_map" border="0"/>
+						<map name="Earth_map" id="Earth_map2">
+							<area shape="poly" coords="319,133,292,101,296,80,280,67,258,61,256,50,277,41,327,20,373,33,394,41,412,58,445,46,481,46,493,77,498,95,492,111,497,126,486,142,500,155,509,177,483,186,481,208,466,186,457,191,444,183,436,191,419,204,404,202,421,176,404,158,409,143,404,143,413,134,400,123,395,114,373,123,345,97" 
+							href="#" target="_blank" alt="歐洲" title="歐洲行程" onMouseOver="MM_showHideLayers('promptDetail_europe','','show','promptDetail_asia','','hide','promptDetail_africa','','hide','promptDetail_oceania','','hide','promptDetail_america','','hide','promptDetail_russia','','hide','promptDetail_ship1','','hide','promptDetail_ship2','','hide','promptDetail_ship3','','hide','promptDetail_ship4','','hide','promptDetail_ship5','','hide','promptDetail_ship6','','hide')" 
+							onMouseOut="MM_showHideLayers('promptDetail_europe','','hide')" />
+							<area shape="poly" coords="515,176,516,163,499,151,494,142,500,131,498,113,503,98,522,105,545,109,546,99,556,70,595,60,600,89,616,92,640,82,636,64,662,63,685,77,710,79,741,89,763,83,788,91,814,95,852,94,872,118,868,130,846,126,831,138,815,150,794,163,790,145,777,136,752,146,762,165,745,180,736,177,734,162,714,153,703,153,697,165,675,164,661,157,646,165,622,160,608,153,590,149,571,151,541,156,534,165,536,180" 
+							href="#" target="_blank" alt="俄羅斯" title="俄羅斯行程" onMouseOver="MM_showHideLayers('promptDetail_europe','','hide','promptDetail_asia','','hide','promptDetail_africa','','hide','promptDetail_oceania','','hide','promptDetail_america','','hide','promptDetail_russia','','show','promptDetail_ship1','','hide','promptDetail_ship2','','hide','promptDetail_ship3','','hide','promptDetail_ship4','','hide','promptDetail_ship5','','hide','promptDetail_ship6','','hide')" 
+							onMouseOut="MM_showHideLayers('promptDetail_russia','','hide')" />
+							<area shape="poly" coords="757,173,769,180,760,194,753,212,741,217,728,220,715,244,693,249,709,254,722,281,727,295,753,302,787,310,785,323,711,322,698,316,671,314,655,299,645,261,647,244,633,240,623,250,612,280,590,245,575,233,562,234,556,259,527,260,511,223,506,217,492,205,489,193,488,187,495,185,507,181,518,179,531,185,539,179,537,170,541,160,553,156,578,153,597,153,619,164,637,167,653,167,661,163,679,170,695,169,709,162,725,160,733,171,731,183,742,183" 
+							href="#" target="_blank" alt="亞洲" title="亞洲旅遊" onMouseOver="MM_showHideLayers('promptDetail_europe','','hide','promptDetail_asia','','show','promptDetail_africa','','hide','promptDetail_oceania','','hide','promptDetail_america','','hide','promptDetail_russia','','hide','promptDetail_ship1','','hide','promptDetail_ship2','','hide','promptDetail_ship3','','hide','promptDetail_ship4','','hide','promptDetail_ship5','','hide','promptDetail_ship6','','hide')" 
+							onMouseOut="MM_showHideLayers('promptDetail_asia','','hide')" />
+							<area shape="poly" coords="696,351,694,391,708,375,770,408,843,407,838,374,810,355,742,327" href="#" target="_blank" alt="大洋洲" title="大洋洲(紐澳)旅遊" onMouseOver="MM_showHideLayers('promptDetail_europe','','hide','promptDetail_asia','','hide','promptDetail_africa','','hide','promptDetail_oceania','','show','promptDetail_america','','hide','promptDetail_russia','','hide','promptDetail_ship1','','hide','promptDetail_ship2','','hide','promptDetail_ship3','','hide','promptDetail_ship4','','hide','promptDetail_ship5','','hide','promptDetail_ship6','','hide')" 
+							onMouseOut="MM_showHideLayers('promptDetail_oceania','','hide')" />
+							<area shape="poly" coords="497,222,459,219,453,206,431,209,409,212,395,223,384,239,382,252,389,278,409,287,442,277,442,287,451,306,448,321,455,344,472,386,507,365,533,357,547,340,539,321,547,307,539,285,549,276,538,268,524,264,515,257,510,238,502,231" 
+							href="#" target="_blank" alt="非洲" title="非洲旅遊" onMouseOver="MM_showHideLayers('promptDetail_europe','','hide','promptDetail_asia','','hide','promptDetail_africa','','show','promptDetail_oceania','','hide','promptDetail_america','','hide','promptDetail_russia','','hide','promptDetail_ship1','','hide','promptDetail_ship2','','hide','promptDetail_ship3','','hide','promptDetail_ship4','','hide','promptDetail_ship5','','hide','promptDetail_ship6','','hide')" 
+							onMouseOut="MM_showHideLayers('promptDetail_africa','','hide')" />
+							<area shape="poly" coords="240,216,249,192,263,182,287,162,297,150,284,132,277,93,237,74,247,51,271,23,198,33,150,64,112,96,70,83,46,88,27,101,29,120,30,156,71,124,115,155,129,197,179,252,218,270,240,282,230,307,245,339,248,427,264,439,293,378,333,343,339,313,292,282,235,255,222,229" 
+							href="#" target="_blank" alt="美洲" title="美洲旅遊" onMouseOver="MM_showHideLayers('promptDetail_europe','','hide','promptDetail_asia','','hide','promptDetail_africa','','hide','promptDetail_oceania','','hide','promptDetail_america','','show','promptDetail_russia','','hide','promptDetail_ship1','','hide','promptDetail_ship2','','hide','promptDetail_ship3','','hide','promptDetail_ship4','','hide','promptDetail_ship5','','hide','promptDetail_ship6','','hide')" 
+							onMouseOut="MM_showHideLayers('promptDetail_america','','hide')" />
+						</map>
+						<!--HOVER 歐洲-->
+						<div class="area-hover" id="promptDetail_europe" style="z-index: 1; left: 300px; top: -295px; " onMouseOver="MM_showHideLayers('promptDetail_europe','','show')" onMouseOut="MM_showHideLayers('promptDetail_europe','','hide')">
+					  	<div class="fleft">
+					  		<a href="#" target="_blank" title="歐洲">
+					  			<img alt="歐洲" src="images/mapthumb/mapeurope.jpg" width="61" height="61">
+					  		</a>
+					  	</div>
+					  	<div class="fright" >
+					  		<span class="area-hover_title">
+					  			<strong><a href="" target="_blank" >歐洲近期行程</a></strong>
+					  		</span>
+					  		<a href="#" target="_blank">北歐</a>
+					  		<a href="#" target="_blank">德國</a>
+					  		<a href="#" target="_blank">法國</a>
+					  		<a href="#" target="_blank">英國</a>
+					  		<a href="#" target="_blank">瑞士</a>
+					  	</div>
+						</div>
+						<!--HOVER 亞洲-->
+						<div class="area-hover" id="promptDetail_asia" style="z-index: 1; left: 550px; top: -345px;" onMouseOver="MM_showHideLayers('promptDetail_asia','','show')" onMouseOut="MM_showHideLayers('promptDetail_asia','','hide')">
+					  	<div class="fleft">
+					  		<a href="#" target="_blank" title="亞洲">
+					  			<img alt="亞洲" src="images/mapthumb/mapasia.jpg" width="61" height="61">
+					  		</a>
+					  	</div>
+					  	<div class="fright" >
+					  		<span class="area-hover_title">
+					  			<strong><a href="" target="_blank" >亞洲近期行程</a></strong>
+					  		</span>
+					  		<a href="#" target="_blank">東北雪鄉</a>
+					  		<a href="#" target="_blank">山西</a>
+					  		<a href="#" target="_blank">九寨溝</a>
+					  		<a href="#" target="_blank">北海道</a>
+					  		<a href="#" target="_blank">伊朗</a>
+					  		<a href="#" target="_blank">印尼</a>
+					  	</div>
+						</div>
+						<!--HOVER 非洲-->
+						<div class="area-hover" id="promptDetail_africa" style="z-index: 1; left: 350px; top: -380px;" onMouseOver="MM_showHideLayers('promptDetail_africa','','show')" onMouseOut="MM_showHideLayers('promptDetail_africa','','hide')">
+					  	<div class="fleft">
+					  		<a href="#" target="_blank" title="非洲">
+					  			<img alt="非洲" src="images/mapthumb/mapafrica.jpg" width="61" height="61">
+					  		</a>
+					  	</div>
+					  	<div class="fright" >
+					  		<span class="area-hover_title">
+					  			<strong><a href="" target="_blank" >非洲近期行程</a></strong>
+					  		</span>
+					  		<a href="#" target="_blank">肯亞單國-動物觀</a>
+					  		<a href="#" target="_blank">東非跨國-維多利亞大瀑布</a>
+					  	</div>
+						</div>
+						<!--HOVER 大洋洲-->
+						<div class="area-hover" id="promptDetail_oceania" style="z-index: 1; left: 470px; top: -450px;" onMouseOver="MM_showHideLayers('promptDetail_oceania','','show')" onMouseOut="MM_showHideLayers('promptDetail_oceania','','hide')">
+					  	<div class="fleft">
+					  		<a href="#" target="_blank" title="大洋洲">
+					  			<img alt="大洋洲" src="images/mapthumb/mapoceania.jpg" width="61" height="61">
+					  		</a>
+					  	</div>
+					  	<div class="fright" >
+					  		<span class="area-hover_title">
+					  			<strong><a href="" target="_blank" >大洋洲近期行程</a></strong>
+					  		</span>
+					  		<a href="#" target="_blank">澳洲全覽</a>
+					  		<a href="#" target="_blank">紐西蘭郵輪</a>
+					  	</div>
+						</div>
+						<!--HOVER 美洲-->
+						<div class="area-hover" id="promptDetail_america" style="z-index: 1; left: 85px; top: -730px;" onMouseOver="MM_showHideLayers('promptDetail_america','','show')" onMouseOut="MM_showHideLayers('promptDetail_america','','hide')">
+					  	<div class="fleft">
+					  		<a href="#" target="_blank" title="美洲">
+					  			<img alt="美洲" src="images/mapthumb/mapamerica.jpg" width="61" height="61">
+					  		</a>
+					  	</div>
+					  	<div class="fright" >
+					  		<span class="area-hover_title">
+					  			<strong><a href="" target="_blank" >美洲近期行程</a></strong>
+					  		</span>
+					  		<a href="#" target="_blank">阿拉斯加賞極光</a>
+					  		<a href="#" target="_blank">阿拉斯加郵輪</a>
+					  	</div>
+						</div>
+						<!--HOVER 俄羅斯-->
+						<div class="area-hover" id="promptDetail_russia" style="z-index: 1; left: 600px; top: -842px;" onMouseOver="MM_showHideLayers('promptDetail_russia','','show')" onMouseOut="MM_showHideLayers('promptDetail_russia','','hide')">
+					  	<div class="fleft">
+					  		<a href="#" target="_blank" title="俄羅斯">
+					  			<img alt="俄羅斯" src="images/mapthumb/maprussia.jpg" width="61" height="61">
+					  		</a>
+					  	</div>
+					  	<div class="fright" >
+					  		<span class="area-hover_title">
+					  			<strong><a href="" target="_blank" >俄羅斯近期行程</a></strong>
+					  		</span>
+					  		<a href="#" target="_blank">俄羅斯全覽</a>
+					  		<a href="#" target="_blank">西伯利亞大鐵路</a>
+					  		<a href="#" target="_blank">俄羅斯全覽</a>
+					  		<a href="#" target="_blank">西伯利亞大鐵路</a>
+					  		<a href="#" target="_blank">俄羅斯全覽</a>
+					  		<a href="#" target="_blank">西伯利亞大鐵路</a>
+					  	</div>
+						</div>
+						<div class="clear"></div>
+						<!--start ship-->
+						<div class="ctn-nm">				
+							<!--start 加勒比海郵輪-->
+							<div id="g_icon_ship1">
+								<a href="" title="加勒比海郵輪行程" target="_blank" onMouseOver="MM_showHideLayers('promptDetail_ship1','','show','promptDetail_ship2','','hide','promptDetail_ship3','','hide','promptDetail_ship4','','hide','promptDetail_ship5','','hide','promptDetail_ship6','','hide')" onMouseOut="MM_showHideLayers('promptDetail_ship1','','hide')" />
+									<img src="images/icon_ship.png" width="64" height="29" style="z-index: 1;position:relative; left: 0px; top: -683px;"/>
+								<!-- </a> -->
+								<span class="g_icon_ship_text"><span style="position:relative; left: 0px; top: -700px;">加勒比海郵輪</span></span>
+								</a>
+							</div>
+							<div id="promptDetail_ship1" style="z-index: 1;position:relative; left: 160px; top:-990px;" onMouseOver="MM_showHideLayers('promptDetail_ship1','','show')" onMouseOut="MM_showHideLayers('promptDetail_ship1','','show')">
+								<div class="">
+									<img src="images/ship_map_01.gif" width="184px" height="116px"/>
+								</div>
+							</div>
+							<!--end 加勒比海郵輪-->
+							<!--start 北大西洋郵輪-->
+							<div id="g_icon_ship2">
+								<a href="" title="北大西洋郵輪行程" target="_blank" onMouseOver="MM_showHideLayers('promptDetail_ship2','','show','promptDetail_ship1','','hide','promptDetail_ship3','','hide','promptDetail_ship4','','hide','promptDetail_ship5','','hide','promptDetail_ship6','','hide')" onMouseOut="MM_showHideLayers('promptDetail_ship2','','hide')" />
+									<img src="images/icon_ship.png" width="64" height="29" style="z-index: 1;position:relative; left: 156px; top: -860px;"/>
+									<span class="g_icon_ship_text"><span style="position:relative; left: 156px; top: -878px;">北大西洋郵輪</span></span>
+								</a>
+							</div>
+							<div id="promptDetail_ship2" style="z-index: 1;position:relative; left: 260px; top: -1350px;" onMouseOver="MM_showHideLayers('promptDetail_ship2','','show')" onMouseOut="MM_showHideLayers('promptDetail_ship2','','show')">
+								<div class="">
+									<img src="images/ship_map_02.gif" width="227px" height="170px"/>
+								</div>
+							</div>
+							<!--end 北大西洋郵輪-->
+							<!--start 波羅的海郵輪-->
+							<div id="g_icon_ship3">
+								<a href="" title="波羅的海郵輪行程" target="_blank" onMouseOver="MM_showHideLayers('promptDetail_ship3','','show','promptDetail_ship1','','hide','promptDetail_ship2','','hide','promptDetail_ship4','','hide','promptDetail_ship5','','hide','promptDetail_ship6','','hide')" onMouseOut="MM_showHideLayers('promptDetail_ship3','','hide')" />
+									<img src="images/icon_ship.png" width="64" height="29" style="z-index: 1;position:relative; left: 310px; top: -1092px;"/>
+									<span class="g_icon_ship_text"><span style="position:relative; left: 310px; top:-1109px;">波羅的海郵輪</span></span>
+								</a>
+							</div>
+							<div id="promptDetail_ship3" style="z-index: 1;position:relative; left: 380px; top: -1540px;" onMouseOver="MM_showHideLayers('promptDetail_ship3','','show')" onMouseOut="MM_showHideLayers('promptDetail_ship3','','show')">
+								<div class="">
+									<img src="images/ship_map_03.gif" width="170px" height="170px"/>
+								</div>
+							</div>
+							<!--end 波羅的海郵輪-->
+							<!--start 地中海郵輪-->
+							<div id="g_icon_ship4">
+								<a href="" title="地中海郵輪行程" target="_blank" onMouseOver="MM_showHideLayers('promptDetail_ship4','','show','promptDetail_ship1','','hide','promptDetail_ship2','','hide','promptDetail_ship3','','hide','promptDetail_ship5','','hide','promptDetail_ship6','','hide')" onMouseOut="MM_showHideLayers('promptDetail_ship4','','hide')" />
+									<img src="images/icon_ship.png" width="64" height="29" style="z-index: 1;position:relative; left:466px; top: -1324px;"/>
+									<span class="g_icon_ship_text"><span style="position:relative; left:466px; top:-1339px;">地中海郵輪</span></span>
+								</a>
+							</div>
+							<div id="promptDetail_ship4" style="z-index: 1;position:relative; left: 350px; top: -1655px;" onMouseOver="MM_showHideLayers('promptDetail_ship4','','show')" onMouseOut="MM_showHideLayers('promptDetail_ship4','','show')">
+								<div class="">
+									<img src="images/ship_map_04.gif" width="170px" height="71px"/>
+								</div>
+							</div>
+							<!--end 地中海郵輪-->
+							<!--start 阿拉斯加郵輪-->
+							<div id="g_icon_ship5">
+								<a href="" title="阿拉斯加郵輪行程" target="_blank" onMouseOver="MM_showHideLayers('promptDetail_ship5','','show','promptDetail_ship1','','hide','promptDetail_ship2','','hide','promptDetail_ship3','','hide','promptDetail_ship4','','hide','promptDetail_ship6','','hide')" onMouseOut="MM_showHideLayers('promptDetail_ship5','','hide')" />
+									<img src="images/icon_ship.png" width="64" height="29" style="z-index: 1;position:relative; left:608px; top: -1455px;"/>
+									<span class="g_icon_ship_text"><span style="position:relative; left: 608px; top:-1471px;">阿拉斯加郵輪</span></span>
+								</a>
+							</div>
+							<div id="promptDetail_ship5" style="z-index: 1;position:relative; left: 26px; top: -1845px;" onMouseOver="MM_showHideLayers('promptDetail_ship5','','show')" onMouseOut="MM_showHideLayers('promptDetail_ship5','','show')">
+								<div class="">
+									<img src="images/ship_map_05.gif" width="136px" height="79px"/>
+								</div>
+							</div>
+							<!--end 阿拉斯加郵輪-->
+							<!--start 紐西蘭郵輪-->
+							<div id="g_icon_ship6">
+								<a href="" title="紐西蘭郵輪行程" target="_blank" onMouseOver="MM_showHideLayers('promptDetail_ship6','','show','promptDetail_ship1','','hide','promptDetail_ship2','','hide','promptDetail_ship3','','hide','promptDetail_ship4','','hide','promptDetail_ship5','','hide')" onMouseOut="MM_showHideLayers('promptDetail_ship6','','hide')" />
+									<img src="images/icon_ship.png" width="64" height="29" style="z-index: 1;position:relative; left:758px; top:-1594px;"/>
+									<span class="g_icon_ship_text"><span style="position:relative; left: 758px; top:-1611px;">紐西蘭郵輪</span></span>
+								</a>
+							</div>
+							<div id="promptDetail_ship6" style="z-index: 1;position:relative; left: 750px; top: -1800px;" onMouseOver="MM_showHideLayers('promptDetail_ship6','','show')" onMouseOut="MM_showHideLayers('promptDetail_ship6','','show')">
+								<div class="">
+									<img src="images/ship_map_06.gif" width="142px" height="142px"/>
+								</div>
+							</div>
+							<!--end 紐西蘭郵輪-->
+						</div><!--end ctn-nm-->																					
+					</div>
+					<!--end  map-->
+
+					<!--START search_result_data -->
+					<div class="search_result_data mt5">
+						<div class="tbgrouplist ctn-nm">
+							<form name="FORM_GROUPLIST" method="post" action="" id="FORM_GROUPLIST">
+								<div class="gplist_searchbox" style="padding: 5px 2px 0px 5px;float:left">
+									<table border="0" cellpadding="0" cellspacing="0" width="100%" style="line-height: 30px;">
+										<tbody>
+											<tr>
+												<td class="title" valign="top">
+													<nobr>目的地:</nobr>
+												</td>
+												<td colspan="">
+													<select name="ITN_AREA" id="ITN_AREA">
+						 								<option value="0010" >其他</option>
+														<option value="0001">美洲</option>
+														<option value="0002">歐洲</option>
+														<option value="0003" selected="selected">亞洲</option>
+														<option value="0004">非洲</option>
+														<option value="0005">中東</option>
+														<option value="0006">大洋洲</option>
+														<option value="0007">東南亞</option>
+														<option value="0008">南亞</option>
+													</select>
+												</td>
+												<td class="title" valign="top">
+													<nobr>國家:</nobr>
+												</td>
+												<td>										
+													<select name="ITN_NATN" id="ITN_NATN">
+														<option value="">請選擇</option>
+														<option value="JP">日本</option>
+														<option value="CN">中國大陸</option>
+													</select>
+												</td>
+												<td class="title" valign="top">
+													<nobr>類型:</nobr>
+												</td>
+												<td>	
+													<select name="ITN_type" id="ITN_type">
+														<option value="">請選擇</option>
+														<option value="">攝影行程</option>
+														<option value="">團體旅遊</option>
+														<option value="">自由行</option>
+													</select>
+												</td>
+												<td class="title">
+													<nobr>出團日期</nobr>
+												</td>
+												<td>
+													<nobr>
+														<input name="USE_BDT" type="text" id="USE_BDT" class="Wdate" onFocus="WdatePicker({isShowClear:false,readOnly:true})" size="10" value="2013/11/20" readonly="">
+														～
+														<input name="USE_EDT" type="text" id="USE_EDT" class="Wdate" onFocus="WdatePicker({isShowClear:false,readOnly:true,minDate:'#F{$dp.$D(\'USE_BDT\')}'})" size="10" value="2014/11/20">
+													</nobr>
+												</td>
+												<td colspan="">
+													<div class="search_mid">
+														<ul class="searchbtn">
+															<li class="search">
+																<a href="#" onClick="return btnSearch_onclick()"></a>
+															</li>
+														</ul>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</form>
+							<div class="clear"></div>
+							<div class="searchResult">
+								<span class="RR">【您查詢的內容】</span>出發期間：
+								<span class="RR">20131122 </span>至
+								<span class="RR">20140210 </span> ｜ 旅遊地點：
+								<span class="RR" id="travelLocation">亞洲 攝影</span>
+								<span>共<span class="RR"><strong>3</strong></span>筆資料</span>
+							</div>
+							<div class="clear"></div>				
+							<table id="" class="table_title_GpList" cellspacing="0" rules="all" border="1"  style="border-collapse:collapse;">
+								<tbody>
+									<tr class="table_title">
+										<th scope="col" style="width:90px;">出發日</th>
+										<th scope="col">團名</th>
+										<th scope="col" style="width:60px;">區域</th>
+										<th scope="col" style="width:50px;">天數</th>
+										<th scope="col" style="width:50px;">班機</th>
+										<th scope="col" style="width:50px;">機位</th>
+										<th scope="col" style="width:50px;">簽證</th>
+										<th scope="col" style="width:50px;">動態</th>
+										<th scope="col" style="width:50px;">稅金</th>
+										<th scope="col" style="width:100px;">團費</th>
+										<th scope="col" style="width:80px;">報名</th>
+									</tr>
+									<tr >
+										<td align="center" style="width:90px;">
+											2013/12/8
+										</td>
+										<td>
+											<div align="left">
+												<a  href="#" class="travelname">冬季 九寨溝 黃龍溝 峨嵋山金頂雲海 攝影 8日</a><br>
+												<span style="color:darkviolet">台北直飛成都航班 <br>
+													<span style="color:green"> 大九寨風光深度遊，2次進入九寨溝景區
+													</span>
+												</span>
+											</div>
+										</td>
+										<td align="center" style="width:60px;">亞洲</td>
+										<td align="center" style="width:50px;">
+											8
+										</td>
+										<td align="center" style="width:50px;">
+											CI
+										</td>
+										<td align="center" style="width:50px;">
+											16
+										</td>
+										<td align="center" style="width:50px;">
+											免簽
+										</td>
+										<td align="center" style="width:50px;">
+											可報名
+										</td>
+										<td align="center" style="width:50px;">
+											含
+										</td>
+										<td align="left" style="width:100px;">
+											NT.43,800
+										</td>
+										<td align="center" style="width:80px;">
+											<a class="oval-redbutton" href="apply.html"><span >報名</span>
+											</td>
+										</tr>
+										<tr>
+											<td align="center" style="width:90px;">
+												2013/12/5
+											</td>
+											<td>
+												<div align="left">
+													<a id="GpList_2" href="#" class="travelname" target="_blank">東北雪鄉 吉林霧淞 丹頂鶴 東北虎 冰雪攝影 8日★</a><br>
+													<span >
+														<span style="color:blue">★～全程不安排採購。</span><span style="color:red">＊ 精選冬最促銷！
+													</span>
+												</span>
+											</div>
+										</td>
+										<td align="center" style="width:60px;">亞洲
+										</td>
+										<td align="center" style="width:50px;">
+											8
+										</td>
+										<td align="center" style="width:50px;">
+											CI
+										</td>
+										<td align="center" style="width:50px;">
+											16
+										</td>
+										<td align="center" style="width:50px;">
+											含
+										</td>
+										<td align="center" style="width:50px;">
+											<span style="color:red">滿團</span>
+										</td>
+										<td align="center" style="width:50px;">
+											含
+										</td>
+										<td align="left" style="width:100px;">
+											NT.42,800
+										</td>
+										<td align="center" style="width:80px;">
+											<a class="oval-redbutton" href="apply.html"><span >報名</span>
+										</td>
+									</tr>
+									<tr >
+										<td align="center" style="width:90px;">
+											2014/1/7
+										</td>
+										<td>
+											<div align="left">
+												<a href="#" class="travelname">寧夏 銀川賀蘭山 葡萄酒 攝影 8日--大地焦點</a><br>
+												<span style="color:dodgerblue">★～～遊覽玉泉營葡萄小鎮：“世界葡萄酒文化博覽中心”～★暢飲四大酒莊～～</span><span style="color:red">＊促銷～超值優惠！ </span>
+											</div>
+										</td>
+										<td align="center" style="width:60px;">
+											亞洲
+										</td>
+										<td align="center" style="width:50px;">
+											8
+										</td>
+										<td align="center" style="width:50px;">
+											CI
+										</td>
+										<td align="center" style="width:50px;">
+											16
+										</td>
+										<td align="center" style="width:50px;">
+											免簽
+										</td>
+										<td align="center" style="width:50px;">
+											可報名
+										</td>
+										<td align="center" style="width:50px;">
+											含
+										</td>
+										<td align="left" style="width:100px;">
+											NT.39,800
+										</td>
+										<td align="center" style="width:80px;">
+											<a class="oval-redbutton" href="apply.html">
+												<span >報名</span>
+											</a>
+										</td>
+									</tr>
+									<tr align="center">
+										<td colspan="11">
+											<table border="0">
+												<tbody>
+													<tr>
+														<td>
+															<div>
+																<div class="pageList">
+																	<div>
+																		<a class="dis">第一頁</a>
+																		<a class="dis">上一頁</a>
+																		<a class="p pActive">1</a>
+																		<a class="dis">下一頁</a>
+																		<a class="dis">最後一頁</a>
+																		<span>每頁</span>
+																		<select class="listSelect" onChange="javascript:location.href=this.options[this.selectedIndex].value">
+																			<option value="">10 筆</option>
+																			<option selected="selected">20 筆</option>
+																			<option value="">30 筆</option>
+																			<option value="">40 筆</option>
+																			<option value="">50 筆</option>
+																		</select>
+																		<span>共<span class="allListNb">3</span>筆</span>
+																	</div>
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>					
+					</div><!-- END #search_result_data -->
+				</div><!-- END #content -->
+				
+				<!--右欄於本頁不顯示-->
+				<div id="sidebar_second" class="blind">
+				</div>
+
+				<div class="clear"></div>
+			</div><!-- END #content_outside -->
+			<div class="clear"></div>
+		</div>
+		<!--END #body-->
+	</div>
+	<!--END #main-->
+
+	<div id="footer_note">
+		<p class="footer_note_txt">
+			以上優惠屬限量商品，正確內容、價格及出發日期，以實際銷售狀況為主，本公司保留活動內容修改、解釋及終止之權利
+		</p>
+	</div>
+
+	<div id="footer">
+
+		<div >
+			<span class="shadow-bottom"></span>
+			<!-- footer-cols -->
+			<div class="footer-cols">
+				<!-- shell -->
+				<div class="shell">
+					<div class="col">
+						<h3><a >精選行程</a></h3>
+						<div class="col-cnt">
+							<ul>
+								<li><a href="list_photograph.html">攝影旅遊</a> | <a href="list_russia.html">俄羅斯旅遊</a></li>
+								<li><a href="list_asia.html">中國旅遊</a> | <a href="list_asia.html">印尼旅遊</a></li>
+								<li><a href="list_asia.html">亞洲旅遊</a> | <a href="list_europe.html">歐洲旅遊</a></li>
+								<li><a href="list_africa.html">非洲旅遊</a> | <a href="list_australia.html">紐澳旅遊</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<h3><a href="service.html">我們的服務</a></h3>
+						<div class="col-cnt">
+							<ul>
+								<li><a href="service.html">旅遊報名須知</a></li>
+								<li><a href="service.html">旅遊諮詢服務</a></li>
+								<li><a href="service.html">簽證護照代辦</a></li>
+								<li><a href="membercenter.html">會員中心 </a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<h3><a href="aboutme.html">大地假期資訊</a></h3>
+						<div class="col-cnt">
+							<ul>
+								<li><a href="aboutme.html">關於我們</a></li>
+								<li><a href="news.html">最新消息</a></li>
+								<li><a href="news.html">行前說明會</a></li>
+								<li><a href="news.html">攝影研習班</a></li>
+								<li><a href="news.html">旅遊講座</a></li>
+								<li><a href="grouplist.html">近期出團總表</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col col_width ">
+						<h3><a href="contact.html">聯絡我們</a></h3>
+						<div class="col-cnt">
+							<p>旅遊產品由大地假期旅行社有限公司提供</p>
+							<p>統一編號：53539036 | 甲種旅行社 交觀甲7316號 | 品保協會會員 北1863號 </p>
+							<p>代表人：曾材樺 | 聯絡人：曾文駿 </p>
+							<p><strong>Email:</strong> <a href="mailto:dianya168@yahoo.com.tw">dianya168@yahoo.com.tw </a></p>
+							<p><strong>電話:</strong>(代表號)<span class="telephone">02-2508-2105</span></p>
+							<p><strong>傳真:</strong>(FAX)<span class="telephone">02-2508-4915</span>/<span class="telephone">02-2508-0394</span></p>
+							<p><strong>地址:</strong> 台北市中山區長安東路2段112號11樓之2
+								<span class="mapguide">
+									<a href="aboutme.html#map" class="btn-mini btn-success"> 交通資訊</a>
+								</span>
+							</p>
+						</div>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+				<!-- end of shell -->
+			</div>
+			<!-- end of footer-cols -->
+			<div class="footer-bottom">
+				<div class="shell">
+					<nav class="footer-nav">
+						<ul>
+							<li><a href="index.html">首頁</a></li>
+							<li><a href="pushsale.html">精選行程</a></li>
+							<li><a href="grouplist.html">近期出團總表</a></li>
+							<li><a href="sitemap.html">網站地圖</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="service.html">報名須知</a></li>
+							<li><a href="contact.html">聯絡我們</a></li>
+							<li><a href="http://www.actwg.com.tw/portal.php" target="_blank">大地彩格網</a></li>
+						</ul>
+						<div class="cl">&nbsp;</div>
+					</nav>
+
+					<p class="copy">&copy; Copyright 2013 Discovery Travel. All Rights Reserved 著作權所有／ACT『大地假期』旅遊網 </p>
+				</div>
+			</div>
+		</div>
+		<!-- end of footer -->
+
+	</div>
+	<!--END #footer-->
+</body>
+</html>

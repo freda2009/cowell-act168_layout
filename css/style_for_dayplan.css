@@ -1,0 +1,1463 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Lily+Script+One);
+
+
+ul li {
+	list-style: none;
+}
+
+ul.dotlist li{
+	list-style: inside square;
+	border-bottom: 1px solid rgba(0,0,0,.07);
+	margin: 0px 0px;
+	padding: 5px 0px 5px 58px;
+	border-left: none;
+	list-style: inside square;
+}
+/****daycontent 每日行程頁 **************/
+/*團名*/
+.daycontent h1 {
+	border-bottom: 3px solid #2491b9;
+	width:98%;
+	clear: both;
+	line-height: 33px;
+	margin-top: 20px;
+	padding:0 10px 0;
+	position: relative;
+	font-family: "微軟正黑體",Arial,Helvetica,sans-serif,"新細明體";
+	text-shadow: rgba(255,255,255,0.5) 0px 1px 2px;
+
+	font-size: 30px;
+}
+
+/*團號*/
+.q:before, .q:after {
+	content: "";
+}
+.q:before, .q:after {
+	content: "";
+}
+.pd-content h1 .q {
+	left: 9px;
+}
+.share-print{
+	/*width: 185px;*/
+}
+.top_share_fb, .top_share_google {
+	float:left;
+	margin-right:5px;
+}
+.top_print{
+	font-size:12px;
+
+	display:inline-block;
+	background-image:url("../images/top_print.gif");
+	background-repeat:no-repeat;
+	padding-left:23px;
+	margin-left:10px;
+}
+.top_collection{
+	font-size:12px;
+	display:inline-block;
+	background-image:url("../images/top_collect.gif");
+	background-repeat:no-repeat;
+	padding-left:28px;
+	margin-left:10px;
+}
+.daycontent h1 .q {
+	color: #999999;
+	font-size: 12px;
+	font-weight: normal;
+	padding-left: 20px;
+	position: absolute;
+	top: -15px;
+}
+
+
+.utils ul li{
+	float:left;
+}
+.section-links {
+	z-index: 600;
+	border: 1px solid rgb(148, 182, 224);
+	margin: 0px 0px 30px;
+	clear: both;
+	border-radius: 3px 3px 3px 3px;
+	background: url("../images/dayplan/section_link_bg.gif") repeat-x scroll center bottom rgb(255, 255, 255);
+}
+
+
+/******dayplan 上方BG**************/
+.dayPlan_topbg{
+	background: url("../images/header.png") repeat-x 0 0;
+	height:auto;
+	margin-top:0px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.alert{
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 20px;
+	color: #c09853;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+	/*行程簡介內文*/
+	.dayPlan_topr_content{
+		padding-top: 5px;
+		margin:0px 10px 10px 10px;
+		height:200px;
+		overflow:hidden;
+	}
+	.dayPlan_topr_content span.shadow-top{
+		background: url(../images/main-shadow.png) repeat-x 0 0;
+		top: 0;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		height: 46px;
+		z-index: 20;
+		display: block;
+	}
+	.dayPlan_topr_content h4{
+		font-size:16px;
+		padding-bottom: 8px;
+		line-height: 40px;
+		font-weight: normal;
+		color: #fff;
+		text-shadow: rgba(0,0,0,0.5) 0px 1px 2px;
+	}
+	.dayPlan_topr_content p, .dayPlan_topr_content div.field-item{
+		font-size: 14px;
+		line-height:22px;
+		letter-spacing:1px;
+		word-spacing:1px;
+		color: #fff; text-shadow: rgba(0,0,0,0.5) 0px 1px 2px;
+		padding-bottom: 5px;
+	}
+	.schedule a.blue-btn {
+		background: url(../images/blue-btn.png) no-repeat 0 -75px;
+		position: relative;
+		bottom: -30px;
+		z-index: 100;
+		width: 198px;
+		height: 70px;
+		text-align: center;
+		line-height: 56px;
+		display: block;
+		color: #fff;
+		text-shadow: rgba(0,0,0,0.5) 0px 1px 1px;
+		font-size: 16px;
+		font-family: 'Ubuntu', sans-serif;
+		font-weight: 700;
+		margin-left:10px;
+	}
+	.schedule a.blue-btn:hover{ text-decoration: none; background-position: 0 0px; }
+	/****
+	start css button
+	88888888888888888888********/
+.btn_style {
+		color:#ffffff;
+		font-family:"微軟正黑體",Arial,Helvetica,sans-serif,"新細明體";
+		font-size:15px;
+		margin:16px auto;
+		text-align:center;
+		-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+		box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+		background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+		background-color:#79bbff;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		border-radius:6px;
+		border:1px solid #84bbf3;
+		display:inline-block;
+		font-weight:bold;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:1px 1px 0px #528ecc;
+	}
+	.btn_style:hover {
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+		background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+		background-color:#378de5;
+	}
+	.btn_style:active {
+		position:relative;
+		top:1px;
+	}
+	/***************************/
+	.btn_big {
+		font-family:"微軟正黑體",Arial,Helvetica,sans-serif,"新細明體";
+		color:#0a455c;
+		font-size:22px;
+		font-weight:bold;
+		background: #49c7c9 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAJklEQVQIW2P4//+/NxMDA8N/JgYGhn+oLDQu7Vk/GP4zMXDQx3IA0To1YWcEwtQAAAAASUVORK5CYII=") repeat-x;
+		display: inline-block;
+		/** padding: 5px 10px;**/
+		padding:12px 24px;
+		text-shadow:1px 1px 0px #ffffff;
+		text-decoration: none;
+		font-weight: bold;
+		border-radius: 23px;
+		-moz-border-radius: 23px;
+		-webkit-border-radius: 23px;
+		box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+		-moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+		-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+		margin-top:3px;
+		margin-right:3px;
+		margin-left:15px;
+		margin-bottom:10px;
+		behavior: url(http://mepopedia.com/files/border-radius/border-radius.htc);
+	}
+	.btn_big:hover{
+		background:#ff8206 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAJklEQVQIW2P4//+/NxMDA8N/JgYGhn+oLDQu7Vk/GP4zMXDQx3IA0To1YWcEwtQAAAAASUVORK5CYII=") repeat-x;
+		text-decoration: none;
+	}
+
+	.btn_big:active {
+		background: #2363ba url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAJklEQVQIW2P4//+/NxMDA8N/JgYGhn+oLDQu7Vk/GP4zMXDQx3IA0To1YWcEwtQAAAAASUVORK5CYII=") repeat-x;
+		position:relative;
+		top:1px;
+		text-decoration: none;
+	}
+
+	/* END css button  */
+/******************
+<div class="buttonwrapper">
+<a class="oval-bluebutton" href="#"><span>Submit</span></a>
+<a class="oval-redbutton" href="#" style="margin-left: 6px"><span>Reset</span></a>
+</div>
+*********/
+a.oval-graybutton{
+	background: transparent url('../images/oval-gray-left.gif') no-repeat top left;
+	display: block;
+	float: left;
+	font: normal 12px Tahoma;
+	line-height: 16px;
+	height: 24px;
+	padding-left: 11px;
+	text-decoration: none;
+}
+
+a:link.oval-graybutton, a:visited.oval-graybutton, a:active.oval-graybutton{
+	color: #494949; /*button text color*/
+}
+
+a.oval-graybutton span{
+	background: transparent url('../images/oval-gray-right.gif') no-repeat top right;
+	display: block;
+	padding: 4px 11px 4px 0;
+}
+
+a.oval-graybutton:hover{ /* Hover state CSS */
+	background-position: bottom left;
+}
+
+a.oval-graybutton:hover span{ /* Hover state CSS */
+	background-position: bottom right;
+	color: black;
+}
+
+/**oval-blue-right*/
+a.oval-bluebutton{
+	background: transparent url('../images/oval-blue-left.gif') no-repeat top left;
+	display: block;
+	float: left;
+	font: normal 12px Tahoma;
+	line-height: 16px;
+	height: 24px;
+	padding-left: 11px;
+	text-decoration: none;
+}
+
+a:link.oval-bluebutton, a:visited.oval-bluebutton, a:active.oval-bluebutton{
+	color: #494949; /*button text color*/
+}
+
+a.oval-bluebutton span{
+	background: transparent url('../images/oval-blue-right.gif') no-repeat top right;
+	display: block;
+	padding: 4px 11px 4px 0;
+}
+
+a.oval-bluebutton:hover{ /* Hover state CSS */
+	background-position: bottom left;
+}
+
+a.oval-bluebutton:hover span{ /* Hover state CSS */
+	background-position: bottom right;
+	color: black;
+}
+/***oval-green-right.gif**/
+a.oval-greenbutton{
+	background: transparent url('../images/oval-green-left.gif') no-repeat top left;
+	display: block;
+	float: left;
+	font: normal 12px Tahoma; /* Change 12px as desired */
+	line-height: 16px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 24px) */
+	height: 24px; /* Height of button background height */
+	padding-left: 11px; /* Width of left menu image */
+	text-decoration: none;
+}
+
+a:link.oval-greenbutton, a:visited.oval-greenbutton, a:active.oval-greenbutton{
+	color: #494949; /*button text color*/
+}
+
+a.oval-greenbutton span{
+	background: transparent url('../images/oval-green-right.gif') no-repeat top right;
+	display: block;
+	padding: 4px 11px 4px 0; /*Set 11px below to match value of 'padding-left' value above*/
+}
+
+a.oval-greenbutton:hover{ /* Hover state CSS */
+	background-position: bottom left;
+}
+
+a.oval-greenbutton:hover span{ /* Hover state CSS */
+	background-position: bottom right;
+	color: black;
+}
+/***oval-red-right.gif**/
+a.oval-redbutton{
+	background: transparent url('../images/oval-red-left.gif') no-repeat top left;
+	display: block;
+	float: left;
+	font: normal 12px Tahoma; /* Change 12px as desired */
+	line-height: 16px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 24px) */
+	height: 24px; /* Height of button background height */
+	padding-left: 11px; /* Width of left menu image */
+	text-decoration: none;
+}
+
+a:link.oval-redbutton, a:visited.oval-redbutton, a:active.oval-redbutton{
+	color: #494949; /*button text color*/
+}
+
+a.oval-redbutton span{
+	background: transparent url('../images/oval-red-right.gif') no-repeat top right;
+	display: block;
+	padding: 4px 11px 4px 0; /*Set 11px below to match value of 'padding-left' value above*/
+}
+
+a.oval-redbutton:hover{ /* Hover state CSS */
+	background-position: bottom left;
+}
+
+a.oval-redbutton:hover span{ /* Hover state CSS */
+	background-position: bottom right;
+	color: black;
+}
+
+/***oval-orange-right.gif**/
+a.oval-orangebutton{
+	background: transparent url('../images/oval-orange-left.gif') no-repeat top left;
+	display: block;
+	float: left;
+	font: normal 12px Tahoma; /* Change 12px as desired */
+	line-height: 16px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 24px) */
+	height: 24px; /* Height of button background height */
+	padding-left: 11px; /* Width of left menu image */
+	text-decoration: none;
+}
+
+a:link.oval-orangebutton, a:visited.oval-orangebutton, a:active.oval-orangebutton{
+	color: #494949; /*button text color*/
+}
+
+a.oval-orangebutton span{
+	background: transparent url('../images/oval-orange-right.gif') no-repeat top right;
+	display: block;
+	padding: 4px 11px 4px 0; /*Set 11px below to match value of 'padding-left' value above*/
+}
+
+a.oval-orangebutton:hover{ /* Hover state CSS */
+	background-position: bottom left;
+}
+
+a.oval-orangebutton:hover span{ /* Hover state CSS */
+	background-position: bottom right;
+	color: black;
+}
+/*****END 按鈕*****************/
+
+.buttonwrapper{ /* Container you can use to surround a CSS button to clear float */
+	overflow: hidden;
+	width: 100%;
+}
+
+
+
+/*****上方左邊簡介下列********************/
+.action {
+	margin:0 auto;
+}
+.action h4{
+	font-size: 15px;
+	color:#f7927d;
+}
+.action .schedule{
+	margin-top:10px;
+}
+.action .price{
+	font-size: 13px;
+	float:left;
+
+}
+.action .utils{
+	float:left;
+	font-size: 13px;
+	margin-left:10px;
+}
+.col_gap1{
+	width:20px;
+	height:42px;
+	float: left;
+	background: url(../images/col-separator.png) repeat-y right 0;
+	margin-left: 18px;
+	padding-bottom: 16px;
+}
+.col_gap{
+	width:20px;
+	height:80%;
+	float: left;
+	background: url(../images/col-separator.png) repeat-y right 0;
+	margin-left: 18px;
+	padding-bottom: 16px;
+	/*position: relative;*/
+}
+
+/*********右方slider***********/
+.sliderBG{
+	width:525px;
+	height:325px;
+	background:url(../images/dayplan_photo/slider_w525h325.png) no-repeat;
+
+}
+.dayplan_sliderBAR{
+	/*bottom:42px;*/
+	top:300px;
+}
+
+.dayplan_slider_padding{
+	padding:23px 32px 28px;
+}
+/**********h2 待用*****
+<div class="heading_dots">
+<div class="heading_supersize">
+<div class="heading_center_bg">
+h2
+</div>
+</div>
+</div>
+
+**********/
+.heading_dots {
+	background: url(../images/heading_dots_grey.png) repeat-x center;
+}
+.heading_supersize {
+	font-size: 30px;
+	text-align: center;
+	font-weight: normal;
+	line-height: normal;
+	margin: 0 0 30px;
+}
+.heading_center_bg {
+	background: #FFF;
+	padding: 0 10px;
+}
+
+
+/*****下方內容區*****************/
+.day_plan_container{
+	font-size: 12px;
+	line-height:20px;
+	letter-spacing:1px;
+	height:auto;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	background-image: url(../images/day_plan_body.png) repeat-x 0 0;
+	background: #edf6ff;
+	box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	-o-box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+#content section.dayplan {
+/*
+background: url(../images/section-shadow.png) no-repeat 0 bottom;
+*/
+padding-top: 0px;
+padding-bottom: 15px;
+}
+
+#content section .title {
+	padding-bottom: 0;
+
+}
+
+#content section.dayplan h2 {
+	padding: 8px 35px 8px 48px;
+	color: #6e8665;
+	background-image: url(../images/dec_h2_left.png);
+	background-position:0 0;
+	background-repeat: no-repeat;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	font-weight:bolder;
+	line-height: 32px;
+	font-size:30px;
+	letter-spacing: 2px;
+	font-family: "微軟正黑體", "Arial Unicode MS",'Ubuntu', sans-serif;
+	text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+	margin-bottom: 23px;
+}
+#content section.dayplan div.h2_bg h2 span> a{
+	color: #6e8665;
+}
+#content section.dayplan #h2food{
+	padding: 8px 35px 8px 48px;
+	color: #6e8665;
+	background-image: url(../images/dec_h2_food.png);
+	background-position:0 0;
+	background-repeat: no-repeat;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	font-weight:bolder;
+	line-height: 32px;
+	font-size:30px;
+	letter-spacing: 2px;
+	font-family: "微軟正黑體", "Arial Unicode MS", sans-serif;
+	text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+	margin-bottom: 23px;
+}
+
+#content section.dayplan #h2hotel{
+	padding: 8px 35px 8px 48px;
+	color: #6e8665;
+	background-image: url(../images/dec_h2_hotel.png);
+	background-position:0 0;
+	background-repeat: no-repeat;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	font-weight:bolder;
+	line-height: 32px;
+	font-size:30px;
+	letter-spacing: 2px;
+	font-family: "微軟正黑體", "Arial Unicode MS", sans-serif;
+	text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+	margin-bottom: 23px;
+}
+
+#content .h2_bg{
+	background: url(../images/section-shadow.png) no-repeat 0 top;
+}
+
+#content h3.major {
+	font-size: 16px;
+	text-align: center;
+	margin: 0 0 3em 0;
+	position: relative;
+	border-left: solid 5px #afbb4b;
+}
+
+#content .day_info_container{
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	background-image: url(../images/day_plan_body.png) repeat-x 0 0;
+	background: #edf6ff;
+	box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	-o-box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+/****行程特色*********************/
+.image {
+	display: inline-block;
+	background: #fff;
+	box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2), 0px 2px 5px 0px rgba(0,0,0,0.15);
+	border-radius: 5px;
+	padding: 8px;
+}
+
+#special_activities .sa_detail{ margin-top:10px; overflow:hidden; height:570px;}
+#special_activities .banner_nav_bg{background-color:#fff; width:390px; height:55px;  margin-top:-205px; clear:both; position:relative;
+	z-index:2;
+}
+#special_activities .banner_nav{ margin-top:-205px; position:relative;
+		z-index:3;
+		cursor:pointer;
+}
+#special_activities .banner_nav .bn_on{ border:5px solid #f8cf27;}
+#special_activities .banner_nav .bn_off{ border:5px solid #fff;filter:Alpha(opacity=50);opacity: 0.5;}
+#special_activities .banner_description{ color:#fff; background-color:#1a1a1a;
+	position: relative; top:-180px; width:330px; height:118px;filter:Alpha(opacity=70);opacity: 0.7; padding:5px 30px;
+}
+#special_activities .banner_description_text{ 
+	margin-top:-300px;color:#fff;position:relative; width:350px; padding:0px 20px;font-size:14px;
+}
+#special_activities .special_hotel{ position:relative;top:-70px;*height:1%;}
+
+#special_activities .arrow_pos{
+	position:relative;
+	z-index:22;
+	top:-380px; clear:left;
+}
+a.arrow_l{ display:block; width:40px; height:40px; background:url(../images/unique/arrows.png) 0 0 scroll no-repeat;float:left; margin-left:10px;}
+a.arrow_l:hover{background:url(../images/unique/arrows.png) 0 100% scroll no-repeat;  }
+a.arrow_r{ display:block; width:40px; height:40px; background:url(/images/unique/arrows.png) 100% 0 scroll no-repeat; float:right; margin-right:10px;}
+a.arrow_r:hover{background:url(../images/unique/arrows.png) 100% 100% scroll no-repeat; }
+.vh {visibility: hidden;}
+.scenic {
+	padding: 5px 0 5px 0;
+	margin-bottom:5px;
+}
+.scenic  h3{
+	padding-left:8px;
+	color:#005aab;
+	border-left:8px #005aab solid;
+	line-height:28px;
+	margin-bottom:15px;
+}
+.scenic img {
+	display: inline-block;
+	background: #fff;
+	box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.2), 0px 2px 5px 0px rgba(0,0,0,0.15);
+	border-radius: 5px;
+	float: right;
+	height: 160px;
+	width: 240px;
+	/*padding: 0 10px 10px 10px;*/
+	padding: 8px;
+	margin-left:10px;
+}
+/****START行程餐食**************************/
+
+#content section.dayplan .commend_food{
+	background: #fefff1;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlZmZmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZGY5Y2MiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+	background: -moz-linear-gradient(top, #fefff1 0%, #fdf9cc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefff1), color-stop(100%,#fdf9cc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #fefff1 0%,#fdf9cc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #fefff1 0%,#fdf9cc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #fefff1 0%,#fdf9cc 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #fefff1 0%,#fdf9cc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefff1', endColorstr='#fdf9cc',GradientType=0 ); /* IE6-8 */
+	behavior: url(http://curved-corner.googlecode.com/files/border-radius.htc);
+}
+
+/****START行程住宿**************************/
+#content section.dayplan .commend_hotel,
+#content section.dayplan .commend_food
+{
+	width: 95%;
+	height: auto;
+	margin: 20px auto;
+	padding: 10px 30px;
+	border: 1px solid #dfded5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 8px;
+	border-radius: 5px;
+	-webkit-box-shadow: #b2b2b2 0px 0px 7px;
+	-moz-box-shadow: #b2b2b2 1px 3px 3px;
+	box-shadow: #b2b2b2 0px 0px 7px;
+}
+
+#content section.dayplan .commend_hotel {
+	background: #f2fff5;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlZmZmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZGY5Y2MiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #dcf6e2 0%,#f2fff5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dcf6e2), color-stop(100%,#f2fff5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #dcf6e2 0%,#f2fff5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #dcf6e2 0%,#f2fff5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #dcf6e2 0%, #f2fff5 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #dcf6e2 0%,#f2fff5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcf6e2', endColorstr='#f2fff5',GradientType=0 ); /* IE6-8 */
+	behavior: url(http://curved-corner.googlecode.com/files/border-radius.htc);
+}
+
+#content section.dayplan dl {
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	color:#695d47;
+	font-size: 13px;
+}
+
+#content section.dayplan .commend_food dt,
+#content section.dayplan .commend_hotel dt
+{
+	height: 28px;
+	line-height: 28px;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+#content section.dayplan .commend_food dt>.bgimg,
+#content section.dayplan .commend_hotel dt>.bgimg
+{
+	position:absolute;
+	left:20px;
+	top:10px;
+	z-index:-1;
+}
+
+#content section.dayplan .commend_food dt>h3,
+#content section.dayplan .commend_hotel dt>h3
+{
+	color:#6c614b;
+	overflow: hidden;
+	text-align: left;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: "微軟正黑體", "Arial Unicode MS", sans-serif;
+}
+
+#content section.dayplan .commend_food dt>h3:before,
+#content section.dayplan .commend_food dt>h3:after,
+#content section.dayplan .commend_hotel dt>h3:before,
+#content section.dayplan .commend_hotel dt>h3:after
+{
+	background-color:#6c614b;
+	content: "";
+	display: inline-block;
+	height: 5px;
+	position: relative;
+	vertical-align: middle;
+	width: 100%;
+}
+#content section.dayplan .commend_food dt>h3:before,
+#content section.dayplan .commend_hotel dt>h3:before
+{
+	right: 0.5em;
+	margin-left: -100%;
+}
+#content section.dayplan .commend_food dt>h3:after,
+#content section.dayplan .commend_hotel dt>h3:after
+{
+	left: 0.5em;
+	margin-right: -90%;
+}
+
+div.line_2
+{
+	display: block;
+	border-top: 2px solid #695d47;
+	width: 100%;
+	height: 5px;
+	margin-top: 11px;
+}
+
+#content section.dayplan .commend_food ul li,
+#content section.dayplan .commend_hotel ul li
+{
+	overflow: hidden;
+	background: url(../images/separator.jpg) no-repeat center top;
+	padding: 30px 0;
+}
+
+#content section.dayplan .commend_food ul li div,
+#content section.dayplan .commend_hotel ul li div
+{
+	float: left;
+	margin: 0 0 0 50px;
+	width:609px;
+}
+
+#content section.dayplan .commend_food ul li:first-child,
+#content section.dayplan .commend_hotel ul li:first-child
+{
+	background: none;
+	padding: 0 0 30px;
+}
+
+#content section.dayplan .commend_food>ul li div.featured,
+#content section.dayplan .commend_hotel>ul li div.featured
+{
+	background: url(../images/interface.jpg) no-repeat 0 -68px;
+	width: 253px;
+	height: 292px;
+	text-align: center;
+	margin: 0;
+	float:left;
+}
+#content section.dayplan .commend_food>ul li div.featuredtxt,
+#content section.dayplan .commend_hotel>ul li div.featuredtxt
+{
+	width: 590px;
+	float:left;
+	height: auto;
+	text-align: left;
+	margin: 0 5px 5px 20px;
+}
+
+#content section.dayplan .commend_food ul li div.featured img,
+#content section.dayplan .commend_hotel ul li div.featured img
+{
+	margin: 10px 0 0 -3px;
+	border: 0;
+	width: 258px;
+	height:168px;
+}
+
+#content section.dayplan .commend_food ul li div.featured,
+#content section.dayplan .commend_hotel ul li div.featured
+{
+	text-align: center;
+}
+
+#content section.dayplan .commend_food ul li div.featured ul,
+#content section.dayplan .commend_hotel ul li div.featured ul
+{
+	overflow: hidden;
+	margin: -3px 0px -5px 8px;
+}
+
+#content section.dayplan .commend_food ul li div.featured ul li:first-child,
+#content section.dayplan .commend_hotel ul li div.featured ul li:first-child
+{
+	margin: 0;
+}
+
+#content section.dayplan .commend_food ul li div.featured ul li,
+#content section.dayplan .commend_hotel ul li div.featured ul li
+{
+	float: left;
+	margin:0 8px 0 8px;
+	background: none;
+	padding: 0;
+}
+
+#content section.dayplan .commend_food ul li div.featured a,
+#content section.dayplan .commend_hotel ul li div.featured a
+{
+	clear:both;
+	display:block;
+	font-size:13px;
+	text-decoration:none;
+	font-weight:bold;
+	padding:0px;
+	outline:none;
+}
+
+#content section.dayplan .commend_food ul li div.featured ul li a,
+#content section.dayplan .commend_hotel ul li div.featured ul li a
+{
+	padding:0;
+}
+
+#content section.dayplan .commend_food ul li div.featured ul li a img,
+#content section.dayplan .commend_hotel ul li div.featured ul li a img
+{
+	width: 72px;
+	height:72px;
+}
+
+#content section.dayplan .commend_food ul li div.featured ul li a img:hover,
+#content section.dayplan .commend_hotel ul li div.featured ul li a img:hover
+{
+	filter:alpha(opacity=80);
+	opacity:0.8;
+}
+
+.rounded-corners {
+	-moz-border-radius: 10px; /* Firefox */
+	-webkit-border-radius: 10px; /* Safari, Chrome */
+	-khtml-border-radius: 10px; /* Konqueror */
+	border-radius: 10px; /* Opera 10.50 and later (CSS3 standard) */
+	behavior: url(http://mepopedia.com/files/border-radius/border-radius.htc); /* IE6, IE7, IE8 */
+}
+
+/***三欄圖***/
+#content section .commend_hotel ul.col_three{
+	list-style:none;
+	overflow:hidden;
+	min-height: 480px;
+	margin-bottom: 15px;
+}
+
+#content section.dayplan .commend_hotel ul.col_three li:first-child{
+	margin:4px 0 0;
+}
+#content section.dayplan .commend_hotel ul.col_three li{
+	float:left;
+	background:none;
+	margin: 4px 0 0 48px;
+	padding:0;
+	overflow: hidden;
+}
+
+#content section.dayplan .commend_hotel ul.col_three li div{
+	width:260px;
+	text-align:center;
+	padding: 0px 0 20px 0;
+	float:none;
+	margin:0;
+	background:none;
+}
+#content section.dayplan .commend_hotel ul.col_three li div a img{
+	margin: 0;
+	width:97%;
+	height: 280px;
+	border: 3px solid #fff;
+	-webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;
+	-webkit-box-shadow: #b2b2b2 1px 3px 3px;-moz-box-shadow: #b2b2b2 1px 3px 3px;box-shadow: #b2b2b2 1px 3px 3px;
+
+}
+#content section.dayplan .commend_hotel ul.col_three li div a img:hover{
+	filter:alpha(opacity=80);
+	opacity:0.8;
+}
+#content section.dayplan .commend_hotel ul.col_three li div p{
+	width: 258px;
+	text-align: justify;
+	color: #695d47;
+	font-family: 'RokkittRegular';
+	margin: 10px 5px 0px 5px;
+	line-height: 20px;
+	font-size: 13px;
+	background: none;
+	padding: 0px;
+	height: 200px;
+	overflow: hidden;
+}
+#content section.dayplan .commend_hotel ul.col_three li div a:first-child{
+	margin:0;
+	padding:0;
+	background:none;
+	width:auto;
+}
+#content section.dayplan .commend_hotel ul.col_three li div a:hover{
+	color:#F78117;
+}
+#content section.dayplan .commend_hotel ul.col_three li div a{
+	font-style:italic;
+	text-decoration:none;
+	padding:0;
+	margin:8px auto 20px;
+	display:block;
+	width: 150px;
+	outline:none;
+	font-size:16px;
+	font-weight:normal;
+	text-shadow: 0 1px 0 #fcfcfc;
+}
+
+/*****ＥＮＤ　行程 餐食 住宿************************/
+
+#content section.dayplan .day_photp_box {
+	margin: 0 auto;
+	width: 100%;
+	height: 180px;
+	background-color: rgba(73, 149, 193,0.6);
+}
+
+.daycontent_Pic_title {
+	border-left: 8px solid rgb(84, 84, 84);
+	padding-left: 8px;
+	margin: 10px 35px 5px;
+	font-family: "微軟正黑體";
+	font-size: 14px;
+	color: rgb(84, 84, 84);
+	line-height: 20px;
+	width: 285px;
+	float: left;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+.daycontent_Pic {
+	float: left;
+	width: 285px;
+	border: 2px solid rgb(204, 204, 204);
+	margin: 20px 45px 10px 35px;
+	text-align: center;
+}
+.icon_note{
+	display: inline-block;
+	background: url(../images/icon_note.png) no-repeat;
+	padding-left: 3px;
+	color:#fcd4a7;
+	font-size: 14px;
+	font-weight:bold;
+	line-height: 42px;
+	margin-bottom: 15px;
+	margin-top: 0px;
+}
+
+.icon_note p{
+	font-weight: bold;
+	color:#f89420;
+	line-height: 18px;
+	font-size:14px;
+	padding:5px 20px 5px 20px;
+	margin:0 35px 0 30px;
+	text-align: justify;
+	width:92%;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	background:rgba(254,209,157,0.3);
+	background:-webkit-liner-gradient(top,#fed19d,#FFFFFF);
+	background:linear-gradient(top,#fed19d,#FFFFFF);
+	box-shadow:3px 3px 10px #DFDFDF;
+	-moz-box-shadow:3px 3px 10px #DFDFDF;
+	-webkit-box-shadow:3px 3px 10px #DFDFDF;
+}
+
+.notes {
+	margin: 1.5em 1em;
+	border-radius: 3px 3px 3px 3px;
+	border: 1px solid rgb(238, 235, 219);
+	box-shadow: 0px 0px 1px 1px rgb(246, 245, 237) inset;
+	background: none repeat scroll 0% 0% rgb(243, 241, 230);
+	font-size: 92.308%;
+	padding: 10px;
+}
+
+.notes em {
+	color: rgb(153, 153, 153);
+}
+.notes > h3{
+	font-size: 24px;
+}
+
+.daybox{
+	height:auto;
+	position: relative;
+	padding: 0px 0px 5px 0px;
+	margin: 20px auto;
+	width: 95%;
+	background: #fff;
+	box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	-o-box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	border: #ccc 1px solid;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+.tbfolor_box{
+	margin:0 0 0 20px;
+}
+.h3_bg{
+	display: inline-block;
+	border-bottom:1px solid #376da3;
+	padding-left: 3px;
+	width:97%;
+	font-weight:bold;
+	line-height: 22px;
+	margin-bottom: 8px;
+}
+h3.tagblue{
+	display:inline-block;
+	float:left;
+	background: url(../images/h3_bg.png) no-repeat left top;
+	height: 25px; width:114px;
+	padding-bottom: 0px;
+}
+
+.tagblue_title{
+	margin:0px;
+	position:relative;
+	top:-6px;
+	left:8px;
+	color:#fff;
+}
+.h3_bg >span.tag_txt{
+	color:#376da3;
+	display: inline-block;
+	float: right;
+	margin-top: 7px;
+	line-height: 12px;
+}
+.h3_bg .more a{
+	color:#376da3;
+	display: inline-block;
+	float: right;
+	margin-top: 7px;
+	line-height: 12px;
+}
+
+div.playfor{
+	margin:0 0 0 20px;
+	font-size:16px;
+	font-weight:bold;
+	line-height:20px;
+}
+
+.daybox >h3{magrin:0;padding:0;
+	font-size: 24px;
+}
+
+.day_big_photo{
+	min-width:100%;
+	height:220px;
+	border-top-left-radius: 5px;
+	-moz-border-top-left-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-o-border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	-moz-border-top-right-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-o-border-top-right-radius: 5px;
+
+}
+
+/**每日行程"天"***/
+.daybox .entry-date {
+	position: absolute;
+	width: 70px;
+	height: 57px;
+	top: 158px;
+	left: -15px;
+	display: block;
+	padding-top: 13px;
+	font-family: "Lily Script One", 'Rancho',Arial, sans-serif;
+	line-height: 1em;
+	-moz-border-radius: 80px;
+	-webkit-border-radius:80px;
+	border-radius:80px;
+	box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
+	background-color:rgb(73, 149, 193);
+
+}
+.daybox .entry-date .number {
+	color:#1C4E61;
+	font-size: 34px !important;
+	text-align: center;
+	margin-bottom: 2px;
+
+}
+.daybox .entry-date .day {
+	color:#1C4E61;
+	font-size:26px;
+	text-align: center;
+}
+.daybox .excerpt {
+	float: left;
+	width:100%;
+}
+/**每日行程標題***/
+.daybox .excerpt .post-heading {
+	display: block;
+	font-family:"微軟正黑體", "Arial Unicode MS", 'Voltaire', Arial, sans-serif;
+	font-size: 24px;
+	font-weight:bolder;
+	line-height: 1.1em;
+	color: rgb(73, 149, 193);
+	text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+	margin: 14px 15px 15px 25px;
+	float:left;
+}
+/**每日行程說明***/
+.day_content{
+	height:auto;
+	padding:0px 30px 20px 30px;
+	font-size:13px;
+	line-height:22px;
+	letter-spacing: 1px;
+	word-spacing:normal;
+	text-align:justify;
+	background: url(../images/box.png) repeat;
+}
+.section_content{
+	height:auto;
+	padding:0px 30px;
+	font-size:13px;
+	line-height:22px;
+	letter-spacing: 1px;
+	word-spacing:normal;
+	text-align:justify;
+}
+
+.h4_box {
+	border-left: 8px solid rgb(84, 84, 84);
+	padding-left: 8px;
+	margin: 10px 35px 5px;
+	font-family: "微軟正黑體";
+	font-size: 15px;
+	color: rgb(84, 84, 84);
+	line-height: 20px;
+	width: 285px;
+	float: left;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+#spots h4,.day_food_hotel_box h4{
+	font-size: 18px;
+	margin: 15px 0 20px 0px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-shadow: rgba(0,0,0,0.3) 0px 1px 2px;
+}
+
+.heading_bg {
+	background: url(../images/heading_bg.png) repeat-x 0 20px;
+}
+.heading_bg h4{
+	background: #FFF;
+	padding-right: 10px;
+	display: inline-block;
+
+}
+h5 {
+	margin-bottom: 0;
+	font-size: 14px;
+	padding: 0px;
+}
+
+/******每日行程大圖********************/
+.day_img{
+}
+.dayphoto_box {
+	background-color: #f8f8f8;
+	background: -moz-linear-gradient(center bottom , #f8f8f8 0px, #FFF 100%) repeat scroll 0 0 transparent;
+	background: -webkit-gradient(linear,left bottom,left top, color-stop(0, #f8f8f8),color-stop(1, #FFF));
+	border: 1px solid #ebebeb !important;
+	padding: 4px;
+	opacity: 1;
+}
+.dayphoto_box_preview {
+	display: block;
+	background: url(../images/photo_1.jpg) no-repeat center center;
+}
+
+#spots{
+	margin: 0px 15px 25px 36px
+}
+
+.spot_photo img,#tumblelog img {
+	display: block;
+	width: 100%;
+}
+
+.spot_photo { width: 260px;
+	float:left;
+	margin-right: 30px;
+	margin-bottom: 20px;
+}
+
+.spots_comment {
+	background: #F2F0F0;
+	border-bottom: 1px solid white;
+	padding: 8px;
+	border-bottom: 1px solid #D9D4D4;
+	border-top: 1px solid #FCFAFA;
+	overflow: hidden;
+}
+.spots_comment p {
+	font-size: 13px;
+	padding: 0px;
+}
+
+.text_content{
+	white-space:normal; word-break:break-all;
+	line-height:22px;
+	letter-spacing: 1px;
+	word-spacing:normal;
+	text-align:justify;
+}
+.spots_comment .fr{
+	clear: left;
+	float: right;
+	padding-right: 3px;
+	margin-bottom: -3px;
+}
+
+
+.point{
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.day_food_hotel_box{
+	width:90%;
+	height:120px;
+	padding-left:30px;
+	padding-right:30px;
+	margin:5px 0px 10px 30px;
+}
+.day_food_hotel_box .day_food
+{
+	float:left;
+	background: url(../images/r_hotel-icons.png) no-repeat;
+	margin-right: 15px;
+	width:120px;
+}
+.day_food_hotel_box .day_hotel
+{
+	float:left;
+	background: url(../images/r_hotel-restaurant-icons.png) no-repeat;
+	margin-right: 15px;
+	width:150px;
+}
+.day_food_hotel_box .description{
+	width:400px;
+	height:auto;
+	float: left;
+
+}
+.dot{
+	background: url(../images/icon_dot.png) no-repeat;
+	padding-left:15px;
+	margin-left: 10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.color_blue{
+	color:#2491b9;
+}
+.color_red{
+	color:#b94a48;
+}
+.bgcolor_pink{
+	color: #b94a48;
+	background-color: #f2dede;
+	border-color: #eed3d7;
+}
+.color_green{
+	color:#549014;
+}
+.color_cyanogen{
+	color:#1f9af1;
+}
+.color_blue{
+	color:1f8eb4;
+}
+.color_pink{
+	color:#f7927d;
+}
+.color_red{
+	color:#dc3e6e;
+}
+/****Map*********************/
+.map{
+	margin: 20px auto;
+	width: 100%;max-height: 300px;
+	padding:0px;
+	border: 5px solid #ddd;
+	font-size: 90%;
+	padding:5px;
+	overflow: hidden;
+	position: relative;
+}
+.map>img{width: 100%;
+	max-height: 300px;
+	text-align:center;
+	/*max-height:auto;*/
+
+}
+/***video**********************/
+.video-container {
+	margin: 20px auto;
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height:0;
+	overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.bigtext {
+	font-size: 18px;
+	line-height: 1.5em;
+	display: inline-block;
+	clear: both;
+}
+.bigtext:hover{
+	font-size: 18px;
+	line-height: 1.5em;
+	color:#fff;
+	background-color:#005aab;
+
+}
+.arrow {
+	background: url(../images/bg-link-arrow.png) no-repeat right;
+	padding-right: 10px;
+}
+div.movie_list{
+	width: 90%;
+}
+div.movie_list ul{
+	font-size: 13px;
+}
+div.movie_list ul li{
+	display: inline-block;
+	line-height: 28px;
+	height: 28px;
+	float: left;
+	margin: 0px 20px 15px 0px;
+	padding: 10px;	
+}
+/****food_hotel**********************/
+.food_hotel{
+	margin: 20px auto;
+	width: 100%;
+	height: 300px;
+}
+img.alignleft {
+	float: left;
+	margin-top: 8px;
+	margin-right: 40px;
+}
+ul.style1 {
+	list-style: none;
+}
+ul.style1 li {
+	padding: 35px 0px 25px 0px;
+	border-top: 1px solid #c8c8c8;
+}
+
+.dayplan_post {
+	margin-bottom: 15px;
+}
+.dayplan_post .title {
+	margin-bottom: 20px;
+	padding-left: 0.5em;
+	font-size: 32px;
+	line-height: 40px;
+	border-left: 8px solid #0082B0;
+	color: #0082B0;
+}
+.dayplan_post .entry {
+	padding: 0px 0px 20px 0px;
+	padding-bottom: 20px;
+	text-align: justify;
+}
+.dayplan_post p,.dayplan_post ul {
+	margin-top: 0;
+	line-height: 180%;
+}

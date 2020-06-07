@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+font-size: 100%;
+border: 0;
+outline: 0;
+vertical-align: baseline;
+}
+ol, ul {
+list-style: none;
+}
+.clearfix {
+display: block;
+}
+.clearfix:after {
+content: ".";
+display: block;
+clear: both;
+visibility: hidden;
+line-height: 0;
+height: 0;
+}
+.hot_list .c1f {margin: 0;
+margin-right: 4px;
+
+width: 70px;
+height: 70px;
+border: 1px solid #ccc;
+}
+
+.hot_list{
+	width:189px;
+margin-bottom: 10px;
+padding: 3px;
+border: 1px solid #ccc;
+background: #FFFBE9;
+}
+.hot_list .head {
+background: #FFD6D6;
+color: #F35;
+}
+.site_valign .c1f img {
+display: inline;
+vertical-align: middle;
+}
+.site_valign .c1f{
+display: block;
+text-align: center;
+white-space: nowrap;
+overflow: hidden;}
+.vc_70 li a,  .vc_70 .c1f {
+width: 70px;
+height: 70px;
+line-height: 70px;
+}
+.c1f {
+float: left;
+display: block;
+}
+.hot_list .c2f a {
+color: #888;
+font: 12px/1.2 normal;
+}
+.hot_list .c2f h6 {
+margin-top: 2px;
+}
+.hot_list .c2f h6 strong {
+color: #FF007C;
+font: 12px/1.2 Verdana,Helvetica,Arial;
+}
+.hot_list .c2f h6 strong a {
+color: #FF007C;
+font: bold 12px/1.2 Verdana,Helvetica,Arial;
+}
+h5, h5 a, h6, h6 a, span a {
+/*overflow: hidden;*/
+}
+
+
+.blockL .head {
+width: 298px;
+}
+.site_mkt .head {
+position: relative;
+width: 306px;
+height: 22px;
+text-indent: -9999px;
+border-bottom: 1px solid #ccc;
+/*background: url() no-repeat;
+*/
+}
+.blockL .body {
+margin-bottom: 10px;
+background: #fee;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+}
+
+.blockL .body li {
+border-bottom: 1px solid #ccc;
+}
+.blockL .c1f {
+width: 120px;
+height: 120px;
+line-height: 120px;
+margin-right: 8px;
+background: #FFD5D5;
+padding: 10px 15px;
+display: block;
+text-align: center;
+white-space: nowrap;
+overflow: hidden;
+}
+.blockL .body li {
+border-bottom: 1px solid #ccc;
+}
+.blockL .c1f img {
+display: inline;
+vertical-align: middle;
+}
+.blockL .c1f {
+line-height: 120px;
+text-align: center;
+white-space: nowrap;
+}
+.blockL .c2f {
+padding-right: 8px;
+}
+
+.blockL  .c2f h5 {
+max-height: 38px;
+_height: 38px;
+font: bold 13px/1.4 normal;
+color: #d00;
+}
+.blockL .c2f span a {
+display: block;
+margin-top: 10px;
+margin-bottom: 4px;
+max-height: 46px;
+font: 12px/1.3 normal;
+color: #069;
+}
+.blockL .c2f span a {
+font: 12px/1.3 normal;
+color: #069;
+}
+.blockL .c2f h6 strong {
+font: 12px/1.2 normal;
+color: #FF007C;
+}
+.blockL .c2f h6 strong i {
+margin-left: 2px;
+vertical-align: -2px;
+font: bold 19px/1.2 Verdana,Helvetica,Arial;
+}
+.blockL h6 a {
+margin-left: 4px;
+color: #00f;
+font: 12px/1.2 normal;
+text-decoration: underline;
+}

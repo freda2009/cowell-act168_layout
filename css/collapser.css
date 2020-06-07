@@ -1,0 +1,479 @@
+/*
+最新消息頁 收合JS用
+*/
+
+.mid{
+    vertical-align:middle;
+}
+.fright{
+	float: right;
+}
+.applemenu{
+	font-family: "微軟正黑體","Microsoft JhengHei","新細明體","PMingLiU","細明體","MingLiU","標楷體","DFKai-sb",Helvetica,Arial,FreeSans,sans-serif;
+	font-size: 13px;
+	margin:5px 0;
+	padding: 0px;
+	width: 100%;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url(ie-css3.htc); /* 使用ie-css3 */
+	background: url(../images/news_r_colum_bg.png) repeat-y;
+}
+
+
+
+.applemenu div.silverheader a{
+	background:url(../images/slide-title-inactive-1.png) 0 0 repeat-y;
+	border: 1px solid #E3E3E3;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	behavior: url(ie-css3.htc); /* 使用ie-css3 */
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 30px;
+	display: block;
+	position: relative; 
+	width: auto;
+	padding: 5px 0px 5px 8px;
+	text-decoration: none;
+}
+
+.applemenu div.silverheader a:visited,
+.applemenu div.silverheader a:active{
+	color: #68889b;
+}
+
+.applemenu div.selected a,
+.applemenu div.silverheader a:hover{
+	/*padding: 3px 8px;*/
+	-moz-box-shadow: 0 8px 6px -6px #669FEC;
+	-webkit-box-shadow: 0 8px 6px -6px #669FEC;
+	box-shadow: 0 8px 6px -6px #669FEC;
+	behavior: url(ie-css3.htc);
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#669FEC', Direction=100, Strength=13);	
+	background:url(../images/slide-title-active-1.png) 0 0 repeat-y !important;
+	color:#FCDCE8 !important;
+}
+
+.applemenu div.submenu{ 
+	background: transparent;
+	min-height:250px; /*500px; */
+	height:auto ;
+	font-size: 13px;
+	padding: 10px;
+}
+
+.applemenu div.submenu img.tour{
+	width: 172px;
+	height: 130px;
+}
+.gray13 {
+	font-family: "新細明體", Arial;
+	font-size: 13px;
+	font-style: normal;
+	line-height: 22px;
+	color: #333333;
+	text-decoration: none;
+}
+.bright{	
+	/*box-shadow: 0px -3px 55px 20px #147197;*/
+	-moz-box-shadow: 0px 0px 3px 3px #147197;
+	-webkit-box-shadow: 0px 0px 3px 3px #147197;
+	box-shadow: 0px 0px 3px 3px #147197;
+	behavior: url(ie-css3.htc);
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=100, Strength=13);
+}
+
+.applemenu .slide-number{
+	font-weight: bold;
+	display: inline-block;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	behavior: url(ie-css3.htc);
+	background: #5C9EC5;
+	height: 30px;
+	width: 30px;
+	padding: 0;
+	text-align: center;
+	margin-top: 3px;
+	margin-right: 15px;
+	color: #fff;
+}
+
+.applemenu .icon-hot{
+	position: absolute;
+	margin: -10px 00px 0 10px;
+	width: 32px;
+	height: 16px;
+	background: url(../images/icon_hot.gif) no-repeat;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.applemenu p>img{
+	float: left;
+	margin: 5px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	width: 100px;
+	height: 100px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 1px 1px 3px #333;
+	-o-box-shadow: 1px 1px 3px #333;
+	-webkit-box-shadow: 1px 1px 3px #333;
+	box-shadow: 1px 1px 3px #333;
+	behavior: url(ie-css3.htc);
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#333', Direction=100, Strength=13);
+}
+
+.applemenu span.news_date{
+	display: inline-block;
+	float: right;
+	margin-right:15px;
+	font-size: 9px;
+	color:#6B2205;
+	width:60px;/*#147197;*/
+}
+
+.applemenu span.news_title{
+	text-indent : -8em;
+	margin : 0 40px 0 0;
+	padding-right : 10px;
+	font-family : inherit;
+}
+
+.smalltext{
+font-size: 12px;
+font-weight: normal;
+color: #F02969;
+display: block;
+height: 0px;
+text-indent: 50px;
+margin: 0px;
+padding: 0px;
+}
+
+.to_block{
+	display: inline-block;
+	margin:0px 0px 0px 10px;
+}
+
+.word_s{
+	font-size: 11px;
+	color:#494949;
+}
+.table_download{
+	background:url(../images/news_center/list_arror.gif) no-repeat;
+	font-size: 12px;
+	margin:0px 0px 0px 10px;
+	padding: 0px 5px 0px 10px;
+	line-height: 25px;
+
+}
+/******以下收合部分的內容用******************/
+/********最新消息頁 右欄*****/
+.rt-block_out{
+	width: 700px;
+	height: auto;	
+}
+.rt-block{
+	min-height: 450px;
+}
+
+.rt-block .component-content .items-row {
+	overflow: hidden;
+	margin-bottom: 10px !important;
+}
+
+.rt-block .component-content .cols-2 .column-1 {
+	width: 30%;
+	float: left;
+}
+
+.rt-block .component-content .cols-2 .column-2 {
+	width: 70%;
+	float: left;
+}
+
+.rt-block .row-separator {
+	border-bottom: 1px dashed #CCC;
+	clear: both;
+	width: 100%;
+	display: block;
+	padding-top: 5px;
+}
+
+.outer-bordered {
+	border-left: solid 6px #4C72AA;
+	margin:0px;
+	padding-left:10px;
+}
+
+.rt-block .component-content .items-row>h3{
+	color:#4C72AA;
+	font-size: 18px;
+	line-height: 30px;
+	margin: 5px 0 2px 0px;
+	font-family: \5FAE\8EDF\6B63\9ED1\9AD4,\65B0\7D30\660E\9AD4 , "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+}
+
+.rt-block .component-content .items-row>h4{
+	width: 100%;
+	height: 22px;
+	line-height: 22px;
+	padding: 0 10px;
+	background-color: #585599;
+	font-size: 14px;
+	letter-spacing: 1px;
+	margin: 0px 0px 15px 20px;
+	color: #FFF;
+}
+
+.color_green{
+	color:#85B82F;
+}
+
+.rt-block .component-content .info_date {
+	height: 20px;
+	padding: 5px 0px 0px 25px;
+	margin: 0 30px 0 20px;
+	float: left;
+	background: url(../images/news_center/i-icon_airplane.png) left top no-repeat;
+	color: #6a8f1e;
+	font-weight: bold;
+}
+
+.rt-block .component-content img.thumbnail_new {
+	float: left;
+	width: 150px;
+	height:auto;	
+	background: #eee;
+	margin: 0px 0px 5px 20px;
+	padding: 10px;
+	-moz-box-shadow: 0 0 2px #999;
+	box-shadow: 0 0 2px #999;
+	-webkit-box-shadow: 0 0 2px #000;
+	-o-box-shadow: 0 0 2px #999;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.rt-block .component-content .info_txt {
+	padding: 4px 0px;
+	line-height: 18px;
+	font-weight: normal;
+	display: block;
+	font-size: 14px;
+}
+
+.rt-block .component-content h5.description_title{
+	font-weight:bold;
+	font-size: 14px !important;
+color: #585599;
+line-height: 14px;
+background: url(../images/news_center/i_icon_Arrow.png) transparent no-repeat;
+padding: 0px 10px 5px 10px;
+margin:0px 0px 5px 0px;
+text-align:left;
+display: inline-block;
+}
+.rt-block .component-content .description_txt{
+	line-height: 20px;
+	float: left;
+}
+
+.rt-block .component-content .note{
+font-size: 12px;
+color: rgb(8, 131, 131);
+margin: 0px 2px 0px 10px;
+padding: 2px;
+display: block;
+}
+
+.rt-block .component-content .news_map{
+	margin: 0px 0px 2px 2px;
+	display: inline-block;
+	float:right;
+	clear: right;
+	width: 80px;
+}
+
+.rt-block .component-content .col_three{
+width: inherit;
+height: auto;
+}
+
+.rt-block .component-content .col_three .col_three-container{
+	width: 100%;
+	overflow: hidden;
+	margin: 16px auto;
+	height: auto;
+}
+.rt-block .component-content .col_three .col_three-container .item_one .border{	
+height: auto;
+width: 220px;
+float: left;
+margin: 0 6px 0px 0px;
+}
+.rt-block .component-content .col_three .col_three-container .item_one .border>img{
+width: 196px;
+height: 150px;
+background: #eee;
+margin: 0px;
+-moz-box-shadow: 0 0 2px #999;
+box-shadow: 0 0 2px #999;
+padding: 5px 10px;
+text-align: center;
+border: #fff solid 1px;
+}
+
+.rt-block .component-content .col_three .col_three-container .item_one .three .shadow {
+background: url(../images/news_center/shadow-portfolio-three.png) transparent;
+height: 15px;
+width: 299px;
+}
+
+.rt-block .component-content .col_three .col_three-container .item_one .border>h5 {
+font-size: 14px;
+color: #4c4c4c;
+width: 196px;
+text-align: center;
+padding: 5px 10px;
+margin: -5px 0px 0px;
+background: #eee;
+-moz-box-shadow: 0 0 2px #999;
+box-shadow: 0 0 2px #999;
+border: #fff solid 1px;
+}
+
+.rt-block .component-content .col_three .col_three-container .item_one .border .col_three_title{
+	height: 36px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.rt-block .component-content .col_three .col_three-container .item_one .border .description{
+	height:67px;
+	overflow: hidden;
+	padding: 8px;
+	margin: 0px;
+	background: #eee;
+	-moz-box-shadow: 0 0 2px #999;
+	box-shadow: 0 0px 2px #999;
+	border: #FFF solid 1px;
+	width: 200px;
+	border-bottom-color: #D3D3D3;
+}
+
+.rt-block .component-content .col_three .col_three-container .item_one .border .description_txt{
+	line-height: 18px;
+	float: left;
+	height: 38px;	overflow: hidden;
+}
+
+
+.rt-block .component-content .col_three .col_three-container .item_one  .shadow {
+background: url(../images/news_center/shadow-portfolio-three-dark.png) transparent;
+height: 15px;
+width: 100%;
+margin: 0px 0 0 0;
+padding: 0px;
+}
+
+.rt-block .component-content .go_btn{
+	margin: 0px 10px 0px 50px;
+	padding: 0px;
+}
+
+/*------附件下載表格---*/
+.downlong {
+	border: 1px solid #ECE7D9;
+	margin-bottom: 6px;
+	margin-top: 20px;
+	background-color: #ffffff;
+}
+.downlong td {
+	background: url(../images/news_center/line_x.gif) repeat-x bottom;
+}
+.downlong th {
+	padding: 1px 1px 1px 3px;
+	background-color: #E0E8C1;
+	color: #718F02;
+	font-weight: lighter;
+	text-align: left;
+}
+.downlong td.pdf {
+	text-align: right;
+	background-image: none;
+	font-size: 11px;
+}
+.downlong td.cap {
+	color: #718F02;
+	font-weight: bold;
+	padding-left: 3px;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+/***end附件下載表格 ********/
+ol.news_content_list li {
+	font-size: 12px;
+border-bottom: 1px solid rgba(0,0,0,.07);
+margin: 0px 0px;
+padding: 0px 0px 3px 30px;
+border-left: none;
+}
+/***start 授課老師及領隊業務大頭照********/
+.profile{
+
+}
+
+.profile .profile_picture {
+padding: 0px 5px 0px 25px;
+text-align: center;
+position: relative;
+width: 120px;
+margin: 0px 5px 0px 0px;
+}
+
+.profile .profile_picture a {
+display: block;
+}
+
+.profile .profile_picture > a > img {
+display: block;
+margin: 0px auto 5px;
+border: 5px solid #FFFFFF;
+border-radius: 8em;
+-webkit-border-radius: 8em;
+-moz-border-radius: 8em;
+-o-border-radius: 8em;
+-moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+-o-box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+-webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+}
+
+.profile .profile_picture_name {
+    background:#2C5786;
+    display:inline-block;
+    padding:2px;
+    margin:0px;
+    width:90px;
+    color:#fff;
+    -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+behavior: url(border-radius.htc);
+}
+
+
+
+/***end 授課老師及領隊業務大頭照 ********/

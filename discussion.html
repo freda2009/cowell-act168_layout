@@ -1,0 +1,1098 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<title>新聞專區---旅遊講座</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<style type="text/css" media="all">
+		@import url("the_third_party/ivaynberg_select2/select2.css");
+		@import url("css/base.css");
+		@import url("css/index.css");
+		@import url("css/index_midslide.css");
+		@import url("css/index_movie_block.css");	/*首頁的影音區CSS*/
+		@import url("css/index_bloglead.css");	/*首頁的領隊旅遊經驗分享區CSS*/
+		@import url("css/index_photoAlbums.css");	/*首頁的旅遊相簿CSS*/
+		@import url("css/style_for_list.css");/*分類頁用*/
+		@import url("css/style_for_dayplan.css");/*行程頁的CSS*/
+		@import url("css/table_airplane_info.css");/*行程頁的航班表格CSS*/
+		@import url("css/forday_stickmenu/styles_forday_stickmenu.css");/*行程頁的submenu*/
+		@import url("css/font-awesome/css/font-awesome.min.css");	/*行程頁的submenu*/
+		@import url("css/owl.carousel.css");/*分類頁的國旗選單*/
+		@import url("css/style_for_news_grouplist_sitemap.css");	/*FOR 最新消息|團體總表|網站地圖 頁*/
+	</style>
+
+
+	<link rel="icon" type="image/icon" href="ico/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|LilyScriptOne-Regular|Ubuntu:400,500,700">
+
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome-ie7.min.css">
+	<![endif]-->
+
+	<!--[if gte IE 9]>
+		<style type="text/css">
+			.gradient {
+				filter: none;
+			}
+		</style>
+	<![endif]-->
+
+	<!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+	<script language="javascript" type="text/ecmascript" src="scripts/jquery.min.js"></script>
+	<script language="javascript" type="text/ecmascript" src="scripts/jquery.form.js"></script>
+
+	<script language="javascript" type="text/ecmascript" src="scripts/scroll.js"></script>
+	<script language="javascript" type="text/ecmascript" src="scripts/index.js"></script>
+
+	<!--start index頁:WdatePicker-->
+	<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+	<link href="js/My97DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	<!--end index頁WdatePicker:-->
+
+	<!--登入的下拉選單用bootstrap.min.js-->
+	<script language="javascript" type="text/ecmascript" src="scripts/bootstrap.min.js"></script>
+
+	<!--index頁:中間強檔促銷行程-->
+	<link rel="stylesheet" type="text/css" href="css/index_promotions.css">
+	<script type="text/javascript" src="scripts/index_promotions.js"></script>
+
+	<!--index頁:標籤雲tagscloud.js-->
+		<script type="text/javascript" src='scripts/tagscloud.js'></script>
+
+	<!--index首頁影音區塊jquery-latest.min.js & index_movieblock.js-->
+	<script type="text/javascript" src="scripts/index_movieblock.js"  ></script>
+
+	<!--分類頁 : START 瀏覽方式切換-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("a.switch_thumb").toggle(function(){
+				$(this).addClass("swap");
+					$("ul.display").fadeOut("fast", function() {
+						$(this).fadeIn("fast").addClass("thumb_view");
+						});
+					}, function () {
+				$(this).removeClass("swap");
+				$("ul.display").fadeOut("fast", function() {
+					$(this).fadeIn("fast").removeClass("thumb_view");
+					});
+				});
+		});
+	</script>
+	<!--END 分類頁: 瀏覽方式切換-->
+
+	<!--START 首頁中間精選攝影行程用-->
+	<script type="text/javascript">
+			$(document).ready(function() {
+				//Show Banner
+				$(".examples_image .desc").show(); //Show Banner
+				$(".examples_image .block").animate({ opacity: 0.7 }, 1 ); //Set Opacity
+
+				//Click and Hover events for thumbnail list
+				$(".mune_thumb ul li:first").addClass('active');
+				$(".mune_thumb ul li").click(function(){
+					//Set Variables
+					var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+					var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+					var imgDesc = $(this).find('.block').html(); 	//Get HTML of block
+					var imgDescHeight = $(".examples_image").find('.block').height();	//Calculate height of block
+
+					if ($(this).is(".active")) {  //If it's already active, then...
+						return false; // Don't click through
+					} else {
+						//Animate
+						$(".examples_image .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250 , function() {
+						$(".examples_image .block").html(imgDesc).animate({ opacity: 0.85,	marginBottom: "0" }, 250 );
+						$(".examples_image img").attr({ src: imgTitle , alt: imgAlt});
+						});
+					}
+
+					$(".mune_thumb ul li").removeClass('active'); //Remove class of 'active' on all lists
+					$(this).addClass('active');  //add class of 'active' on this list only
+					return false;
+
+				}) .hover(function(){
+					$(this).addClass('hover');
+					}, function() {
+					$(this).removeClass('hover');
+				});
+
+				//Toggle
+				$("a.collapse").click(function(){
+				$(".examples_image .block").slideToggle();
+				$("a.collapse").toggleClass("show");
+				});
+
+			});//Close Function
+		</script>
+		<!--END 首頁中間精選攝影行程用-->
+
+		<!--START 上方選單 mouseOVER 出現SUBMENU-->
+		<script type="text/javascript">
+			function MM_over(mmObj) {
+					var mSubObj = mmObj.getElementsByTagName("div")[0];
+					mSubObj.style.display = "block";
+					mSubObj.style.backgroundColor = "";
+				}
+				function MM_out(mmObj) {
+					var mSubObj = mmObj.getElementsByTagName("div")[0];
+					mSubObj.style.display = "none";
+				}
+		</script>
+		<!--END 上方選單 mouseOVER 出現SUBMENU-->
+
+
+    <script type="text/javascript" src="scripts/fancybox/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script type="text/javascript" src="scripts/fancybox/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="scripts/fancybox/jquery.fancybox.css" media="screen" />
+     
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("a.fancybox_photo").fancybox({
+                'opacity'        : true,
+                'overlayShow'    : false,
+                'transitionIn'    : 'elastic',
+                'transitionOut'    : 'none'
+            });
+						$(".various").fancybox({
+								'maxWidth'	: 800,
+								'maxHeight'	: 600,
+								'fitToView'	: false,
+								'width'		: '70%',
+								'height'		: '70%',
+								'autoSize'	: false,
+								'closeClick'	: false,
+								'openEffect'	: 'none',
+								'closeEffect'	: 'none'
+							});
+        });
+    </script>
+<!--start 分類頁的國旗選單用-->
+	<script src="scripts/owl.carousel.js"></script>
+	<script>
+    $(document).ready(function() {
+
+      var owl = $("#owl-demo");
+
+      owl.owlCarousel({
+
+      items : 10, //10 items above 1000px browser width
+      itemsDesktop : [1000,5], //5 items between 1000px and 901px
+      itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
+      itemsTablet: [600,2], //2 items between 600 and 0;
+      itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+
+      });
+
+      // Custom Navigation Events
+      $(".owl_next").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".owl_prev").click(function(){
+        owl.trigger('owl.prev');
+      })
+      $(".owl_play").click(function(){
+        owl.trigger('owl.play',1000);
+      })
+      $(".owl_stop").click(function(){
+        owl.trigger('owl.stop');
+      })
+    });
+    </script>
+<!--END 分類頁的國旗選單用-->
+
+<!--start 最新消息頁 收合JS用-->
+<link rel="stylesheet" type="text/css" href="css/collapser.css">
+<script type="text/javascript" src="scripts/ddaccordion.js"></script>
+<script type="text/javascript">
+		ddaccordion.init({
+			headerclass: "silverheader", //Shared CSS class name of headers group
+			contentclass: "submenu", //Shared CSS class name of contents group
+			revealtype: "mouseover", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+			mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+			collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+			defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+			onemustopen: true, //Specify whether at least one header should be open always (so never all headers closed)
+			animatedefault: false, //Should contents open by default be animated into view?
+			persiststate: true, //persist state of opened contents within browser session?
+			toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+			togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+			animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+			oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+				//do nothing
+			},
+			onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+				//do nothing
+			}
+		})
+</script>
+<!--end 最新消息頁 收合JS用-->
+</head>
+
+<body >
+		<!--START FACEBOOK 按讚用-->
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=153150358224827";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+		<!--END FACEBOOK 按讚用-->
+
+	<div id="main">
+
+		<div id="navigation">
+			<div class="logo">
+				<div class="d250 fl">
+					<a href="index.html"><img src="images/logo.png" alt="大地假期旅遊網" class="mt10"></a>
+				</div>
+				<div class="d700 fr">
+					<div class="topbar a3">
+						<div class="frml"></div>
+						<div class="frmc">
+							<div class="d450 ml10 fl f12">
+								<div id="user_info_default">
+									<div class="login">
+										<div class="dropdown">
+											<a class="dropdown-toggle toggle" data-toggle="dropdown" data-target="#" href="#">登入</a>
+											<ul class="dropdown-menu" role="menu">
+												<div class="forms m10">
+													<form name="loginkform" method="post" action="membercenter.html#login">
+														<div class="close">
+															會員登入
+															<a href="" onclick="show_submenu_list(null);" data-toggle="close"><!-- X -->
+																<img src="images/close.gif" />
+															</a>
+														</div>
+														<div class="control-group">
+															<label for="email" class="">
+																<span class="fc03">*</span> E-mail
+															</label>
+															<div class="field" style="margin-left:0;">
+																<input type="text" id="login_email" name="email" class="input-large" placeholder="Email" value="">
+															</div>
+														</div>
+														<div class="control-group">
+															<label for="password" class="">
+																<span class="fc03">*</span> 密碼
+															</label>
+															<div class="field" style="margin-left:0;">
+																<input type="password" id="login_password" name="password" class="input-large" placeholder="密碼">
+															</div>
+														</div>
+														<div class="control-group">
+															<div class="field" style="margin-left:0;">
+																<span class="a2 fi ml10">
+																	<a href="forgot_password.html" class="various fancybox.iframe">忘記密碼</a>
+																</span>
+																<span class="a2 fi ml10">
+																	<a href="membercenter.html" >會員註冊</a>
+																</span>
+																<!--
+																<input type="submit" name="button" id="submit_button" value="登入" class="btn fr" style="width:115px; height:30px;">
+																-->
+																<a class="oval-bluebutton" href="" title="" target="_blank">
+																	<span>登入</span>
+																</a>
+															</div>
+														</div>
+													</form>
+												</div>
+											</ul>
+										</div>
+									</div>
+									<div class="fl d350">
+										<span class="divider">|</span>
+										<a href="aboutme.html">關於大地假期</a>
+										<span class="divider">|</span>
+										<span id="top_message">
+											<a href="grouplist.html"> 最新出團總表 </a>
+											<span class="divider">|</span>
+											<a href="sitemap.html">網站地圖</a>
+										</span>
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="frmr"></div>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+					<div class="sns_icons fc04">
+						<a href="https://www.facebook.com/ACTWG" target="_blank"><img src="images/facebook_02.gif" alt="Facebook"></a>
+						<a href="mailto:dianya168@yahoo.com.tw" target="_blank"><img src="images/mail_02.gif" alt="Email"></a>
+						<span class="sns_icons_txt">02-2508-2105 (代表號) | 傳真：02-25084915 </span>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="navi">
+				<div class="navibar">
+					<div class="frml"></div>
+					<div class="frmc">
+						<div class="navi">
+							<ul class="links inline clearfix btns" id="main-menu" style="display: inline-table; float: left;">
+								<li class="first leaf" style="padding-right: 0px; padding-left: 0px;" mlid="237">
+									<!--
+									<a href="#" class="submenu_item" id="switch_submenu_237_list" onclick="return show_submenu_list(237);">首頁
+									-->
+									<a href="index.html" class="submenu_item" id="switch_submenu_237_list" >首頁
+									</a>
+									<div class="blocker">
+									</div>
+								</li>
+								<li class="leaf" style="padding-right: 0px; padding-left: 0px;" mlid="340" onmouseover="MM_over(this)" onmouseout="MM_out(this)">
+
+									<a href="/taxonomy/term/8" title="攝影旅遊" id="switch_submenu_340_list" class="submenu_item" >攝影旅遊
+									</a>
+
+									<!--start submenu-list-->
+									<div id="submenu_340_list" class="hide topl_list submenu_list" style="display: none;">
+										<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+										<div class="frm2 bg6 a2">
+											<div class="topl_frms_frm">
+												<div class="topl">
+													<div class="topl_tt"><a href="list_photograph.html">國外攝影行程</a></div>
+													<div class="topl_cc">
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_photograph.html">台灣攝影行程</a></div>
+													<div class="topl_cc">
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_photograph.html">模特兒攝影行程</a></div>
+													<div class="topl_cc">
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--end submenu-list-->
+									<div class="blocker"></div>
+								</li>
+								<li class="leaf" style="padding-right: 0px; padding-left: 0px;" mlid="334" onmouseover="MM_over(this)" onmouseout="MM_out(this)">
+									<a href="/taxonomy/term/2" title="俄羅斯旅遊" id="switch_submenu_334_list" class="submenu_item" >俄羅斯旅遊
+									</a>
+									<!--start submenu-list-->
+									<div id="submenu_334_list" class="hide topl_list submenu_list" style="display: none;">
+										<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+										<div class="frm2 bg6 a2">
+											<div class="topl_frms_frm">
+												<div class="topl">
+													<div class="topl_tt">俄羅斯全系列</div>
+													<div class="topl_cc">
+														<a href="list_russia.html">西伯利亞大鐵路系列</a>
+														<a href="list_russia.html">堪察加半島系列</a>
+														<a href="list_russia.html">貝加爾湖系列</a>
+														<a href="list_russia.html">金環城市系列</a>
+														<a href="list_russia.html">伏爾加河 郵輪渡假</a>
+														<div class="topl_tt"><a href="list_russia.html#">俄羅斯+跨國行程</a></div>
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!--end submenu-list-->
+									<div class="blocker">
+									</div>
+								</li>
+								<li class="expanded" style="padding-right: 0px; padding-left: 0px;" mlid="335" onmouseover="MM_over(this)" onmouseout="MM_out(this)">
+									<a href="/taxonomy/term/3" title="亞洲旅遊" id="switch_submenu_335_list" class="submenu_item" >
+										亞洲旅遊
+									</a>
+									<!--start submenu-list-->
+									<div id="submenu_335_list" class="hide topl_list submenu_list" style="display: none;">
+										<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+										<div class="frm2 bg6 a2">
+											<div class="topl_frms_frm">
+												<div class="topl">
+													<div class="topl_tt">中國大陸旅遊</div>
+													<div class="topl_cc">
+														<a href="list_asia.html">西藏尼泊爾</a>
+														<a href="list_asia.html">新疆絲路</a>
+														<a href="list_asia.html">香格里拉</a>
+														<a href="list_asia.html">華北</a>
+														<a href="list_asia.html">華南</a>
+														<a href="list_asia.html">大江南北</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_asia.html">台灣</a></div>
+													<div class="topl_cc">
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt">東亞</div>
+													<div class="topl_cc">
+														<a href="list_asia.html">北韓</a>
+														<a href="list_asia.html">蒙古國</a>
+														<a href="list_asia.html">日本</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt">東南亞</div>
+													<div class="topl_cc">
+														<a href="list_asia.html">印尼</a>
+														<a href="list_asia.html">東/西帝汶</a>
+														<a href="list_asia.html">緬甸</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt">南亞</div>
+													<div class="topl_cc">
+														<a href="list_asia.html">印度</a>
+														<a href="list_asia.html">不丹</a>
+														<a href="list_asia.html">尼泊爾</a>
+														<a href="list_asia.html">巴基斯坦</a>
+														<a href="list_asia.html">斯里蘭卡</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--end submenu-list-->
+									<div class="blocker"></div>
+								</li>
+								<li class="leaf" style="padding-right: 0px; padding-left: 0px;" mlid="336" onmouseover="MM_over(this)" onmouseout="MM_out(this)">
+									<a href="/taxonomy/term/4" title="歐洲旅遊" id="switch_submenu_336_list" class="submenu_item" >歐洲旅遊
+									</a>
+									<!--start submenu-list-->
+									<div id="submenu_336_list" class="hide topl_list submenu_list" style="display: none;">
+										<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+										<div class="frm2 bg6 a2">
+											<div class="topl_frms_frm">
+												<div class="topl">
+													<div class="topl_tt"><a href="list_europe.html">北歐</a></div>
+													<div class="topl_cc">
+														<a href="list_europe.html">丹麥</a>
+														<a href="list_europe.html">挪威</a>
+														<a href="list_europe.html">冰島</a>
+														<a href="list_europe.html">芬蘭</a>
+														<a href="list_europe.html">瑞典</a>
+														<a href="list_europe.html">立陶宛|拉脫維亞|愛沙尼亞</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_europe.html">南歐</a></div>
+													<div class="topl_cc">
+														<a href="list_europe.html">葡萄牙</a>
+														<a href="list_europe.html">西班牙</a>
+														<a href="list_europe.html">希臘</a>
+														<a href="list_europe.html">義大利|梵蒂岡|直布羅陀|馬其頓</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_europe.html">東歐</a></div>
+													<div class="topl_cc">
+														<a href="list_europe.html">烏克蘭</a>
+														<a href="list_europe.html">白俄羅斯</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_europ.html">西歐</a></div>
+													<div class="topl_cc">
+														<a href="list_europe.html">英國</a>
+														<a href="list_europe.html">波蘭</a>
+														<a href="list_europe.html">匈牙利</a>
+														<a href="list_europe.html">斯洛伐克</a>
+														<a href="list_europe.html">捷克</a>
+														<a href="list_europe.html">保加利亞</a>
+														<a href="list_europe.html">羅馬尼亞</a>
+														<a href="list_europe.html">烏克蘭</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_europe.html">西歐</a></div>
+													<div class="topl_cc">
+														<a href="list_europe.html">法國</a>
+														<a href="list_europe.html">荷蘭</a>
+														<a href="list_europe.html">比利時</a>
+														<a href="list_europe.html">盧森堡|瑞士</a>
+														<a href="list_europe.html">奧地利</a>
+														<a href="list_europe.html">摩納哥</a>
+														<a href="list_europe.html">德國</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--end submenu-list-->
+									<div class="blocker"></div>
+								</li>
+								<li class="leaf" style="padding-right: 0px; padding-left: 0px;" mlid="339" onmouseover="MM_over(this)" onmouseout="MM_out(this)">
+									<a href="/taxonomy/term/5" title="非洲旅遊" id="switch_submenu_339_list" class="submenu_item" >非洲旅遊
+									</a>
+									<!--start submenu-list-->
+									<div id="submenu_339_list" class="hide topl_list submenu_list" style="display: none;">
+										<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+										<div class="frm2 bg6 a2">
+											<div class="topl_frms_frm">
+												<div class="topl">
+													<div class="topl_tt"><a href="list_africa.html">東非肯亞-動物天堂</a></div>
+													<div class="topl_cc">
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_africa.html">東非跨國之旅</a></div>
+													<div class="topl_cc">
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--end submenu-list-->
+									<div class="blocker"></div>
+								</li>
+									<li class="leaf" style="padding-right: 0px; padding-left: 0px;" mlid="338" onmouseover="MM_over(this)" onmouseout="MM_out(this)">
+										<a href="/taxonomy/term/6" title="美洲旅遊" id="switch_submenu_338_list" class="submenu_item">美洲旅遊
+										</a>
+									<!--start submenu-list-->
+									<div id="submenu_338_list" class="hide topl_list submenu_list" style="display: none;">
+										<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+										<div class="frm2 bg6 a2">
+											<div class="topl_frms_frm">
+												<div class="topl">
+													<div class="topl_tt">北美洲</div>
+													<div class="topl_cc">
+														<a href="list_america.html">美國 阿拉斯加</a>
+														<a href="list_america.html">美國 夏威夷</a>
+														<a href="list_america.html">加拿大</a>
+														<div class="clear"></div>
+													</div>
+												</div>
+												<div class="topl">
+													<div class="topl_tt"><a href="list_america.html">拉丁美洲</a></div>
+													<div class="topl_cc">
+														<div class="clear"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--end submenu-list-->
+										<div class="blocker"></div>
+									</li>
+									<li class="leaf" style="padding-right: 0px; padding-left: 0px;" mlid="337" onmouseover="MM_over(this)" onmouseout="MM_out(this)">
+										<a href="/taxonomy/term/7" title="紐澳旅遊" id="switch_submenu_337_list" class="submenu_item">紐澳旅遊
+										</a>
+										<!--start submenu-list-->
+										<div id="submenu_337_list" class="hide topl_list submenu_list" style="display: none;">
+											<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+											<div class="frm2 bg6 a2">
+												<div class="topl_frms_frm">
+													<div class="topl">
+														<div class="topl_tt"><a href="list_australia.html">澳洲</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+													<div class="topl">
+														<div class="topl_tt"><a href="list_australia.html">紐西蘭</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!--end submenu-list-->
+										<div class="blocker"></div>
+									</li>
+									<li class="last leaf" style="padding-right: 0px; padding-left: 0px;" mlid="341" onmouseover="MM_over(this)" onmouseout="MM_out(this)">
+										<a href="/taxonomy/term/9" title="主題旅遊" id="switch_submenu_341_list" class="submenu_item" >主題旅遊
+										</a>
+										<!--start submenu-list-->
+										<div id="submenu_341_list" class="hide topl_list submenu_list" style="display: none;">
+											<!--<div class="close"><a href="#" onclick="show_submenu_list(null);">X</a></div>-->
+											<div class="frm2 bg6 a2">
+												<div class="topl_frms_frm">
+													<div class="topl">
+														<div class="topl_tt"><a href="list_themetravel.html">節慶旅遊</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+													<div class="topl">
+														<div class="topl_tt"><a href="list_themetravel.html">郵輪渡假</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+													<div class="topl">
+														<div class="topl_tt"><a href="list_themetravel.html">海外婚禮|蜜月旅遊</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+													<div class="topl">
+														<div class="topl_tt"><a href="list_themetravel.html">主題樂園</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+													<div class="topl">
+														<div class="topl_tt"><a href="list_themetravel.html">SPA休閒&購物</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+													<div class="topl">
+														<div class="topl_tt"><a href="list_themetravel.html">挑戰極限旅遊</a></div>
+														<div class="topl_cc">
+															<div class="clear"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!--end submenu-list-->
+										<div class="blocker"></div>
+									</li>
+								</ul>
+								<!-- /#main_menu -->
+							<div class="nsfrm">
+								<form name="ksearch" method="get" action="#">
+									<input name="keyword" class="nsipt" value="關鍵字/團號搜尋" onclick="if(this.value=='關鍵字/團號搜尋')this.value='';" onblur="if(this.value=='')this.value='關鍵字/團號搜尋';" type="text"> <input value="" class="nsbtn" type="submit">
+								</form>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="frmr"></div>
+					<div class="clear"></div>
+
+				</div>
+			</div>
+
+			<div id="nav_message" class="navisub" data-sec="7">
+				<div class="frml"></div>
+				<div class="frmc">
+					<div class="ml10 a2 hide slideUpDown current" style="display: block;"><span class="fc05">最新消息: </span><a href="http://www.act168.com.tw/newscont.asp?id=369&amp;sub_kind=&amp;kind_id=&amp;subject1=%A4%A4%AC%EE%B8%60%B4%E7%B0%B2%A6%E6%B5%7B&amp;curName=&amp;topName=" class="ml5">中秋節渡假行程</a></div>
+					<div class="ml10 a2 hide slideUpDown" style="display: none;"><span class="fc05">最新消息: </span><a href="http://www.act168.com.tw/newscont.asp?id=368&amp;sub_kind=&amp;kind_id=&amp;subject1=%A5%EC%AE%D4+%A5j%AAi%B4%B5%AB%D2%B0%EA+%A4%A7%AE%C8+9%A4%E9%2F+14%A4%E9%7E%AC%DD%BA%C9%AAi%B4%B5%AB%D2%B0%EA%AA%BA%BAa%C4%A3%A5%FA%BD%F7%A1I&amp;curName=&amp;topName=" class="ml5">伊朗 古波斯帝國 之旅 9日/ 14日~看盡波斯帝國的榮耀光輝！</a></div>
+					<div class="ml10 a2 hide slideUpDown" style="display: none;"><span class="fc05">最新消息: </span><a href="http://www.act168.com.tw/newscont.asp?id=367&amp;sub_kind=&amp;kind_id=&amp;subject1=%B0l%B3v%A5%5F%B7%A5%A5%FA%AA%BA%A9u%B8%60%A1A%A7Y%B1N%B6%7D%C6r%A1C&amp;curName=&amp;topName=" class="ml5">追逐北極光的季節，即將開鑼。</a></div>
+				</div>
+				<div class="frmr"></div>
+				<div class="clear"></div>
+			</div>
+			<!-- /#nav_message -->
+		</div>
+		<!--END #navigation-->
+
+		<div id="body" class="ctn">
+
+			<div id="header" class="ld0">
+
+				<div id="position_now" class="ld0">
+					<!-- START 當前位置 -->
+					<div class="d250 fr">
+						<div class="bc_ln a3">當前位置:
+							<a href="index.html">首頁</a>
+							<span class="nowpostion divider"></span>
+							<a href="news.html">新聞專區</a>
+							<span class="nowpostion divider"></span>
+							旅遊講座
+						</div>
+					</div>
+					<!-- END 當前位置 -->
+					<div class="clear"></div>
+				</div><!-- END #position_now-->
+			</div>
+			<!-- END header -->
+
+			<!-- start 左欄內容#sidebar_first -->
+			<div id="sidebar_first" >
+				<div class="ld5l">
+					<div class="news_L_box">
+						<div class="news_nemu">
+							<div class="news_nemu_title">
+								<h2>新聞專區選單</h2>
+							</div>
+							<ul class="news_menu_list">
+								<li >
+									<a href="news.html#newstop">
+										<span>最新消息</span>
+									</a>
+								</li>
+								<li >
+									<a href="orientation.html">
+										<span>行前說明會</span>
+									</a>
+								</li>
+								<li class="current active">
+									<a href="discussion.html">
+										<span>旅遊講座</span>
+									</a>
+								</li>
+								<li >
+									<a href="classes.html">
+										<span>攝影研習班</span>
+									</a>
+								</li>
+								<li >
+									<a href="pushsale.html">
+										<span>強檔促銷</span>
+									</a>
+								</li>							
+              </ul>
+            </div>
+					</div>
+				</div>
+			</div>
+			<!-- END 左欄內容#sidebar_first -->
+
+			<div id="content_outside" class="ctn">
+				<div id="content" class="ld5r ml20">
+					<div id="" class="hd">
+						<h1 class="title_briefing">
+							旅遊講座
+						</h1>
+					</div>
+					<div class="clear"></div>
+					<div class="ld5r ml20">
+						<div class="rt-block_out">
+							<div class="rt-block">
+								<!--START 可收合列表.applemenu-->
+								<div class="applemenu">
+									<!--第一項-->
+									<div class="silverheader">										
+										<a name="newstop">
+											<span class="slide-number">01</span>
+											<b class="icon-hot"></b>
+											<span class="news_title">
+												《紐西蘭遊輪》峽灣-世界遺產群島 ~旅遊講座 ~
+											</span>
+											<span class="news_date">2014/01/01</span>
+										</a>
+									</div>
+									<!--第一項 內容-->
+									<div class="submenu">
+										<div class="component-content">
+											<div class="cols-2">
+												<div class="item column-1"><!--L欄 30%-->
+												<img class="thumbnail_new" src="images/news_center/Ship_00.jpg" alt="旅遊講座">
+												</div>
+												<div class="item column-2"><!--R欄 70%-->
+													<div class="description_txt">
+														<h5 class="description_title">主講者:</h5>大地假期專業領隊<br/>
+														<h5 class="description_title">講座時間:</h5>2014/2/16 (二) 15:00 ~ 17:00 </span><br/>
+														<h5 class="description_title">講座地點:</h5><span class="color_red">大地假期旅行社</span>&nbsp;&nbsp;&nbsp;
+														台北市中山區長安東路2段112號11樓之2<br />
+														<div class="news_map">
+															<a href="images/news_center/company_address_map.png" target="_blank" class="various">【地圖】</a>
+														</div>
+														<h5 class="description_title">講座報名:</h5>（2/11截止報名）&nbsp;&nbsp;&nbsp;<h5 class="description_title">電話報名:
+														<span class="color_red">02-2508-2105</span></h5><br/>
+														<div class="note">註：參加講座免費，預約報名有機會獲得精美禮品及行程優惠!!</div>
+													</div>													
+												</div>
+												<div class="go_btn">
+													<a class="oval-redbutton" href="apply.html" title="網路報名" target="_blank">
+														<span>網路報名</span>
+													</a>									
+												</div>
+											</div>
+											<span class="row-separator"></span>
+											<div class="items-row">
+												<h3 class="outer-bordered">
+													相關講座及其他日期
+												</h3>
+												<h4>
+													若您有想要進一步了解的旅遊資訊，也歡迎您來電洽詢。
+												</h4>
+												<div class="col_three">
+													<div class="col_three-container">
+														<!--START 第一欄-->
+														<div class="item_one" >
+															<div class="border">
+																<img src="images/news_center/Ship_02.jpg">
+																<h5 class="col_three_title">
+																	<a href="#" target="_blank" title="查看行程">正北極90度 征服之旅</a>
+																</h5>
+																<div class="description">
+																	<span class="description_txt">
+																	<span class="color_green">旅遊路線:</span>俄羅斯-摩爾曼斯克-正北極90度
+																	</span>
+																	<h5 class="description_title">講座時間:</h5>2/20,3/17
+																</div>
+																<div class="shadow"></div>
+															</div>
+														</div>
+														<!--END 第一欄-->
+
+														<!--START 第2欄-->
+														<div class="item_one" >
+															<div class="border">
+																<img src="images/news_center/Ship_02.jpg">
+																<h5 class="col_three_title">
+																	<a href="#" target="_blank" title="查看行程">南極 破冰之旅</a>
+																</h5>
+																<div class="description">
+																	<span class="description_txt">
+																		<span class="color_green">旅遊路線:</span>阿根廷-布宜諾斯艾利斯-烏斯懷雅-南極
+																	</span>
+																	<h5 class="description_title">講座時間:</h5>2/20,3/17
+																</div>
+																<div class="shadow"></div>
+															</div>														
+														</div>
+														<!--END 第2欄-->
+
+														<!--START 第3欄-->
+														<div class="item_one" >
+															<div class="border">
+																<img src="images/news_center/Ship_02.jpg">
+																<h5 class="col_three_title">
+																	<a href="#" target="_blank" title="查看行程">北大西洋 跨國之旅</a>
+																</h5>
+																<div class="description">
+																	<span class="description_txt">
+																		<span class="color_green">旅遊路線:</span>丹麥-挪威-蘇格蘭-冰島
+																	</span>
+																	<h5 class="description_title">講座時間:</h5>2/20,3/17
+																</div>
+																<div class="shadow"></div>
+															</div>											
+														</div>
+														<!--END 第3欄-->		
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+				
+									<!--第2項-->
+									<div class="silverheader">
+										<a href="" >
+											<span class="slide-number">02</span>
+											<b class="icon-hot"></b>
+											<span class="news_title">
+												2014《蒙古國》旅遊講座
+											</span>
+											<span class="news_date">2014/02/10</span>
+										</a>
+									</div>
+									<!--第2項 內容-->
+									<div class="submenu">
+									內容區<br />
+									</div>
+
+									<!--第3項-->
+									<div class="silverheader">
+										<a href="">
+											<span class="slide-number">03</span>
+											<b class="icon-hot"></b>
+											<span class="news_title">
+												~《印尼旅遊講座》~
+											</span>
+											<span class="news_date">2014/01/01</span>
+										</a>
+									</div>
+									<!--第3項 內容-->
+									<div class="submenu">
+									內容區<br />
+									</div>
+
+									<!--第4項-->
+									<div class="silverheader">
+										<a href="">
+											<span class="slide-number">04</span>
+											<span class="news_title">
+												2014春季旅遊講座~
+											</span>
+											<span class="news_date">2014/01/01</span>
+										</a>
+									</div>
+									<!--第4項 內容-->
+									<div class="submenu">
+									內容區<br />
+									<img src="http://i27.tinypic.com/sy7295.gif" />
+									</div>
+
+									<!--第5項-->
+									<div class="silverheader">
+										<a href="">
+											<span class="slide-number">05</span>
+											<span class="news_title">
+												2014春季旅遊講座~
+											</span>
+											<span class="news_date">2014/01/01</span>
+										</a>
+									</div>
+									<!--第5項 內容-->
+									<div class="submenu">
+									內容區<br />
+									</div>
+
+									<!--第6項-->
+									<div class="silverheader">
+										<a href="">
+											<span class="slide-number">06</span>
+											<span class="news_title">
+												2014春季旅遊講座~
+											</span>
+											<span class="news_date">2014/01/01</span>
+										</a>
+									</div>
+									<!--第6項 內容-->
+									<div class="submenu">
+									內容區<br />
+									</div>
+								</div><!--end 可收合列表.applemenu-->
+							</div>
+						</div>
+					<div class="clear"></div>
+					<div class="PageNaviL">
+						<a href="#page-1" class="NavLink">&lt;&lt;</a>
+						<a href="" class="NavLink">&lt;</a>
+						<a href="" class="NaviCurrent">1</a>
+						<a href="#page-2" class="NavLink">2</a>
+						<a href="#page-3" class="NavLink">3</a>
+						<a href="#page-4" class="NavLink">4</a> <a href="#/page-2" class="NavLink">&gt;</a>
+						<a href="#page-5" class="NavLink">&gt;&gt;</a>
+					</div>
+					<div class="clear"></div>
+					</div>
+				</div>
+				<!-- END #Content -->
+			
+				<!--start 右欄-->
+				<div id="sidebar_second" class="blind">				
+					<!--右欄.blind(import.css)暫不顯示-->
+				</div>
+				<!--end 右欄-->
+				<div class="clear"></div>
+			</div><!-- END #content_outside -->
+
+			<div class="clear"></div>
+		</div>
+		<!--END #body-->
+	</div>
+	<!--END #main-->
+
+	<div id="footer_note blind">
+		<p class="footer_note_txt ">		
+		</p>
+	</div>
+
+	<div id="footer">
+
+		<div>
+			<span class="shadow-bottom"></span>
+			<!-- footer-cols -->
+			<div class="footer-cols">
+				<!-- shell -->
+				<div class="shell">
+					<div class="col">
+						<h3><a >精選行程</a></h3>
+						<div class="col-cnt">
+							<ul>
+								<li><a href="list_photograph.html">攝影旅遊</a> | <a href="list_russia.html">俄羅斯旅遊</a></li>
+								<li><a href="list_asia.html">中國旅遊</a> | <a href="list_asia.html">印尼旅遊</a></li>
+								<li><a href="list_asia.html">亞洲旅遊</a> | <a href="list_europe.html">歐洲旅遊</a></li>
+								<li><a href="list_africa.html">非洲旅遊</a> | <a href="list_australia.html">紐澳旅遊</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<h3><a href="service.html">我們的服務</a></h3>
+						<div class="col-cnt">
+							<ul>
+								<li><a href="service.html">旅遊報名須知</a></li>
+								<li><a href="service.html">旅遊諮詢服務</a></li>
+								<li><a href="service.html">簽證護照代辦</a></li>
+								<li><a href="membercenter.html">會員中心 </a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<h3><a href="aboutme.html">大地假期資訊</a></h3>
+						<div class="col-cnt">
+							<ul>
+								<li><a href="aboutme.html">關於我們</a></li>
+								<li><a href="news.html">最新消息</a></li>
+								<li><a href="news.html">行前說明會</a></li>
+								<li><a href="news.html">攝影研習班</a></li>
+								<li><a href="news.html">旅遊講座</a></li>
+								<li><a href="grouplist.html">近期出團總表</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col col_width ">
+						<h3><a href="contact.html">聯絡我們</a></h3>
+						<div class="col-cnt">
+							<p>旅遊產品由大地假期旅行社有限公司提供</p>
+							<p>統一編號：53539036 | 甲種旅行社 交觀甲7316號 | 品保協會會員 北1863號 </p>
+							<p>代表人：曾材樺 | 聯絡人：曾文駿 </p>
+							<p><strong>Email:</strong> <a href="mailto:dianya168@yahoo.com.tw">dianya168@yahoo.com.tw </a></p>
+							<p><strong>電話:</strong>(代表號)<span class="telephone">02-2508-2105</span></p>
+							<p><strong>傳真:</strong>(FAX)<span class="telephone">02-2508-4915</span>/<span class="telephone">02-2508-0394</span></p>
+							<p><strong>地址:</strong> 台北市中山區長安東路2段112號11樓之2
+								<span class="mapguide">
+									<a href="aboutme.html#map" class="btn-mini btn-success"> 交通資訊</a>
+								</span>
+							</p>
+						</div>
+					</div>
+					<div class="cl">&nbsp;</div>
+				</div>
+				<!-- end of shell -->
+			</div>
+			<!-- end of footer-cols -->
+			<div class="footer-bottom">
+				<div class="shell">
+					<nav class="footer-nav">
+						<ul>
+							<li><a href="index.html">首頁</a></li>
+							<li><a href="http://www.act168.com.tw/events/201311/#topic01" target="_blank">強檔促銷</a></li>
+							<li><a href="grouplist.html">近期出團總表</a></li>
+							<li><a href="sitemap.html">網站地圖</a></li>
+							<li><a href="news.html">最新消息</a></li>
+							<li><a href="service.html">報名須知</a></li>
+							<li><a href="contact.html">聯絡我們</a></li>
+							<li><a href="http://www.actwg.com.tw/portal.php" target="_blank">大地彩格網</a></li>
+						</ul>
+						<div class="cl">&nbsp;</div>
+					</nav>
+
+					<p class="copy">&copy; Copyright 2013 Discovery Travel. All Rights Reserved 著作權所有／ACT『大地假期』旅遊網 </p>
+				</div>
+			</div>
+		</div>
+		<!-- end of footer -->
+
+	</div>
+	<!--END #footer-->
+</body>
+</html>

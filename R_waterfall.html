@@ -1,0 +1,72 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title></title>
+
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- CSS Reset -->
+  <link rel="stylesheet" href="css/reset.css">
+
+  <!-- start for 流瀑式~強檔促銷的JS-->
+  <link rel="stylesheet" href="css/waterfall-style.css">
+  <!-- 流瀑式~強檔促銷-->
+  <script language="javascript" src="scripts/jquery-1.9.1.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+  <div id="container">
+
+    <div id="waterfall_main" role="waterfall_main">      
+      <ul id="waterfall_tiles">
+        <!-- These are our grid blocks -->
+        <li><img src="images/push_sale_dm/image_1.jpg" width="200" height="282"><p>2014/2/10前第二人優惠2000元</p></li>
+        <li><img src="images/push_sale_dm/image_2.jpg" width="200" height="282"><p>2014/2/10前第二人優惠2000元</p></li>
+        <li><img src="images/push_sale_dm/image_3.jpg" width="200" height="282"><p>2014/2/10前第二人優惠2000元</p></li>
+        <li><img src="images/push_sale_dm/image_4.jpg" width="200" height="282"><p>2014/2/10前第二人優惠2000元</p></li>
+        <li><img src="images/push_sale_dm/image_5.jpg" width="200" height="282"><p>2014/2/10前第二人優惠2000元</p></li>
+        <li><img src="images/push_sale_dm/image_6.jpg" width="200" height="282"><p>2014/2/10前第二人優惠2000元</p></li>
+        <li><img src="images/push_sale_dm/image_7.jpg" width="200" height="282"><p>2014/2/10前第二人優惠2000元</p></li>      
+        <!-- End of grid blocks -->
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- 流瀑式~強檔促銷的 waterfall -->
+  <script language="javascript" src="scripts/jquery.wookmark.js"></script>
+  <!-- 流瀑式.強檔促銷的 JS需放在<BODY>內且圖片之後 -->
+  <script type="text/javascript">
+    $(document).ready(new function() {
+      var options = {
+        autoResize: true, 
+        container: $('#waterfall_main'),
+        offset: 2, // Optional, the distance between grid items
+        itemWidth: 210 // Optional, the width of a grid item
+      };
+ 
+      var handler = $('#waterfall_tiles li');
+	  
+      handler.wookmark(options);
+      handler.click(function(){        
+        var newHeight = $('img', this).height() + Math.round(Math.random()*300+30);
+        $(this).css('height', newHeight+'px');
+        handler.wookmark();
+      });
+    });
+  </script>
+
+
+</body>
+</html>

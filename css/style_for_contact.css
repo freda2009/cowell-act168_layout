@@ -1,0 +1,39 @@
+.fform-head-container {
+/*background: #f6f6f6;*/
+padding: 9px 0 0 20px;
+height: 50px;
+/*cursor: pointer;*/
+}
+.fform-head-container {
+cursor: pointer;
+}
+
+.fform-head-main-pencil {
+width: 23px;
+height: 23px;
+margin-top: 12px;
+background: url(../images/pen-icon.png) no-repeat;
+float: left;
+}
+.fform-head-main-title {
+margin: 0 0 0 20px;
+font-size: 27px;
+float: left;
+font-family: 'Segoe UI Light','Segoe UI',Arial,serif;
+font-weight: 100;
+}
+
+.fform-container.fform-container-expanded .fform-head-main-ico {
+background-position: 0 0;
+}
+
+.fform-head-main-ico {
+width: 18px;
+height: 9px;
+margin: 18px;
+background: url(../images/arrows-spoiler.png) 0 -9px no-repeat;
+float: right;
+}
+.required{
+color:red;
+}

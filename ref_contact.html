@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>聯絡我們</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<style type="text/css" media="all">
+		@import url("the_third_party/ivaynberg_select2/select2.css");
+		@import url("css/base.css");
+		@import url("css/index.css");
+		@import url("css/index_midslide.css");
+		@import url("css/index_movie_block.css");	/*首頁的影音區CSS*/
+		@import url("css/index_bloglead.css");	/*首頁的領隊旅遊經驗分享區CSS*/
+		@import url("css/index_photoAlbums.css");	/*首頁的旅遊相簿CSS*/
+		@import url("css/style_for_list.css");/*分類頁用*/
+		@import url("css/style_for_dayplan.css");/*行程頁的CSS*/
+		@import url("css/table_airplane_info.css");/*行程頁的航班表格CSS*/
+		@import url("css/forday_stickmenu/styles_forday_stickmenu.css");/*行程頁的submenu*/
+		@import url("css/font-awesome/css/font-awesome.min.css");	/*行程頁的submenu*/
+		@import url("css/owl.carousel.css");/*分類頁的國旗選單*/
+		@import url("css/style_for_news_grouplist_sitemap.css");	/*FOR 最新消息|團體總表|網站地圖 頁*/
+	</style>
+
+
+	<link rel="icon" type="image/icon" href="ico/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|LilyScriptOne-Regular|Ubuntu:400,500,700">
+
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome-ie7.min.css">
+	<![endif]-->
+
+	<!--[if gte IE 9]>
+		<style type="text/css">
+			.gradient {
+				filter: none;
+			}
+		</style>
+	<![endif]-->
+
+	<!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+	<script language="javascript" type="text/ecmascript" src="scripts/jquery.min.js"></script>
+	<script language="javascript" type="text/ecmascript" src="scripts/jquery.form.js"></script>
+
+	<script language="javascript" type="text/ecmascript" src="scripts/scroll.js"></script>
+	<script language="javascript" type="text/ecmascript" src="scripts/index.js"></script>
+
+	<!--start index頁:WdatePicker-->
+	<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+	<link href="js/My97DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	<!--end index頁WdatePicker:-->
+
+	<!--登入的下拉選單用bootstrap.min.js-->
+	<script language="javascript" type="text/ecmascript" src="scripts/bootstrap.min.js"></script>
+
+	<!--index頁:中間強檔促銷行程-->
+	<link rel="stylesheet" type="text/css" href="css/index_promotions.css">
+	<script type="text/javascript" src="scripts/index_promotions.js"></script>
+
+	<!--index頁:標籤雲tagscloud.js-->
+		<script type="text/javascript" src='scripts/tagscloud.js'></script>
+
+	<!--index首頁影音區塊jquery-latest.min.js & index_movieblock.js-->
+	<script type="text/javascript" src="scripts/index_movieblock.js"  ></script>
+
+	<!--分類頁 : START 瀏覽方式切換-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("a.switch_thumb").toggle(function(){
+				$(this).addClass("swap");
+					$("ul.display").fadeOut("fast", function() {
+						$(this).fadeIn("fast").addClass("thumb_view");
+						});
+					}, function () {
+				$(this).removeClass("swap");
+				$("ul.display").fadeOut("fast", function() {
+					$(this).fadeIn("fast").removeClass("thumb_view");
+					});
+				});
+		});
+	</script>
+	<!--END 分類頁: 瀏覽方式切換-->
+
+	<!--START 首頁中間精選攝影行程用-->
+	<script type="text/javascript">
+			$(document).ready(function() {
+				//Show Banner
+				$(".examples_image .desc").show(); //Show Banner
+				$(".examples_image .block").animate({ opacity: 0.7 }, 1 ); //Set Opacity
+
+				//Click and Hover events for thumbnail list
+				$(".mune_thumb ul li:first").addClass('active');
+				$(".mune_thumb ul li").click(function(){
+					//Set Variables
+					var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+					var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+					var imgDesc = $(this).find('.block').html(); 	//Get HTML of block
+					var imgDescHeight = $(".examples_image").find('.block').height();	//Calculate height of block
+
+					if ($(this).is(".active")) {  //If it's already active, then...
+						return false; // Don't click through
+					} else {
+						//Animate
+						$(".examples_image .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250 , function() {
+						$(".examples_image .block").html(imgDesc).animate({ opacity: 0.85,	marginBottom: "0" }, 250 );
+						$(".examples_image img").attr({ src: imgTitle , alt: imgAlt});
+						});
+					}
+
+					$(".mune_thumb ul li").removeClass('active'); //Remove class of 'active' on all lists
+					$(this).addClass('active');  //add class of 'active' on this list only
+					return false;
+
+				}) .hover(function(){
+					$(this).addClass('hover');
+					}, function() {
+					$(this).removeClass('hover');
+				});
+
+				//Toggle
+				$("a.collapse").click(function(){
+				$(".examples_image .block").slideToggle();
+				$("a.collapse").toggleClass("show");
+				});
+
+			});//Close Function
+		</script>
+		<!--END 首頁中間精選攝影行程用-->
+
+		<!--START 上方選單 mouseOVER 出現SUBMENU-->
+		<script type="text/javascript">
+			function MM_over(mmObj) {
+					var mSubObj = mmObj.getElementsByTagName("div")[0];
+					mSubObj.style.display = "block";
+					mSubObj.style.backgroundColor = "";
+				}
+				function MM_out(mmObj) {
+					var mSubObj = mmObj.getElementsByTagName("div")[0];
+					mSubObj.style.display = "none";
+				}
+		</script>
+		<!--END 上方選單 mouseOVER 出現SUBMENU-->
+
+
+    <script type="text/javascript" src="scripts/fancybox/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script type="text/javascript" src="scripts/fancybox/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="scripts/fancybox/jquery.fancybox.css" media="screen" />
+     
+    <script type="text/javascript">
+			  $(document).ready(function() {
+						$("a.fancybox_photo").fancybox({
+						    'opacity'			  : true,
+						    'overlayShow'    : false,
+						    'transitionIn'    : 'elastic',
+						    'transitionOut'    : 'none'
+						});
+						$(".various").fancybox({
+								'maxWidth'	: 800,
+								'maxHeight'	: 600,
+								'fitToView'	: false,
+								'width'		: '70%',
+								'height'		: '70%',
+								'autoSize'	: false,
+								'closeClick'	: false,
+								'openEffect'	: 'none',
+								'closeEffect'	: 'none'
+							});
+			  });
+    </script>
+<!--start 分類頁的國旗選單用-->
+	<script src="scripts/owl.carousel.js"></script>
+	<script>
+    $(document).ready(function() {
+
+			var owl = $("#owl-demo");
+
+			owl.owlCarousel({
+
+			items : 10, //10 items above 1000px browser width
+			itemsDesktop : [1000,5], //5 items between 1000px and 901px
+			itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
+			itemsTablet: [600,2], //2 items between 600 and 0;
+			itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+
+			});
+
+			// Custom Navigation Events
+			$(".owl_next").click(function(){
+			  owl.trigger('owl.next');
+			})
+			$(".owl_prev").click(function(){
+			  owl.trigger('owl.prev');
+			})
+			$(".owl_play").click(function(){
+			  owl.trigger('owl.play',1000);
+			})
+			$(".owl_stop").click(function(){
+			  owl.trigger('owl.stop');
+			})
+    });
+    </script>
+<!--END 分類頁的國旗選單用-->
+
+<!--MAP HOVER BOX-->
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+
+
+<link href="css/style_for_contact.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body >
+		<!--START FACEBOOK 按讚用-->
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=153150358224827";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+		<!--END FACEBOOK 按讚用-->
+
+	<div id="main">
+
+		<div id="body" class="ctn">
+				<div id="header" class="ld0">
+					<div id="position_now" class="ld0">
+						<!-- START 當前位置 -->
+						<div class="d250 fr">
+							<div class="bc_ln a3">當前位置:
+								<a href="index.html">首頁</a>
+								<span class="nowpostion divider"></span>
+								<a href="">聯絡我們</a>
+								<span class="nowpostion divider blind"></span>
+							</div>
+						</div>
+						<!-- END 當前位置 -->
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			<!-- END #header -->
+
+			<div id="sidebar_first" class="blind">
+				<!--左欄#sidebar_first 於行程頁不顯示-->
+			</div>
+			<!-- END 左欄內容#sidebar_first -->
+
+			<div id="content_outside" class="ctn">
+				<div id="content" class="ld0 ctn-nm">
+
+					<div class="hd">
+						<h1 class="tile_grouplist">
+							團體總表
+						</h1>
+					</div>
+
+					<div class="fform-container fform-container-expanded">
+							<div class="fform-head-container">
+								<div class="fform-head-main">
+									<div class="fform-head-main-pencil">&nbsp;</div>
+									<div class="fform-head-main-title">聯絡我們(Contact us)</div>
+									<!-- <div class="fform-head-main-ico">&nbsp;</div> -->
+								</div>
+							</div>
+							<div class="fform-body-container" id="fform-body-container" style="display: block;">
+								<div class="fform-body-main">
+									<table class="fform-body-main-table ">
+										<tbody><tr>
+											<td class="tdfirst">
+												<label for="fform-sendername">您的姓名(Your&nbsp;Name)<span class="required">*</span></label>
+											</td>
+											<td class="tdsecond" width="315" colspan="2">
+												<input tabindex="50" class="input-name" type="text" name="sendername" id="fform-sendername" size="25" maxlength="50" value="">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<label for="fform-sendermail">您的EMAIL(Your&nbsp;e-mail)<span class="required">*</span></label>
+											</td>
+											<td colspan="2">
+												<input tabindex="52" class="input-email" type="text" name="sendermail" id="fform-sendermail" size="25" maxlength="50" value="">
+											</td>
+										</tr>
+											<input type="hidden" name="fform-question-types" value="Other Questions">
+											<tr>
+											<td>
+												<label for="fform-subject">主旨(Subject)<span class="required">*</span></label>
+											</td>
+											<td colspan="2">
+												<input tabindex="53" class="input-subject" type="text" name="subject" id="fform-subject" size="50" maxlength="200" value="">
+											</td>
+										</tr>
+										<tr><td class="fform-body-main-label"><label for="fform-msgbody">內容(Message)<span class="required">*</span></label></td><td colspan="2"><textarea tabindex="54" name="msgbody" id="fform-msgbody" cols="50" rows="20" maxlength="10000"></textarea></td></tr>
+										<tr>
+											<td>&nbsp;</td>
+											<td class="ext-form-td"><span><input type="hidden" id="extForm" name="extForm" value="publishMyMessage"><label class="for-ext-form checked" for="extForm"></label>Publish this message on the forum</span></td>
+											<td style="text-align:right;"><input class="input-sendqst" id="b-sendqst" type="submit" title="Send question" value="Send"></td>
+										</tr>
+										<tr>
+											<td>&nbsp;</td>
+											<td><p class="fform-body-main-timenote">Please remember that we work from 9am. to 6pm GMT</td>						
+										</tr>
+									</tbody></table>
+								</div>
+							</div><!--/fform-body-container-->
+					</div>
+
+				</div><!-- END #content -->
+				
+				<!--右欄於本頁不顯示-->
+				<div id="sidebar_second" class="blind">
+				</div>
+
+				<div class="clear"></div>
+			</div><!-- END #content_outside -->
+			<div class="clear"></div>
+		</div>
+		<!--END #body-->
+	</div>
+	<!--END #main-->
+	
+</body>
+</html>

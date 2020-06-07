@@ -1,0 +1,303 @@
+@charset "utf-8";
+/* table for tbdollor */
+table.tbdollor
+{
+background: #D3E4E5;
+border: 1px solid gray;
+border-collapse: collapse;
+color: #fff;
+font: normal 12px verdana, arial, helvetica, sans-serif;
+border-collapse: collapse;
+}
+table.tbdollor caption {
+border: 1px solid #5C443A;
+color: #5C443A;
+font-weight: bold;
+letter-spacing: 4px;
+padding: 6px 4px 8px 25px;
+text-align: left;
+text-transform: uppercase;
+}
+table.tbdollor thead {
+display: table-header-group;
+vertical-align: middle;
+border-color: inherit;
+}
+table.tbdollor tr {
+border: 1px dotted gray;
+}
+table.tbdollor thead th,table.tbdollor tfoot th {
+background: #5C443A;
+color: #FFFFFF;
+padding: 3px 25px 3px 25px;
+text-align: center;
+text-transform: uppercase;
+}
+table.tbdollor thead th,table.tbdollor tfoot th {
+background: #5C443A;
+color: #FFFFFF;
+padding: 3px 25px 3px 25px;
+text-align: left;
+text-transform: uppercase;
+}
+table.tbdollor td,table.tbdollor th {
+color: #363636;
+padding: .4em;
+display: table-cell;
+vertical-align: inherit;
+}
+table.tbdollor th {
+font-weight: bold;
+}
+table.tbdollor tfoot {
+display: table-footer-group;
+vertical-align: middle;
+border-color: inherit;
+}
+/* table for airplane */
+.CSSTableGenerator, .view-go-of-trip-main .views-table {
+	margin:20px;
+	padding:0px;
+	width:95%;
+	box-shadow: 7px 7px 2px rgba(100,100,100,0.4);
+	border:1px solid #3f7f00;
+
+	-moz-border-radius-bottomleft:5px;
+	-webkit-border-bottom-left-radius:5px;
+	border-bottom-left-radius:5px;
+
+	-moz-border-radius-bottomright:5px;
+	-webkit-border-bottom-right-radius:5px;
+	border-bottom-right-radius:5px;
+
+	-moz-border-radius-topright:5px;
+	-webkit-border-top-right-radius:5px;
+	border-top-right-radius:5px;
+
+	-moz-border-radius-topleft:5px;
+	-webkit-border-top-left-radius:5px;
+	border-top-left-radius:5px;
+}
+.CSSTableGenerator table, .view-go-of-trip-main .views-table table{
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}
+.CSSTableGenerator tr:last-child td:last-child,
+.view-go-of-trip-main .views-table tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:first-child,
+.view-go-of-trip-main .views-table table tr:first-child td:first-child{
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:last-child,
+.view-go-of-trip-main .views-table table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}
+.CSSTableGenerator tr:last-child td:first-child,
+ .view-go-of-trip-main .views-table tr:last-child td:first-child {
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}
+.CSSTableGenerator tr:hover td,
+ .view-go-of-trip-main .views-table tr:hover td{
+
+}
+.CSSTableGenerator tr:hover{background-color:#c4ffd6;}
+.CSSTableGenerator tr:nth-child(odd), .view-go-of-trip-main .views-table tr:nth-child(odd){
+ background-color:#d9eac9; }
+.CSSTableGenerator tr:nth-child(even), .view-go-of-trip-main .views-table tr:nth-child(even) {
+ background-color:#ffffff; }
+.CSSTableGenerator td, .view-go-of-trip-main .views-table td,.CSSTableGenerator th{
+	vertical-align:middle;
+	border:0px solid #B5C7A4;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:13px;
+	font-family:"微軟正黑體", "Arial Unicode MS", sans-serif,Arial;
+	font-weight:normal;
+	color:#2C2C2C;
+}
+.CSSTableGenerator tr:last-child td, .view-go-of-trip-main .views-table tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}
+.CSSTableGenerator tr td:last-child, .view-go-of-trip-main .views-table tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}
+.CSSTableGenerator tr:last-child td:last-child, .view-go-of-trip-main .views-table tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+.CSSTableGenerator tr:first-child td,
+.view-go-of-trip-main .views-table tr:first-child td,
+.CSSTableGenerator th
+{
+	background:-o-linear-gradient(bottom, #98AF7E 5%, #6D805B 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #98AF7E), color-stop(1, #6D805B) );
+	background:-moz-linear-gradient( center top, #98AF7E 5%, #3f7f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fbf00", endColorstr="#6D805B");
+	background: -o-linear-gradient(top,#98AF7E,#6D805B);
+	background-color:#586B49;
+	border:0px solid #8F8F8F;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:13px;
+	font-family:"微軟正黑體", "Arial Unicode MS", sans-serif,Arial;
+	font-weight:bold;
+	color:#ffffff;
+}
+.CSSTableGenerator tr:first-child:hover td, .view-go-of-trip-main .views-table tr:first-child:hover td,
+.CSSTableGenerator th:hover
+{
+	background:-o-linear-gradient(bottom, #618141 5%, #3f7f00 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #618141), color-stop(1, #3f7f00) );
+	background:-moz-linear-gradient( center top, #618141 5%, #3f7f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#618141", endColorstr="#3f7f00");
+	background: -o-linear-gradient(top,#618141,3f7f00);
+	background-color:#618141;
+}
+.CSSTableGenerator tr:first-child td:first-child,
+.view-go-of-trip-main .views-table tr:first-child td:first-child
+{
+	border-width:0px 0px 1px 0px;/*下邊線*/
+}
+.CSSTableGenerator tr:first-child td:last-child,
+.view-go-of-trip-main .views-table tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;/*下邊線和左邊線*/
+}
+
+.CSSTableGenerator table tr:hover {
+background-color: #fde5e5;
+}
+/* table for 團體總表以下待用 */
+
+.tableGrouplist {
+	margin:20px;
+	padding:0px;
+	width:95%;
+	box-shadow: 7px 7px 2px rgba(100,100,100,0.4);
+	border:1px solid #3f7f00;
+
+	-moz-border-radius-bottomleft:5px;
+	-webkit-border-bottom-left-radius:5px;
+	border-bottom-left-radius:5px;
+
+	-moz-border-radius-bottomright:5px;
+	-webkit-border-bottom-right-radius:5px;
+	border-bottom-right-radius:5px;
+
+	-moz-border-radius-topright:5px;
+	-webkit-border-top-right-radius:5px;
+	border-top-right-radius:5px;
+
+	-moz-border-radius-topleft:5px;
+	-webkit-border-top-left-radius:5px;
+	border-top-left-radius:5px;
+}
+.CSSTableGenerator table, .view-go-of-trip-main .views-table table{
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+}
+.CSSTableGenerator tr:last-child td:last-child,
+.view-go-of-trip-main .views-table tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:first-child,
+.view-go-of-trip-main .views-table table tr:first-child td:first-child{
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:last-child,
+.view-go-of-trip-main .views-table table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}
+.CSSTableGenerator tr:last-child td:first-child,
+ .view-go-of-trip-main .views-table tr:last-child td:first-child {
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}
+.CSSTableGenerator tr:hover td,
+ .view-go-of-trip-main .views-table tr:hover td{
+
+}
+.CSSTableGenerator tr:hover{background-color:#c4ffd6;}
+.CSSTableGenerator tr:nth-child(odd), .view-go-of-trip-main .views-table tr:nth-child(odd){
+ background-color:#d9eac9; }
+.CSSTableGenerator tr:nth-child(even), .view-go-of-trip-main .views-table tr:nth-child(even) {
+ background-color:#ffffff; }
+.CSSTableGenerator td, .view-go-of-trip-main .views-table td,.CSSTableGenerator th{
+	vertical-align:middle;
+	border:0px solid #B5C7A4;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:13px;
+	font-family:"微軟正黑體", "Arial Unicode MS", sans-serif,Arial;
+	font-weight:normal;
+	color:#2C2C2C;
+}
+.CSSTableGenerator tr:last-child td, .view-go-of-trip-main .views-table tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}
+.CSSTableGenerator tr td:last-child, .view-go-of-trip-main .views-table tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}
+.CSSTableGenerator tr:last-child td:last-child, .view-go-of-trip-main .views-table tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+.CSSTableGenerator tr:first-child td,
+.view-go-of-trip-main .views-table tr:first-child td,
+.CSSTableGenerator th
+{
+	background:-o-linear-gradient(bottom, #98AF7E 5%, #6D805B 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #98AF7E), color-stop(1, #6D805B) );
+	background:-moz-linear-gradient( center top, #98AF7E 5%, #3f7f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fbf00", endColorstr="#6D805B");
+	background: -o-linear-gradient(top,#98AF7E,#6D805B);
+	background-color:#586B49;
+	border:0px solid #8F8F8F;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:13px;
+	font-family:"微軟正黑體", "Arial Unicode MS", sans-serif,Arial;
+	font-weight:bold;
+	color:#ffffff;
+}
+.CSSTableGenerator tr:first-child:hover td, .view-go-of-trip-main .views-table tr:first-child:hover td,
+.CSSTableGenerator th:hover
+{
+	background:-o-linear-gradient(bottom, #618141 5%, #3f7f00 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #618141), color-stop(1, #3f7f00) );
+	background:-moz-linear-gradient( center top, #618141 5%, #3f7f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#618141", endColorstr="#3f7f00");
+	background: -o-linear-gradient(top,#618141,3f7f00);
+	background-color:#618141;
+}
+.CSSTableGenerator tr:first-child td:first-child,
+.view-go-of-trip-main .views-table tr:first-child td:first-child
+{
+	border-width:0px 0px 1px 0px;/*下邊線*/
+}
+.CSSTableGenerator tr:first-child td:last-child,
+.view-go-of-trip-main .views-table tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;/*下邊線和左邊線*/
+}
+
+.CSSTableGenerator table tr:hover {
+background-color: #fde5e5;
+}

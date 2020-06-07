@@ -1,0 +1,228 @@
+/*  
+Theme Name: Airos Chou
+Theme URI: http://www.sunflowamedia.com
+Description: Web Design examples
+
+
+
+html, body, p {
+     border: 0 none;
+     margin: 0;
+	 padding:0;
+     outline-style: none;
+     outline-width: 0;
+     vertical-align: baseline;
+	 font-size: 12px;
+}
+*/
+/*--------------------------------------------
+container
+--------------------------------------------*/
+/*
+div#container {
+     width: 100%;
+     margin: 0 auto;
+     overflow: hidden;
+}
+*/
+div.examples_body {
+     width: 490px;//750px;
+	 margin: 10px auto 0 auto;
+	 clear: both;
+	 overflow: hidden;
+	 position: relative;
+
+     
+}
+/*
+h2.title_name {
+     font-family: 'Times New Roman',Times,serif;
+	 font-weight: normal;
+     font-size: 4em;
+	 margin: 0;
+     padding: 50px 0 20px 0;
+     text-align: center;
+	 color: #555;
+}
+h2.title_name span {
+     font-family: 'Times New Roman',Times,serif;
+     color: #f9f66d;
+	 font-size: 0.9em;
+	 font-style: normal;
+     font-weight: normal;
+     line-height: normal;
+}
+h2.title_name small {
+     color: #505e70;
+     display: block;
+     font-family: normal Verdana,Arial,Helvetica,sans-serif;
+     font-size: 0.19em;
+     letter-spacing: 1.0em;
+	 font-weight: bold;
+     line-height: normal;
+     text-transform: uppercase;
+	 padding: 3px 0 0 0;
+}
+*/
+div.examples_body h3 {
+     color: #f9f66d;
+     font-size: 18px;
+	 padding-bottom: 15px;
+	 background: url(../images/index_midslide/solid-line-news.gif) repeat-x bottom;
+}
+/*
+.copyright {
+      width: 100%;
+      color: #555;
+	  text-align: center;
+	  font-size: 100%;
+	  letter-spacing: 3px;
+	  margin-top: 100px;
+}
+.copyright a {
+      color: #AAA;
+	  text-decoration: none;
+}
+*/
+/* main_image section CSS */
+.examples_bg {
+	width: 98%;
+	background-color: #F0F0F0;
+    border: 0px solid #CCCCCC;
+    padding: 5px 2px;
+	overflow: hidden;
+}
+.examples_image {
+    width:55% ;    height:auto;
+    max-height:248px;
+    float: left;
+    background: #333;
+    position: relative;
+    overflow: hidden; /*--Overflow hidden allows the description to toggle/tuck away as it slides down--*/
+    color: #fff;
+}
+.examples_image img.examples_left{
+    width: auto;
+  height: 305px;
+}
+.examples_image  h4 {
+    font-size:18px;// 1.5em;
+    font-weight: normal;
+    margin: 0px;
+    padding:3px 5px;
+}
+.examples_image h4.title02 {
+	color: #feb403;
+}
+.examples_image h4.title03 {
+	color: #f23962;
+}
+.examples_image h4.title04 {
+	color: #43b6ff;
+}
+.examples_image p {
+    line-height:11px;// 1.5em;
+    padding: 5px;//10px 10px 0 10px;
+    margin: 0px;
+	font-size:11px;// 0.9em;
+    //position:relative;
+    //top:-5px;
+}
+.block small { /*--We'll be using this same style on our thumbnail list--*/
+    font-size:11px;// 1em;
+    padding: 0 0 0px 25px;
+    // position:relative;
+   // top:-5px;
+    background: url(../images/index_midslide/icon_calendar.gif) no-repeat 0 center;
+}
+.examples_image .block small {
+	margin-left: 5px;
+}
+.examples_image .desc{
+	width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0; /*--Stick the desc class to the bottom of our main image container--*/
+    display: none; /*--Hide description by default, if js is enabled, we will show this--*/
+}
+.examples_image .block{
+    width: 100%;
+    
+    background: #111;
+    border-top: 1px solid #000;
+}
+.examples_image a.collapse { /*--This is our hide/show tab--*/
+    width:93px; //93px;
+    height:27px; //27px;
+    background: url(../images/index_midslide/icon_display.png) no-repeat left top;
+    text-indent: -99999px;
+    position: absolute;
+    top: -25px;
+    right: -55px;//10px;
+}
+.examples_image a.show {background-position: left bottom;}
+
+
+/* image_thumb section CSS */
+
+.mune_thumb {
+	width: 44%;//299px;
+    float: left;
+    background: #f0f0f0;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #ccc;
+	overflow: hidden;
+}
+.mune_thumb img {
+    border: 1px solid #ccc;
+    padding: 5px;
+    background: #fff;
+    float: left;
+}
+.mune_thumb ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.mune_thumb ul li{
+	width: 100%;//279px;
+	color: #333;
+    margin: 0;
+    padding: 5px;//12px 10px;
+    background-color: #EEE;
+    float: left;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #ccc;
+    max-height: 50px;
+    overflow: hidden;
+    font-size:12px;
+}
+.mune_thumb ul li.hover { /*--Hover State--*/
+    background: #CCC;
+    cursor: pointer;
+}
+.mune_thumb ul li.active { /*--Active State--*/
+    background: #fff;
+    cursor: default;
+}
+.mune_thumb ul li h4.mune_thumb_h4 {
+    font-size: 12px;//1.4em;
+    margin:0px;
+    padding:2px;
+    overflow: hidden;
+    margin-top: 8px;
+line-height: 16px;
+}
+.mune_thumb ul li .block {
+float: left;
+margin-top: -10px;
+margin-left: 5px;
+margin-right: 5px;
+padding: 0px 3px 0 0;
+width: 60%;
+
+}
+.mune_thumb ul li .block small {
+    display: none;}
+.mune_thumb ul li p{display: none;} /*--Hide the description on the list items--*/

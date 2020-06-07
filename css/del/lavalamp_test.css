@@ -1,0 +1,67 @@
+
+
+.lavaLampNoImage {
+    position: relative;
+    width: 834px;
+    overflow: hidden;
+   
+    font-size: 10px; 
+    left:-8px;
+    border: 0px solid #eee;
+
+    margin-top:34px;/**for firefox **/
+}
+.lavaLampNoImage li {
+    float: left;
+    list-style: none;
+
+ }
+ .lavaLampNoImage li.back {
+    border: 0px solid #eee;
+    background: url("../images/list_flag_select_bg.png") no-repeat;
+    width: 72px;
+    height: 56px;
+    z-index: 2;
+    position: absolute;
+}
+.lavaLampNoImage li a {
+text-decoration: none;
+font-family: "微軟正黑體", "Arial Unicode MS", sans-serif;
+text-decoration: none;
+font-size: 12px;
+outline: none;
+top: 12px;
+text-align: center;
+padding-left: 5px;
+text-transform: uppercase;
+letter-spacing: 0;
+z-index: 3;
+display: block;
+float: left;
+
+height: 57px;
+padding-top: 12px;
+margin: -6px 15px 0 0;
+position: relative;
+overflow: hidden; 
+font-weight:bold; 
+color:#1c565a;
+ }
+.lavaLampNoImage li a:hover {
+ 
+color:#0096d9;
+}
+ .lavaLampNoImage li a>span {
+   z-index: 3;
+   margin-top:-10px;
+   margin-bottom: 0px;
+   border:none;
+   display: block;
+   float: left;
+   width:48px;
+  
+ }
+.lavaLampNoImage li a:hover, .lavaLampNoImage li a:active, .lavaLampNoImage li a:visited {
+
+    border: none;
+ }                    

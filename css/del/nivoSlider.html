@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html lang="">
+<head>
+    <title>Nivo Slider Demo</title>
+    <link rel="stylesheet" href="css/nivo-slider/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/nivo-slider/light/light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/nivo-slider/dark/dark.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/nivo-slider/bar/bar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/style_index_Nivoslider_w985.css" type="text/css" media="screen" />
+</head>
+<body>
+    <div id="wrapper">
+        <div class="slider-wrapper theme-default">
+            <div id="nivoslider" class="nivoSlider">
+                <img src="images/toystory.jpg" data-thumb="images/toystory.jpg" alt="" />
+                <a href="/"><img src="images/up.jpg" data-thumb="images/up.jpg" alt="" title="2014春節旅遊" /></a>
+                <img src="images/walle.jpg" data-thumb="images/walle.jpg" alt="" data-transition="slideInLeft" />
+                <img src="images/nemo.jpg" data-thumb="images/nemo.jpg" alt="" title="#htmlcaption" />
+            </div>
+            <div id="htmlcaption" class="nivo-html-caption">
+                <strong>2014</strong> 春節 <em>早鳥</em> 旅遊<a href="/">推薦</a>. 
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#nivoslider').nivoSlider();
+    });
+    </script>
+</body>
+</html>

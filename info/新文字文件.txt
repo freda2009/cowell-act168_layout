@@ -1,0 +1,8 @@
+/info/domestic_package.htm國內個別旅遊定型化契約書
+
+<map name="Map">
+    <area shape="rect" coords="128,9,286,27" href="abroad_contract.htm" target="_blank" alt="國外個別旅遊定型化契約書">
+    <area shape="rect" coords="128,49,291,67" href="abroadgroup_contract.htm" target="_blank" alt="國外團體旅遊定型化契約書">
+    <area shape="rect" coords="128,72,288,87" href="domestic_contract.htm" target="_blank" alt="國內旅遊契約書">
+    <area shape="rect" coords="130,32,290,47" href="domestic_package.htm" target="_blank" alt="國內個別旅遊定型化契約書">
+  </map>

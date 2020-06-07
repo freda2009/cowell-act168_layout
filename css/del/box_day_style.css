@@ -1,0 +1,121 @@
+@charset "utf-8";
+/* CSS Document */
+
+#day_body{
+background: #edf6ff url(../images/day_plan_body.png) repeat-x 0 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+@media \0screen {
+  img { 
+  	width: auto; /* for ie 8 */
+  }
+}
+
+
+
+.day_info_container{
+	margin:0 auto;
+	width:100%;
+	height:auto;
+	background: #fff;  
+	box-shadow: 0px 0px 7px rgba(0,0,0,0.3); 
+	-moz-box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	 -webkit-box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	  -o-box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+	border-radius: 5px; 
+	-moz-border-radius: 5px;
+	 -webkit-border-radius: 5px; 
+	 -o-border-radius: 5px;
+	}
+
+.day_photp_box{
+	 margin:0 auto;
+     width: 100%;
+	 height:180px;//auto;
+	 background: url(../images/icon-format-post.png) no-repeat 0px 0px;
+	 background-color: rgb(73, 149, 193);
+	}
+
+.day_photp_box .feature-image {
+	
+}
+.day_photp_box .feature-image a img:hover {
+  opacity: 0.1;
+}
+
+.box {
+	height:auto;
+	position: relative;
+	padding-left: 40px;
+	padding-top: 12px;
+	padding-bottom: 18px;
+	padding-right:10px;
+	background-image: url(../images/bg_box_dayplan/box.png);
+}
+
+
+.box .entry-date {
+  position: absolute;
+  width: 70px;
+  height: 57px;
+  top: 15px;
+  left: -15px;
+  display: block;
+  padding-top: 13px;
+  font-family:'Rancho',Arial, sans-serif;
+  line-height: 1em;
+  -moz-border-radius: 80px;//60px
+  -webkit-border-radius:80px;
+  border-radius:80px;
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
+  background-color:rgb(73, 149, 193);
+}
+.box .entry-date .number {
+  color:#c3ecfc;
+  font-size:28px;
+  text-align: center;
+  margin-bottom: 3px;
+}
+.box .entry-date .day {
+	color:#c3ecfc;
+  font-size: 24px;
+  text-align: center;
+}
+.box .excerpt {
+  float: left;
+  width:100%;
+}
+.box .excerpt .post-heading {
+  display: block;
+  font-family:"微軟正黑體", "Arial Unicode MS", 'Voltaire', Arial, sans-serif;
+  font-size: 28px;
+  font-weight:bold;
+  line-height: 1.1em;
+  color: rgb(73, 149, 193);
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 14px;
+  margin-left: 25px;
+  padding-right:15px;
+  margin-bottom: 21px;
+  float:left;
+
+}
+.box .day_content{
+	height:auto;
+	padding-right:10px;
+	}
+	
+.food_hotel{
+	height:56px;
+	padding-left:40px;
+	padding-right:10px;
+	}
+
+.break-word {
+		word-wrap: break-word;
+}
