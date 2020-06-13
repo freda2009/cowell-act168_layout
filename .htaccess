@@ -1,3 +1,6 @@
+#隱藏目錄下所有檔案
+Options -Indexes
+
 RewriteEngine On
 RewriteCond %{HTTP_USER_AGENT} ^.*(Googlebot|Baiduspider|HTTrack|Yandex).*$ [NC]
 RewriteRule .* - [F,L]
