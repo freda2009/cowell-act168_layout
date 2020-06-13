@@ -1,0 +1,18 @@
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} ^.*(Googlebot|Baiduspider|HTTrack|Yandex).*$ [NC]
+RewriteRule .* - [F,L]
+
+ErrorDocument 503 "Site temporarily disabled for crawling"
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} ^.*(bot|crawl|spider).*$ [NC]
+RewriteCond %{REQUEST_URI} !^/robots.txt$
+RewriteRule .* - [R=503,L]
+
+BrowserMatchNoCase "Googlebot" bots
+BrowserMatchNoCase "Baiduspider" bots
+BrowserMatchNoCase "HTTrack" bots
+BrowserMatchNoCase "Yandex" bots
+
+Order Allow,Deny
+Allow from ALL
+Deny from env=bots
